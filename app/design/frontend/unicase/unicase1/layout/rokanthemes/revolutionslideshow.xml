@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+
+		<reference name="head">
+			
+			<action method="addCss"><stylesheet>rs-plugin/css/settings.css</stylesheet></action>
+			<action method="addItem"><type>skin_css</type><name>rs-plugin/css/settings-ie8.css</name><params/><if>lt IE 9</if></action>
+
+			<action method="addJs"><script>rokanthemes/jquery-1.11.0.min.js</script></action>
+			<action method="addJs"><script>rokanthemes/jquery-migrate-1.2.1.min.js</script></action>
+			<action method="addJs"><script>rokanthemes/jquery.noconflict.js</script></action>
+			<action method="addJs"><script>rokanthemes/jquery.cycle2.min.js</script></action>
+			<action method="addItem"><type>skin_js</type><script>rs-plugin/js/jquery.themepunch.plugins.min.js</script></action>
+			<action method="addItem"><type>skin_js</type><script>rs-plugin/js/jquery.themepunch.revolution.min.js</script></action>
+			<action method="addItem"><type>skin_js</type><script>rs-plugin/js/script.js</script></action>
+		</reference>
+
+	</default>
+</layout>

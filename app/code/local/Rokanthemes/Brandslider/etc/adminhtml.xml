@@ -1,0 +1,44 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<brandslider>
+										<title>Brandslider</title>
+									</brandslider>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="brandslider">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<brandslider translate="title" module="brandslider">
+								<title>Brandslider</title>
+								<sort_order>0</sort_order>
+								<children>
+									<items translate="title" module="brandslider">
+										<title>Manage Items</title>
+										<sort_order>0</sort_order>
+										<action>brandslider/adminhtml_brandslider</action>
+									</items>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/brandslider</action>
+									</configuration>
+								</children>
+							</brandslider>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

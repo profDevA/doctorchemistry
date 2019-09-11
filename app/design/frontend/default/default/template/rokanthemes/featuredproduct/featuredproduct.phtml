@@ -1,0 +1,146 @@
+<?php if($this->getConfig('enabled')){ // start enable module?>
+	<?php $this->getProducts() ?>
+	<?php $_productCollection=$this->getProductCollection() ?>
+	<div class="ma-featuredproductslider-container">
+		<div class="container">
+		<?php				
+			if ( !$this->getConfig('width_thumbnail') ){
+				$w_thumbnail = 135;
+			} else {
+				$w_thumbnail = $this->getConfig('width_thumbnail');
+			}
+			if( !$this->getConfig('height_thumbnail') ){
+				$h_thumbnail = 135;
+			 }
+			else {
+				$h_thumbnail = $this->getConfig('height_thumbnail');
+			}
+		?>
+		<?php if($this->getConfig('title')){?>
+			<div class="ma-featured-sldier-title"><h2><?php echo $this->getConfig('title')?></h2></div>
+		<?php }?>
+		<?php if(!$_productCollection->count()): ?> 
+			<div class="ma-bestseller-slider">	
+				<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+			</div>
+		<?php else: ?>
+			<?php
+			$rows = $this->getConfig('row_show');
+			?>	
+				<ul class="bxslider">
+					<?php $_collectionSize = $_productCollection->count() ?>
+					<?php $i=0; foreach ($_productCollection as $_product): ?>
+						<?php if($i %$rows == 0) echo "<li class='featuredproductslider-item'>"; ?>
+						<div class="featuredproductslider_item">
+						
+							<?php
+							$newFromDate = Mage::getModel('catalog/product')->load($_product->getID())->getNewsFromDate();
+							$newToDate = Mage::getModel('catalog/product')->load($_product->getID())->getNewsToDate();                 
+							$now = date("Y-m-d H:m:S");
+							// Get the Special Price
+							$specialprice = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialPrice(); 
+							// Get the Special Price FROM date
+							$specialPriceFromDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialFromDate();
+							// Get the Special Price TO date
+							$specialPriceToDate = Mage::getModel('catalog/product')->load($_product->getId())->getSpecialToDate();
+							// Get Current date
+							if ($specialprice&&($specialPriceFromDate <= $now && $specialPriceToDate >= $now)&& Mage::getStoreConfig('themeoptions/themeoptions_config/sale_label')){
+							 echo '<div class="label-pro-sale"></div>';
+							}else{
+							 if($newFromDate <= $now && $newToDate >= $now && Mage::getStoreConfig('themeoptions/themeoptions_config/new_label') ) {
+								   echo '<div class="label-pro-new"></div>';
+							 }
+							}
+							   ?>
+							<div class="item-inner">
+							<div class="box-item">
+										<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($w_thumbnail, $h_thumbnail); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
+									
+										<?php if( $this->getConfig('show_price') ): ?>
+											<?php echo $this->getPriceHtml($_product, true) ?>
+										<?php endif; ?>
+						
+										<?php if($this->getConfig('review')): ?>
+											<?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+										<?php endif; ?>
+						<h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h2>
+										
+										<div class="actions">
+											<div class="cart-content">
+								<?php if ($this->getConfig('addtocart')) { ?>
+								<?php if($_product->isSaleable()): ?>
+									<button type="button"  class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+								<?php else: ?>
+									<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+								<?php endif; ?>
+								<?php }?>	
+						
+											<?php if( $this->getConfig('addtowishlist') || $this->getConfig('addtocompare') ){?>
+												<ul class="add-to-links">
+													<?php if( $this->getConfig('addtowishlist')): ?>
+														<?php if ($this->helper('wishlist')->isAllow()) : ?>
+															<li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>"  class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+														<?php endif; ?>
+													<?php endif; ?>
+							
+													<?php if( $this->getConfig('addtocompare')): ?>
+														<?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+															<li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+														<?php endif; ?>
+													<?php endif; ?>
+												</ul>
+											<?php }?>
+						</div>
+										</div>
+										<?php if( $this->getConfig('description')){?>
+											<div class="ma-desc">
+												<?php if(!$this->getConfig('maxlength')){?>
+													<?php echo nl2br($this->htmlEscape($_product->getShortDescription())) ?>
+												<?php } else {?>
+													<?php echo nl2br($this->cut_string_featuredproductslider($this->htmlEscape($_product->getShortDescription()),$this->getConfig('maxlength'))) ?>			            
+												<?php }?>			                    
+											</div>
+										<?php }?>
+							<?php $i++;?>
+							</div>
+							</div>
+						
+						</div>
+						<?php if($i %$rows == 0) echo "</li>"; ?>                  
+					<?php endforeach; ?>
+						<?php if($i %$rows != 0) echo "</li>"; ?>                
+				</ul>
+
+<script type="text/javascript">
+	$jq(document).ready(function(){
+	  $jq('.ma-featuredproductslider-container .bxslider').bxSlider(
+		{
+		<?php if($this->getConfig('auto')) { ?>
+		  auto: true,
+		<?php } ?>
+		  speed: <?php echo $this->getConfig('speed') ?>,
+		  pause: <?php echo $this->getConfig('interval') ?>,			  
+		  minSlides: 2,
+		  maxSlides: <?php echo $this->getConfig('items_show') ?>,
+		  slideWidth: <?php echo $this->getConfig('item_width') ?>,
+		<?php if ($this->getConfig('nav_ctrl')) { ?>
+		  pager: true,
+		<?php } else { ?> 
+		  pager:false, 
+		<?php } ?>
+		<?php if ($this->getConfig('next_back')) { ?>
+			controls: true,
+		<?php } else { ?>
+		    controls:false,
+		<?php } ?>
+		}
+	  );
+	});
+</script>
+			
+		<?php endif; ?>
+		</div>
+	</div> 
+<?php } ?>
+
+

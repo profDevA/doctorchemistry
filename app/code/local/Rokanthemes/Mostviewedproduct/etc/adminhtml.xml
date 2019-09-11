@@ -1,0 +1,33 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<mostviewedproduct>
+										<title>Mostviewed Products</title>
+									</mostviewedproduct>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="mostviewedproduct">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<mostviewedproduct translate="title" module="mostviewedproduct">
+								<title>Mostviewed Products</title>
+								<sort_order>0</sort_order>
+								<action>adminhtml/system_config/edit/section/mostviewedproduct</action>
+							</mostviewedproduct>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

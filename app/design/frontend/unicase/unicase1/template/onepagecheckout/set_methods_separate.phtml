@@ -1,0 +1,15 @@
+<?php
+/**  
+ * @category    Ocodewire
+ * @package     Ocodewire_OnePageCheckout
+ * @author	Ocodewire
+ */
+
+$data = array(
+    'payment_method' => $this->getChildHtml('choose-payment-method'),
+    'summary' => $this->getChildHtml('summary')
+);
+
+echo Zend_Json::encode($data);
+
+?>

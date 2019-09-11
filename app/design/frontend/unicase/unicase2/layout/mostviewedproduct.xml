@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+        <!-- <reference name="content">
+            <block type="mostviewedproduct/mostviewedproduct" name="mostviewedproduct" template="rokanthemes/mostviewedproduct/mostviewedproduct.phtml" />
+        </reference> -->
+        <reference name="left">
+            <block type="mostviewedproduct/mostviewedproduct" after="catalog.leftverticalmenu" name="mostviewedproduct" template="rokanthemes/mostviewedproduct/mostviewedproduct.phtml" />
+        </reference>
+    </cms_index_index>
+</layout> 

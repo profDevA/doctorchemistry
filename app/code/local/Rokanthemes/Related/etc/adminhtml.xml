@@ -1,0 +1,44 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<related>
+										<title>Related</title>
+									</related>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="related">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<related translate="title" module="related">
+								<title>Related</title>
+								<sort_order>0</sort_order>
+								<children>
+									<items translate="title" module="related">
+										<title>Manage Items</title>
+										<sort_order>0</sort_order>
+										<action>related/adminhtml_related</action>
+									</items>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/related</action>
+									</configuration>
+								</children>
+							</related>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

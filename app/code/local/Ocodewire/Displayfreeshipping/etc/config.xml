@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ocodewire_Displayfreeshipping>
+            <version>1.1.0</version>
+        </Ocodewire_Displayfreeshipping>
+    </modules>
+    
+	<global>
+		<blocks>
+			<checkout>
+				<rewrite>
+					<onepage_shipping_method_available>Ocodewire_Displayfreeshipping_Block_Checkout_Onepage_Shipping_Method_Available</onepage_shipping_method_available>
+				</rewrite>
+			</checkout>
+		</blocks>
+	</global>
+</config>

@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <rokanthemes translate="label" module="explodemenu">
+            <label>Rokanthemes</label>
+            <sort_order>205</sort_order>
+        </rokanthemes>
+    </tabs>
+    <sections>
+        <explodemenu translate="label" module="explodemenu">
+            <label>Custom Menu</label>
+            <tab>rokanthemes</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[In order to display a custom block with images or other html content in the popup, use the <b>Static Block</b> (<strong>CMS->Static Blocks</strong> section) with the ID like "<b>pt_menu_idcat_10</b>", where "<b>10</b>" is the Category ID of this category]]></comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <showhome translate="label comment">
+                            <label>Show homepage</label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Show homepage in menu]]></comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showhome>
+                        <max_level translate="label comment">
+                            <label>Visible menu depth</label>
+                            <comment><![CDATA[e.g. 1, 2, 3, 4 (0 - disable limits). For example, if you set this value to <b>2</b>, only second level categories will be displayed.]]></comment>
+                            <frontend_type>text</frontend_type>                                                   
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </max_level>
+                        <catsid translate="label">
+                            <label>Categories will be shown as title without link.</label>
+                            <frontend_type>multiselect</frontend_type>       
+                            <source_model>explodemenu/config_categories</source_model>                     
+                            <comment>All of the selected categories will be shown as title without link.</comment>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </catsid>
+                    </fields>
+                </general>
+                <columns translate="label">
+                    <label>Columns</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <count translate="label comment">
+                            <label>Number of columns</label>
+                            <comment>e.g. 1, 2, 3. The maximum number of columns in the popup.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </count>
+                        <integrate translate="label comment">
+                            <label>Merge small subcategories</label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Merge small subcategory lists into one column (except the extream left categories).]]></comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integrate>
+                    </fields>
+                </columns>
+                <popup translate="label">
+                    <label>Popup settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <effect translate="label comment">
+                            <label>Popup Effect</label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Choose effect to show popup]]></comment>
+                            <source_model>explodemenu_adminhtml/system_config_source_effectoptions</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </effect>
+                        <top_offset translate="label comment">
+                            <label>Top offset</label>
+                            <comment>in pixels</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </top_offset>
+                    </fields>
+                </popup>
+            </groups>
+        </explodemenu>
+    </sections>
+</config>

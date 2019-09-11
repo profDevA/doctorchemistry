@@ -1,0 +1,33 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<ajaxcart>
+										<title>Ajaxcart Super</title>
+									</ajaxcart>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="ajaxcart">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<ajaxcart translate="title" module="ajaxcart">
+								<title>Ajaxcart Super</title>
+								<sort_order>0</sort_order>
+								<action>adminhtml/system_config/edit/section/ajaxcart</action>
+							</ajaxcart>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<newproduct>
+										<title>New Product</title>
+									</newproduct>
+								</children>
+							</config>
+						</children>
+					</system>		
+					<rokanthemes translate="title" module="newproduct">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<newproduct translate="title" module="newproduct">
+								<title>New Products</title>
+								<sort_order>0</sort_order>
+								<action>adminhtml/system_config/edit/section/newproduct</action>
+							</newproduct>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

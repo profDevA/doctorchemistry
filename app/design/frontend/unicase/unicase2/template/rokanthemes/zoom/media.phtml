@@ -1,0 +1,205 @@
+<?php
+    $_zoom_w = Mage::getStoreConfig('zoom/zoom_config/zoom_w');
+    $_zoom_h = Mage::getStoreConfig('zoom/zoom_config/zoom_h');
+	$_border_w = Mage::getStoreConfig('zoom/zoom_config/zoom_border_w');
+	$_border_color = Mage::getStoreConfig('zoom/zoom_config/zoom_border_color');
+    $_lightbox_w = Mage::getStoreConfig('zoom/zoom_config/lightbox_w');   
+    $_lightbox_h = Mage::getStoreConfig('zoom/zoom_config/lightbox_h');
+    $_thumbnail_qty = Mage::getStoreConfig('zoom/zoom_config/thumbnail_qty');   
+    $_thumbnail_w = Mage::getStoreConfig('zoom/zoom_config/thumbnail_w');
+    $_thumbnail_h = Mage::getStoreConfig('zoom/zoom_config/thumbnail_h');
+	$_scroll_qty = Mage::getStoreConfig('zoom/zoom_config/scroll_qty');
+	$_auto = Mage::getStoreConfig('zoom/zoom_config/auto_scroll');
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<p class="product-image">
+    <?php
+        $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($_zoom_w, $_zoom_h).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+    ?>
+	<!-- images for lightbox -->
+	<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($_lightbox_w, $_lightbox_h); ?>" class = "ma-a-lighbox" rel="lightbox[rotation]"></a>
+	<!--++++++++++++-->
+	<a href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize(1200,1200); ?>" class = "cloud-zoom" id="ma-zoom1" style="position: relative; display: block;" rel="adjustX:10, adjustY:-2, zoomWidth:<?php echo $_zoom_w; ?>, zoomHeight:<?php echo $_zoom_h; ?>">
+		<?php echo $_helper->productAttribute($_product, $_img, 'image'); ?>
+	</a>
+</p>
+<?php if ( count($this->getGalleryImages()) > 0 ): ?>
+	<?php if( (!Mage::getStoreConfig('zoom/zoom_config/enabled_thumbnail')) || ( count($this->getGalleryImages()) < $_thumbnail_qty )|| ( count($this->getGalleryImages()) == $_thumbnail_qty )) { ?>
+		<div class="more-views rokanthemes-more-img">
+			<h2><?php echo $this->__('More Views') ?></h2>
+			<ul>
+			<?php foreach ($this->getGalleryImages() as $_image): ?>
+				<li>
+					<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1200,1200); ?>" class="cloud-zoom-gallery" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>" name="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_lightbox_w, $_lightbox_h); ?>"
+										rel="useZoom: 'ma-zoom1', smallImage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_zoom_w, $_zoom_h); ?>'">
+					<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($_thumbnail_w, $_thumbnail_h); ?>" width="<?php echo $_thumbnail_w ?>" height="<?php echo $_thumbnail_h ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a>
+				</li>
+			<?php endforeach; ?>
+			</ul>
+			<!-- thumbnail for lighbox-->
+				<ul class="rokanthemes-thumb-light" style="display:none;">
+					<?php foreach ($this->getGalleryImages() as $_image): ?>
+						<li>
+							<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_lightbox_w, $_lightbox_h); ?>" rel="lightbox[rotation]" title="<?php echo $_product->getName();?>"></a>
+						</li>
+					<?php endforeach; ?>                                                                
+				</ul>
+			<!--##########-->
+			<script type="text/javascript">
+				//<![CDATA[
+					$jq(document).ready(function(){
+						$jq('head').append('<style type="text/css"> .cloud-zoom-big { border:<?php echo $_border_w ?>px solid <?php echo $_border_color ?> }</style>');
+					});
+				//]]>
+			</script>
+		</div>
+	<?php } else { ?>
+		<?php if( Mage::getStoreConfig('zoom/zoom_config/scroll_style')=='horizontal' ) { ?>
+			<div class="more-views rokanthemes-thumbnail-container">
+				<!-- <h2><?php echo $this->__('More Views') ?></h2> -->
+					<ul class="owl">
+					<?php foreach ($this->getGalleryImages() as $_image): ?>
+						<li class="thumbnail-item">
+							<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1200,1200); ?>" class="cloud-zoom-gallery" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>" name="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_lightbox_w, $_lightbox_h); ?>"
+												rel="useZoom: 'ma-zoom1', smallImage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_zoom_w, $_zoom_h); ?>'">
+							<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($_thumbnail_w, $_thumbnail_h); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a>
+						</li>
+					<?php endforeach; ?>
+					</ul>
+				<?php //thumbnail for lighbox ?>
+					<ul class="rokanthemes-thumb-light" style="display:none;">
+						<?php foreach ($this->getGalleryImages() as $_image): ?>
+							<li>
+								<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_lightbox_w, $_lightbox_h); ?>" rel="lightbox[rotation]" title="<?php echo $_product->getName();?>"></a>
+							</li>
+						<?php endforeach; ?>                                                                
+					</ul>
+				<?php //--##########-- ?>
+				<script type="text/javascript">
+					//<![CDATA[
+						$jq(document).ready(function(){
+							$jq(".rokanthemes-thumbnail-container .owl").owlCarousel({
+								autoPlay : <?php if($auto) echo 'true'; else echo 'false'; ?>,
+								items : <?php if($itemsDefault) echo $itemsDefault; else echo '4'; ?>,
+								itemsDesktop : [1199,<?php if($itemsDesktop) echo $itemsDesktop; else echo '4'; ?>],
+								itemsDesktopSmall : [980,<?php if($itemsDesktopSmall) echo $itemsDesktopSmall; else echo '3'; ?>],
+								itemsTablet: [768,<?php if($itemsTablet) echo $itemsTablet; else echo '2'; ?>],
+								itemsMobile : [479,<?php if($itemsMobile) echo $itemsMobile; else echo '1'; ?>],
+								slideSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+								paginationSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+								rewindSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+								navigation : <?php if($next_back) echo 'true'; else echo 'false'; ?>,
+								stopOnHover : true,
+								pagination : <?php if($nav_ctrl) echo 'true'; else echo 'false'; ?>,
+								scrollPerPage:true,
+							});
+						});			
+					//]]>
+				</script>
+			</div>
+		<?php } else { ?>
+			
+			<div class="more-views rokanthemes-thumbnail-container">
+				<!-- <h2><?php echo $this->__('More Views') ?></h2> -->
+					<ul class="owl">
+					<?php foreach ($this->getGalleryImages() as $_image): ?>
+						<li class="thumbnail-item">
+							<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1200,1200); ?>" class="cloud-zoom-gallery" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>" name="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_lightbox_w, $_lightbox_h); ?>"
+												rel="useZoom: 'ma-zoom1', smallImage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_zoom_w, $_zoom_h); ?>'" style='display:block;width:100px;height:60px;float: none;'>
+							<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize($_thumbnail_w, $_thumbnail_h); ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" /></a>
+						</li>
+					<?php endforeach; ?>
+					</ul>
+				<?php //thumbnail for lighbox ?>
+					<ul class="rokanthemes-thumb-light" style="display:none;">
+						<?php foreach ($this->getGalleryImages() as $_image): ?>
+							<li>
+								<a href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($_lightbox_w, $_lightbox_h); ?>" rel="lightbox[rotation]" title="<?php echo $_product->getName();?>"></a>
+							</li>
+						<?php endforeach; ?>                                                                
+					</ul>
+				<?php //--##########-- ?>
+				<script type="text/javascript">
+					//<![CDATA[
+						$jq(document).ready(function(){
+							$jq(".rokanthemes-thumbnail-container .owl").owlCarousel({
+								autoPlay : <?php if($auto) echo 'true'; else echo 'false'; ?>,
+								items : <?php if($itemsDefault) echo $itemsDefault; else echo '4'; ?>,
+								itemsDesktop : [1199,<?php if($itemsDesktop) echo $itemsDesktop; else echo '4'; ?>],
+								itemsDesktopSmall : [980,<?php if($itemsDesktopSmall) echo $itemsDesktopSmall; else echo '3'; ?>],
+								itemsTablet: [768,<?php if($itemsTablet) echo $itemsTablet; else echo '2'; ?>],
+								itemsMobile : [479,<?php if($itemsMobile) echo $itemsMobile; else echo '1'; ?>],
+								slideSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+								paginationSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+								rewindSpeed : <?php if($speed) echo $speed; else echo '500'; ?>,
+								navigation : <?php if($next_back) echo 'true'; else echo 'false'; ?>,
+								stopOnHover : true,
+								pagination : <?php if($nav_ctrl) echo 'true'; else echo 'false'; ?>,
+								scrollPerPage:true,
+							});
+						});						
+					//]]>
+				</script>
+			</div>
+		<?php } ?>
+	<?php } ?>
+
+<?php endif; ?>
+
+<?php if( Mage::getStoreConfig('zoom/zoom_config/scroll_style')!='horizontal' && count($this->getGalleryImages()) > 0) { ?>
+<script>
+	$jq(document).ready(function(){
+		$jq('.more-views img').click(function(){
+			$jq('.thumbnail-item').removeClass( "image_select" );
+			$jq(this).parent().parent().addClass( "image_select" );
+		});
+	});
+</script>
+
+
+<style>
+.rokanthemes-thumbnail-container .bx-wrapper .bx-controls-direction a.bx-prev{
+	background:url('<?php echo $this->getSkinUrl('rokanthemes/images/up.png')?>')no-repeat scroll 0 0 rgba(0, 0, 0, 0);;
+	height: 22px;
+    margin-left: 8px;
+    margin-top: -300px;
+    text-indent: -9999px;
+    width: 24px;
+}
+.rokanthemes-thumbnail-container .bx-wrapper .bx-controls-direction a.bx-next{
+	background:url('<?php echo $this->getSkinUrl('rokanthemes/images/down.png');?>') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height: 23px;
+	margin-right: 9px;
+	margin-top: 0;
+	text-indent: -9999px;
+	width: 24px;
+}
+.product-image{
+float:right;
+}
+.rokanthemes-thumbnail-container{
+float:left;
+}
+.product-view .product-img-box {
+    float: left;
+    width: 333px;
+}
+.product-view .product-shop{
+    float: right;
+    width: 300px;
+}
+.product-view .product-img-box .more-views li{
+	border: 1px solid #c4c4c4;
+    margin: 0 6px 8px 9px !important;
+}
+.bx-wrapper{
+	max-width: 60px !important;
+}
+.product-view .product-img-box .more-views li.image_select{
+	border:1px solid #000;
+}
+</style>
+<?php } ?>

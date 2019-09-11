@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * Package :- Robots
+ * Edition :- community
+ * Developed By :- CueBlocks.com
+ * 
+ */
+-->
+<config>
+    <modules>
+        <CueBlocks_Robots>
+            <version>1.8.0</version>
+        </CueBlocks_Robots>
+    </modules> 
+    <global>
+        <blocks>
+            <robots>
+                <class>CueBlocks_Robots_Block</class>
+            </robots>
+        </blocks>
+        <helpers>
+            <robots>
+                <class>CueBlocks_Robots_Helper</class>
+            </robots>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <robots>
+                <use>admin</use>
+                <args>
+                    <module>CueBlocks_Robots</module>
+                    <frontName>robots</frontName>
+                </args>
+            </robots>
+        </routers>
+    </admin>  
+     <default>
+        <robotstxt>
+            <general>
+                <path_map>/</path_map>
+            </general>
+        </robotstxt>
+     </default>        
+</config>

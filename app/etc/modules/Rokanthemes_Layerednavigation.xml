@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rokanthemes_Layerednavigation>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rokanthemes_Layerednavigation>
+    </modules>
+</config> 

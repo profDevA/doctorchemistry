@@ -1,0 +1,35 @@
+
+<div class="product-listing">
+<?php
+$_productCollection = Mage::getModel('catalog/product')->getCollection();
+//$_productCollection->addAttributeToFilter('feature','1'); //custom attribute is yes/no(1,0)
+$_productCollection->addAttributeToFilter('status', 1); //enabled
+$_productCollection->addAttributeToFilter('visibility', 4); //catalog, search
+?>
+<?php
+foreach ($_productCollection as $_product)
+{
+
+
+$model = Mage::getModel('catalog/product');
+$product_id = $_product->getId();
+$_product = $model->load($product_id);
+//echo $_product->getPrice()."";
+//echo $_product->getName()."";
+if($_product->getSummaryHtml()){
+$_image=Mage::getModel('catalog/product')->load($product_id);
+//echo Mage::helper('catalog/image')->init($_image, 'image')."";
+?>
+<div class="feature-product">
+<div class="feature-product-image"><a href="<?php echo $_product->getProductUrl() ?>"><img src="<?php echo Mage::helper('catalog/image')->init($_image, 'image')->resize(200,200); ?>"></a></div>
+<div class="feature-product-price"><?php echo $_product->getPrice(); ?></div>
+<div class="feature-product-name"><?php echo $_product->getName(); ?></div>
+<?php $reviewHelper = $this->getLayout()->createBlock('review/helper');
+echo $reviewHelper->getSummaryHtml($_product, 'short', false);
+?>
+</div>
+<?php
+}
+}
+?>
+</div>

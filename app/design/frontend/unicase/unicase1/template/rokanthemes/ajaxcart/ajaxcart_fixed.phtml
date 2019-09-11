@@ -1,0 +1,28 @@
+<div id="cart_content" class="cart_content"><?php
+$count = Mage::helper('checkout/cart')->getSummaryCount();
+
+if ($count == 1) {
+    echo $this->__('My Cart (%s item)', $count);
+} elseif ($count > 0) {
+    echo $this->__('My Cart (%s items)', $count);
+} else {
+    echo $this->__('My Cart');
+}
+?>
+</div>
+<div class="cart_side_ajax">
+    <?php echo $this->getChildHtml('cart_sidebar_ajax') ?>
+</div>
+<div class="ajaxcart_message">
+    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+</div>
+
+<div class="ajaxcart_checkout_content">
+    <?php echo $this->getChildHtml('cart_content_ajax');?>
+</div>
+
+<script type ="text/javascript">
+    $jq(document).ready(function(){
+        deleteCartInCheckoutPage();
+    });
+</script>

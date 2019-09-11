@@ -1,0 +1,43 @@
+<?php 
+    $loading_bg = Mage::getStoreConfig('ajaxcart/ajaxcart_config/loading_bg') ;
+    //$enable_module = Mage::getStoreConfig('ajaxcart/ajaxcart_config/enabled') ;
+    $loading_image = Mage::getBaseUrl('media').'theme/' . Mage::getStoreConfig('ajaxcart/ajaxcart_config/loading_image') ;
+    $bg_opacity = Mage::getStoreConfig('ajaxcart/ajaxcart_config/bg_opacity') ;
+    $is_login = Mage::getSingleton('customer/session')->isLoggedIn();
+    $effect_to_cart = Mage::getStoreConfig('ajaxcart/ajaxcart_config/effect_to_cart') ;
+    $enable_module = Mage::getStoreConfig('ajaxcart/ajaxcart_config/enabled') ;
+	$usingSsl = Mage::getStoreConfig('ajaxcart/ajaxcart_config/using_ssl') ;
+    $titleBoxShopping = $this->__('Go to shopping cart');
+    $titleBoxShoppingContinue = $this->__('Continue Shopping');
+    $titleBoxShoppingW = $this->__('Go to wishlist');
+    $titleBoxShoppingC = $this->__('Go to list Compare');
+    $confirmDelete = $this-> __('Are you sure you would like to remove this item ?');
+    $addToCartSuccesful = $this->__('Item was successfully added to your cart');
+    $addToWishlistSuccesful = $this->__('Item was successfully added to your wishlist');
+    $addToCompareSuccesful = $this->__('Item was successfully added to your compare');
+    if(!$enable_module) return ;
+    if($loading_bg==NULL) $loading_bg ='black';
+    if($bg_opacity==NULL) $loading_bg =0.5
+        
+?>
+<div id ="ajaxconfig_info" style ="display:none">
+<a href ="<?php echo Mage::getBaseUrl();?>"></a>
+<div ><img src ="<?php echo $loading_image;?>" alt ="<?php echo $this->__('Loading Image'); ?>" /></div>
+<button name ="<?php echo $loading_bg;?>" value ="<?php echo $bg_opacity;?>" ></button>
+<input type="hidden" value ="<?php echo $is_login;?>"/>
+<input type="hidden" id="enable_module" value ="<?php echo $enable_module;?>"/>
+<input class="effect_to_cart" type="hidden" value ="<?php echo $effect_to_cart;?>"/>
+<input class="title_shopping_cart" type="hidden" value ="<?php echo $titleBoxShopping;?>"/>
+<input class="title_shopping_continue" type="hidden" value ="<?php echo $titleBoxShoppingContinue;?>"/>
+<input class="title_shopping_wishlist" type="hidden" value ="<?php echo $titleBoxShoppingW;?>"/>
+<input class="title_shopping_compare" type="hidden" value ="<?php echo $titleBoxShoppingC;?>"/>
+<input class="confirm_delete_product" type="hidden" value ="<?php echo $confirmDelete;?>"/>
+<input class="title_add_to_cart" type="hidden" value ="<?php echo $addToCartSuccesful;?>"/>
+<input class="title_add_to_wishlist" type="hidden" value ="<?php echo $addToWishlistSuccesful;?>"/>
+<input class="title_add_to_compare" type="hidden" value ="<?php echo $addToCompareSuccesful;?>"/>
+<input class="using_ssl" type="hidden" value ="<?php echo $usingSsl;?>"/>
+
+
+</div>
+<div id="ajaxcart-checkout-content" style="display:none;"></div>
+<div id ="productHaveOption"  style="display:block;" ></div>

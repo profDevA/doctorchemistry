@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>rokanthemes/css/blog_slide.css</name>
+            </action>
+			<action method="addCss" ifconfig="blog/blog/enabled"><stylesheet>rokanthemes/css/blog.css</stylesheet></action>
+        </reference>
+    </default>
+	<blog_index_list>
+        <reference name="footer" >
+            <block type="blog/blog" name="copyright.blog.footer" template="rokanthemes/blog/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="blog/blog" name="blog" template="rokanthemes/blog/blog.phtml">
+                <block type="blog/product_toolbar" name="rokanthemes/blog_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                </block>
+            </block>
+        </reference>
+    </blog_index_list>
+    <blog_post_view>
+        <reference name="footer" >
+            <block type="blog/blog" name="copyright.blog.footer" template="rokanthemes/blog/copyright.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="blog/post" name="post" template="rokanthemes/blog/post.phtml">
+                <block type="blog/product_toolbar" name="rokanthemes/blog_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                </block>
+            </block>
+        </reference>
+    </blog_post_view>
+</layout>

@@ -1,0 +1,75 @@
+<?php $_categories = Mage::helper('catalog/category')->getStoreCategories() ?>
+<?php if(count($_categories)): 
+    ?>
+<div class="rokanthemes-menu-container visible-lg visible-md">
+	<?php if(Mage::getStoreConfig('verticalmenu/general/title')){?>
+			<div class="rokanthemes-menu-title"><h2><?php echo Mage::getStoreConfig('verticalmenu/general/title'); ?></h2></div>
+		<?php }?>
+    <div id="rokanthemes-verticalmenu" class="rokanthemes-verticalmenu">
+        
+        <?php
+        $showhome = Mage::getStoreConfig('verticalmenu/general/showhome');
+        $active = '';
+        if(Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms') :
+            $active = ' act';
+        endif; 
+        if($showhome){
+            $id     = "_home";
+            $html[] = '<div id="rokanthemes-pt-menu' . $id . '" class="rokanthemes-pt-menu' . $active . '" >';
+            $html[] = '<div class="rokanthemes-parent-menu">';
+            $html[] = '<a href="'.Mage::helper('core/url')->getHomeUrl().'">';
+            $html[] = '<span>Home</span>';
+            $html[] = '</a>';
+            $html[] = '</div>';
+            $html[] = '<div class="rokanthemes-wrap-popup"><div id="popup' . $id . '" class="popup" >';
+            $html[] = '</div>';
+            $html[] = '</div>';
+            $html[] = '</div>';
+            $html = implode("\n", $html);
+            echo $html;
+        }
+	$n = 0;
+	foreach ($_categories as $_category):
+	$n++;
+	endforeach;
+	//echo $n;
+	
+	$i=1;
+	$total = count($_categories);
+	
+        foreach ($_categories as $_category):
+	    $class='';
+	    if($i==1) $class="first";
+	    else if($i==$n) $class="last";
+	    echo $this->drawCustomMenuItem($_category,0, false, $class);
+	    $i++;
+        endforeach ?>
+        
+        <div class="clearBoth"></div>
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var VMEGAMENU_POPUP_EFFECT = <?php echo (int)Mage::getStoreConfig('verticalmenu/popup/effect')?>;
+//]]>
+
+$jq(document).ready(function(){
+    $jq("#rokanthemes-pt-menu_link ul li").each(function(){
+        var url = document.URL;
+        $jq("#rokanthemes-pt-menu_link ul li a").removeClass("act");
+        $jq('#rokanthemes-pt-menu_link ul li a[href="'+url+'"]').addClass('act');
+    }); 
+        
+    $jq('.rokanthemes-pt-menu').hover(function(){
+        if(VMEGAMENU_POPUP_EFFECT == 0) $jq(this).find('.popup').stop(true,true).slideDown('slow');
+        if(VMEGAMENU_POPUP_EFFECT == 1) $jq(this).find('.popup').stop(true,true).fadeIn('slow');
+        if(VMEGAMENU_POPUP_EFFECT == 2) $jq(this).find('.popup').stop(true,true).show('slow');
+    },function(){
+        if(VMEGAMENU_POPUP_EFFECT == 0) $jq(this).find('.popup').stop(true,true).slideUp('fast');
+        if(VMEGAMENU_POPUP_EFFECT == 1) $jq(this).find('.popup').stop(true,true).fadeOut('fast');
+        if(VMEGAMENU_POPUP_EFFECT == 2) $jq(this).find('.popup').stop(true,true).hide('fast');
+    })
+});
+</script>
+
+<?php endif ?>

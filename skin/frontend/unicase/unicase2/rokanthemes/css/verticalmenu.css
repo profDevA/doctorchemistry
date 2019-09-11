@@ -1,0 +1,179 @@
+/*=================leftmegamenu============================*/ 
+
+.rokanthemes-verticalmenu  .last .rokanthemes-parent-menu{background: none}
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu {
+    padding: 0px;
+    /*width: 195px;*/
+    position: relative;
+}
+.rokanthemes-verticalmenu div.popup {
+    left: 100%;
+    top: 0;
+    width:900px;
+    position: absolute;
+    display: none;
+}
+
+/*.rokanthemes-verticalmenu div.rokanthemes-pt-menu .rokanthemes-parent-menu{*/
+/*    width:100%;*/
+/*}*/
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu .noSubMenu a, .rokanthemes-verticalmenu div.rokanthemes-pt-menu .noSubMenu span.block-title{background-image: none}
+
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu .rokanthemes-parent-menu span.block-title:hover, .rokanthemes-verticalmenu div.rokanthemes-pt-menu .rokanthemes-parent-menu a:hover{
+color: #f36b6c
+}
+.rokanthemes-verticalmenu #rokanthemes-pt-menu_link ul li a.act,
+ .rokanthemes-verticalmenu #rokanthemes-pt-menu_link ul li a:hover,
+  .rokanthemes-verticalmenu div.rokanthemes-pt-menu.act .rokanthemes-parent-menu a,
+  .rokanthemes-verticalmenu div.rokanthemes-pt-menu.active .rokanthemes-parent-menu a
+{
+color: #f36b6c
+}
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu .rokanthemes-parent-menu.noSubMenu a:hover,
+ .rokanthemes-verticalmenu div.rokanthemes-pt-menu .rokanthemes-parent-menu.noSubMenu span.block-title:hover,
+ .rokanthemes-verticalmenu div.rokanthemes-pt-menu.act .rokanthemes-parent-menu.noSubMenu a
+ {
+background-image: none    
+}
+.custom-menu-right { float: left; margin: 0;}
+.rokanthemes-verticalmenu .column.blockright { width: 150px !important; }
+.menu-right-title {
+    background: url("../images/bg-bottom1-title.png") repeat-x left bottom;
+    float: left;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+.menu-right-title h2 {
+    background: url("../images/bg-f-title6.png") no-repeat scroll left bottom;
+    color: #777777;
+    font-family: 'titilliumwebsemibold';
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+.menu-right-images { float: left;}
+.m-images { float: left;}
+.m-images.col1 { margin:20px 0 0;}
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu.last .rokanthemes-parent-menu.noSubMenu a{
+    border: 0;
+}
+/*.rokanthemes-verticalmenu div.rokanthemes-pt-menu:hover,.rokanthemes-verticalmenu div.rokanthemes-pt-menu .active{*/
+/*    width: 400px;*/
+/*}*/
+.rokanthemes-menu-container { position: relative; z-index:100; float: left; width: 100%;margin: 0 0 20px}
+.cms-index-index .rokanthemes-menu-container{margin: 0 0 50px}
+.rokanthemes-verticalmenu div.popup a {
+    text-decoration: none;
+    display:block;
+}
+.rokanthemes-verticalmenu .itemMenu h4.level1,
+.rokanthemes-verticalmenu .itemMenu a.level1{
+    color: #777777;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: uppercase;
+    width: 100%;
+    background: url(../images/bg_submenu.png) no-repeat left bottom;
+    padding-bottom: 5px
+}
+.rokanthemes-verticalmenu .itemMenu h4.level1,
+.rokanthemes-verticalmenu .itemSubMenu h4.level2 span{
+    color: #897725;
+}
+.rokanthemes-verticalmenu .itemMenu h4.level1:hover, .rokanthemes-verticalmenu .itemMenu a.level1:hover{
+color:#f36b6c 
+}
+.rokanthemes-verticalmenu .itemSubMenu h4.level2,
+.rokanthemes-verticalmenu .itemSubMenu a.level2,
+.rokanthemes-verticalmenu .itemSubMenu h4.level3,
+.rokanthemes-verticalmenu .itemSubMenu a.level3,
+.rokanthemes-verticalmenu .itemMenu a.level1.nochild{
+    color:#888888;
+    text-transform: none;
+    font-weight: normal;
+    line-height: 25px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.rokanthemes-verticalmenu .itemSubMenu h4.level2:hover,
+.rokanthemes-verticalmenu .itemSubMenu a.level2:hover,
+.rokanthemes-verticalmenu .itemSubMenu h4.level3:hover,
+.rokanthemes-verticalmenu .itemSubMenu a.level3:hover,
+.rokanthemes-verticalmenu .itemMenu a.level1.nochild:hover{
+color:#f36b6c ;
+}
+.rokanthemes-verticalmenu div.popup a.act{color: #f36b6c;}
+
+.rokanthemes-verticalmenu div.column {
+    float:left;
+    width:170px;
+    margin-right: 15px;
+    padding-right:0;
+}
+.rokanthemes-verticalmenu div.column.last {
+    border-right: 0 none;
+    margin-right: 0;
+    padding-right: 0;
+}
+.rokanthemes-verticalmenu div.itemSubMenu {
+    margin-top:10px;
+    margin-bottom:20px
+}
+.rokanthemes-verticalmenu .clearBoth {
+    clear:both;
+}
+.rokanthemes-verticalmenu .block2{
+    margin-top: 10px;
+/*    display: inline-block;*/
+}
+.rokanthemes-verticalmenu #popup_home{
+    display: none !important;
+}
+.rokanthemes-verticalmenu div.popup .block1{
+    overflow: hidden;
+}
+.rokanthemes-verticalmenu div.popup .block1 .column{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+/*show right block*/
+.rokanthemes-verticalmenu div.popup .floatleft{
+    float: left;
+}
+.rokanthemes-verticalmenu div.popup .blockright img{
+    max-width: 100%;
+} 
+.rokanthemes-verticalmenu .rokanthemes-parent-menu .block-title{
+    color: #1E7EC8;
+}
+
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu .rokanthemes-parent-menu p{
+    margin: 0;
+    padding: 0;
+}
+.rokanthemes-verticalmenu #rokanthemes-pt-menu_link .rokanthemes-parent-menu ul li{
+    float: none;
+    list-style: none;
+}
+.rokanthemes-verticalmenu #rokanthemes-pt-menu_link .rokanthemes-parent-menu ul li a{
+    float: none;
+    padding: 5px 10px 6px;
+    display: block;
+}
+.rokanthemes-verticalmenu #rokanthemes-pt-menu_link{
+    padding: 0;
+    width: 195px;
+}
+.rokanthemes-verticalmenu .rokanthemes-wrap-popup{
+    position: absolute;
+    left: 177px;
+    top: 0;
+    width:1000px;
+}
+.rokanthemes-verticalmenu .rokanthemes-wrap-popup:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.rokanthemes-verticalmenu div.rokanthemes-pt-menu{
+    padding: 0 !important;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+    <name>notification_module</name>
+    <version>0.1.2</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension allows you to create and manage a notification bar for displaying important announcements and notices to your customers and site visitors.</summary>
+    <description>Overview&#xD;
+This extension allows you to create and manage a notification bar for displaying important announcements and notices to your customers and site visitors.&#xD;
+&#xD;
+Features&#xD;
+&#x2022;	Easily configurable from System &gt; Configuration &gt; Biztech Extensions&gt; Notification&#xD;
+&#x2022;	Style notification bar to match Users theme&#xD;
+&#x2022;	Notification bar content may contain plain text, HTML and template tags&#xD;
+&#x2022;	Optionally allow visitors to close and dismiss the notification bar&#xD;
+&#x2022;	Optionally set a notification start date, to set your message to automatically display on a specified date, and also set a notification end date, to hide your message automatically after this specific date &#xD;
+&#x2022;	You can also fix the notification bar at the top of the browser, at the bottom and also can make it appear as pop up! Interesting part is that in pop up option you can set your own title also for the notification, so that it scrolls with the page, and remains always visible to the visitor (although visitor can close it anytime)!</description>
+    <notes>- Enhancement : New design options</notes>
+    <authors><author><name>Biztech</name><user>biztechcon</user><email>sales@biztechconsultancy.com</email></author></authors>
+    <date>2015-01-05</date>
+    <time>12:45:57</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Biztech_Notification.xml" hash="0067858c3ce32fc8773c4d640929d4e1"/><file name="Biztech_All.xml" hash="f4c3b9c029e56da8f09d7d71336c00f7"/></dir></target><target name="magelocal"><dir name="Biztech"><dir name="Notification"><dir name="Block"><dir name="Adminhtml"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Notificationdate.php" hash="7d03a8c9fce098b6bfb556358b50805d"/></dir></dir></dir></dir><file name="Notification.php" hash="9f17c658e5974c2e5af28dde3003f47a"/><file name="Notificationdesign.php" hash="a1d857df7c556c43cf13b9b5115b36c8"/></dir><dir name="Helper"><file name="Data.php" hash="9016e11b629c4f6ee5b075bdc0774101"/></dir><dir name="Model"><dir name="System"><file name="Notificationposition.php" hash="8be3ae1acf3d5943ba395d92cb4a47ab"/></dir></dir><dir name="etc"><file name="config.xml" hash="f4f350c9c76290ccb335cf079f69f3f5"/><file name="system.xml" hash="3d98bbcdb268390de67103016843f436"/></dir></dir><dir name="All"><dir name="Helper"><file name="Data.php" hash="e856726fd089e7f73ca7de450b696419"/></dir><dir name="Model"><file name="All.php" hash="a9aeeb9c6d7be9cf20414f405efc878d"/><dir name="Mysql4"><dir name="All"><file name="Collection.php" hash="a1909236183d126f38e628b85bb57e81"/></dir><file name="All.php" hash="f02542393eb26eadfb9b92d901d2ac12"/></dir><dir name="Source"><dir name="Updates"><file name="Type.php" hash="fa695bf4764c2d93c7436ed54bde89ba"/></dir></dir><file name="Status.php" hash="30a6f0da7d9d45e1082da532d5f8dabc"/><file name="Update.php" hash="83ceddbab4d621545b9c7c4bccdec7c0"/></dir><dir name="etc"><file name="config.xml" hash="27e403cedb861da03753d28527d9c664"/><file name="system.xml" hash="17262087dc933d934e09ac04cafb4c51"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="notification.xml" hash="0e206c5421f931f4041205fc8a5ffafc"/></dir><dir name="template"><dir name="notification"><file name="notification.phtml" hash="cda1f3160bb139ec023471c7ce9cbf9d"/><file name="notificationdesign.phtml" hash="9076e4a5c455ab061c9c702d1fb97e1f"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="notification"><dir name="images"><file name="bubble-left.png" hash="8e612ee12c2b5a417c6d3e0b03dcb451"/><file name="bubble-right.png" hash="a0627a11ee46e7019bcaafe402871333"/><file name="close-note.png" hash="d4511392715a554859c06430eb445b28"/><file name="closebox.png" hash="f2aace763cfcc4d6f3427a8a0842e55c"/><file name="overlay.png" hash="28d610442e36fb2a71773eeb013c3660"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

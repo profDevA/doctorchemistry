@@ -1,0 +1,158 @@
+<?php
+$_coreHelper = $this->helper('core');
+$checkoutHelper = Mage::helper('onepagecheckout/checkout');
+?>
+
+<table class="onepagecheckout-summary">
+    <thead>
+        <tr>
+			 <th class="name"><?php echo $this->__(' '); ?></th>
+            <th class="name"><?php echo $this->__('Product'); ?></th>
+            <th class="qty"><?php echo $this->__('Qty'); ?></th>
+            <th class="total"><?php echo $this->__('Subtotal'); ?></th>
+        </tr>
+    </thead>
+    <?php foreach($this->getItems() as $item): ?>
+    <tr>
+		
+		 <td class="onepage_image"> 
+        
+        <?php $_product = Mage::getModel('catalog/product')->load($item->getProductId()); ?>
+
+<img src="<?php echo Mage::helper('catalog/image')->init($_product, 'image') ->constrainOnly(TRUE) ->keepAspectRatio(TRUE) ->keepFrame(FALSE) ->resize(100,100);?>" alt="<?php echo $this->htmlEscape($_product['name']); ?>" border="0" width="100"  height="100"/>
+       
+	<!--<img src="<?php //echo $item->getProduct()->getSmallImageUrl(); ?>" width="88px"  height="77px">-->
+
+            <?php if($checkoutHelper->settings['show_custom_options']): ?>
+                <?php $options = $item->getProduct()->getTypeInstance(true)->getOrderOptions($item->getProduct()); ?>
+                <?php if(isset($options['options']) && count($options['options']) > 0): ?>
+                <ul class="onepagecheckout-custom-options">
+                <?php foreach($options['options'] as $option): ?>
+                    <li><b><?php echo $option['label'] . ':</b> ' . $option['value']; ?></li>
+                <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
+
+                <?php if($item->getProduct()->isConfigurable()): ?>
+
+                <?php
+                $configurable_options = $item->getProduct()->getTypeInstance(true)->getSelectedAttributesInfo($item->getProduct());
+                ?>
+
+                <?php if(is_array($configurable_options) && count($configurable_options) > 0): ?>
+                <ul class="onepagecheckout-custom-options">
+                <?php foreach($configurable_options as $option): ?>
+                    <li><b><?php echo $option['label']; ?>:</b> <?php echo $option['value']; ?></li>
+                <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
+
+                <?php endif; ?>
+
+            <?php endif; ?>
+        </td>
+		
+		
+		
+        <td class="name">
+            <?php echo $item->getName(); ?>
+            <?php if($checkoutHelper->settings['show_custom_options']): ?>
+                <?php $options = $item->getProduct()->getTypeInstance(true)->getOrderOptions($item->getProduct()); ?>
+                <?php if(isset($options['options']) && count($options['options']) > 0): ?>
+                <ul class="onepagecheckout-custom-options">
+                <?php foreach($options['options'] as $option): ?>
+                    <li><b><?php echo $option['label'] . ':</b> ' . $option['value']; ?></li>
+                <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
+
+                <?php if($item->getProduct()->isConfigurable()): ?>
+
+                <?php
+                $configurable_options = $item->getProduct()->getTypeInstance(true)->getSelectedAttributesInfo($item->getProduct());
+                ?>
+
+                <?php if(is_array($configurable_options) && count($configurable_options) > 0): ?>
+                <ul class="onepagecheckout-custom-options">
+                <?php foreach($configurable_options as $option): ?>
+                    <li><b><?php echo $option['label']; ?>:</b> <?php echo $option['value']; ?></li>
+                <?php endforeach; ?>
+                </ul>
+                <?php endif; ?>
+
+                <?php endif; ?>
+
+            <?php endif; ?>
+        </td>
+        <td class="qty"><?php echo $item->getQty(); ?></td>
+        <td class="total">
+            <?php if($checkoutHelper->settings['display_tax_included']): ?>
+            <?php echo $this->helper('checkout')->formatPrice($this->helper('checkout')->getSubtotalInclTax($item)); ?>
+            <?php else: ?>
+            <?php echo $this->helper('checkout')->formatPrice($item->getRowTotal()); ?>
+            <?php endif; ?>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+
+<table class="onepagecheckout-totals">
+    <?php foreach($this->getTotals() as $total): ?>
+    <?php if(!$total->getTitle()){continue;}?>
+        <?php
+        $fullInfo = $total->getFullInfo();
+
+        if(!empty($fullInfo) && $checkoutHelper->settings['display_full_tax']):
+            foreach ($fullInfo as $info):
+                $rates = current($info['rates']);
+                $amount = $info['amount'];
+        ?>
+            <tr>
+                <td class="title"><?php echo $rates['title'] ?> (<?php echo $rates['percent'] ?>%)</td><td class="value"><?php echo $this->helper('checkout')->formatPrice($amount); ?></td>
+            </tr>
+        <?php endforeach;
+        endif;?>
+    <tr<?php if($total->getCode() == 'grand_total'): ?> class="grand-total"<?php endif; ?>>
+        <td class="title">
+            <?php
+
+            $code = $total->getCode();
+            $value = $total->getValue();
+
+            if($code == 'subtotal')    {
+                $total_name = $this->__('Subtotal');
+            }
+            elseif($code == 'shipping')    {
+                $total_name = $this->__('Shipping');
+                if($checkoutHelper->settings['display_tax_included'])   {
+                    $value += $this->getQuote()->getShippingAddress()->getShippingTaxAmount();
+                }
+                            }
+            elseif($code == 'grand_total')    {
+                $total_name = $this->__('Grand total');
+            }
+            else    {
+                $total_name = $total->getTitle();
+            }
+
+            echo $total_name;
+
+            ?>
+        </td>
+        <td class="value">
+            <?php echo $this->helper('checkout')->formatPrice($value); ?>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+var total = <?php echo $this->getGrandTotal();?>;
+    if(payment.reloadcallback){
+        var url = '<?php echo $this->getUrl('onepagecheckout/ajax/updated_payment', array('_secure'=>true)); ?>';
+        paymentrefresh(url);
+        payment.countreload = 0;
+        payment.reloadcallback = false;
+    }
+//]]>
+</script>

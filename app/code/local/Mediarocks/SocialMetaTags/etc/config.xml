@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Media Rocks GbR
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled with 
+ * this package in the file MEDIAROCKS-LICENSE-COMMUNITY.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://solutions.mediarocks.de/MEDIAROCKS-LICENSE-COMMUNITY.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package is designed for Magento COMMUNITY edition. 
+ * Media Rocks does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * Media Rocks does not provide extension support in case of
+ * incorrect edition usage.
+ * =================================================================
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension
+ * to newer versions in the future. If you wish to customize the extension
+ * for your needs please send an email to support@mediarocks.de
+ *
+ */
+-->
+<config>
+
+    <modules>
+        <Mediarocks_SocialMetaTags>
+            <version>0.1.11</version>
+        </Mediarocks_SocialMetaTags>
+    </modules>
+	
+    <global>
+    	
+        <blocks>
+    		<mediarocks_socialmetatags>
+    			<class>Mediarocks_SocialMetaTags_Block</class>
+    		</mediarocks_socialmetatags>
+            <adminhtml>
+                <rewrite>
+                    <cms_page_edit_form>Mediarocks_SocialMetaTags_Block_Adminhtml_Cms_Page_Edit_Form</cms_page_edit_form>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+		
+        <models>
+            <mediarocks_socialmetatags>
+                <class>Mediarocks_SocialMetaTags_Model</class>
+            </mediarocks_socialmetatags>
+        </models>
+		
+        <helpers>
+            <mediarocks_socialmetatags>
+                <class>Mediarocks_SocialMetaTags_Helper</class>
+            </mediarocks_socialmetatags>
+        </helpers>
+        
+        <resources>
+            <mediarocks_socialmetatags_setup>
+                <setup>
+                    <module>Mediarocks_SocialMetaTags</module>
+					<class>Mediarocks_SocialMetaTags_Model_Resource_Mysql4_Setup</class>
+                </setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+            </mediarocks_socialmetatags_setup>
+            <mediarocks_socialmetatags_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </mediarocks_socialmetatags_write>
+            <mediarocks_socialmetatags_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </mediarocks_socialmetatags_read>
+        </resources>
+        
+    </global>
+	
+	
+    <frontend>
+        
+        <translate>
+            <modules>
+                <Mediarocks_SocialMetaTags>
+                    <files>
+                        <default>Mediarocks_SocialMetaTags.csv</default>
+                    </files>
+                </Mediarocks_SocialMetaTags>
+            </modules>
+        </translate>
+    	
+        <layout>
+            <updates>
+                <mediarocks_socialmetatags>
+                    <file>mediarocks_socialmetatags.xml</file>
+                </mediarocks_socialmetatags>
+            </updates>
+        </layout>
+        
+    </frontend>
+    
+    
+    <adminhtml>  
+    	      
+        <events>
+            <cms_page_prepare_save>
+                <observers>
+                    <mediarocks_socialmetatags_save_page>
+                        <type>singleton</type>
+                        <class>mediarocks_socialmetatags/observer</class>
+                        <method>savePage</method>
+                    </mediarocks_socialmetatags_save_page>
+                </observers>
+            </cms_page_prepare_save>
+ 
+            <adminhtml_cms_page_edit_tab_main_prepare_form>
+                <observers>
+                    <mediarocks_socialmetatags_prepare_form>
+                        <type>singleton</type>
+                        <class>mediarocks_socialmetatags/observer</class>
+                        <method>prepareForm</method>
+                    </mediarocks_socialmetatags_prepare_form>
+                </observers>
+            </adminhtml_cms_page_edit_tab_main_prepare_form>
+        </events>
+        
+    </adminhtml>
+    
+    <default>
+        <socialmetatags>
+            <general>
+                <product_img_fallback_order>base_image,small_image,thumbnail</product_img_fallback_order>
+            </general>
+            <facebook>
+            	<enabled>0</enabled>
+            	<use_product_type>1</use_product_type>
+            </facebook>
+            <twitter>
+            	<enabled>0</enabled>
+            </twitter>
+        </socialmetatags>
+    </default>
+	
+</config>

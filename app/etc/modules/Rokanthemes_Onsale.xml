@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rokanthemes_Onsale>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rokanthemes_Onsale>
+    </modules>
+</config> 

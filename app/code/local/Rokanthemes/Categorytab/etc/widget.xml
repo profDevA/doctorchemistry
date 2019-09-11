@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<widgets>
+    <categorytab_advanced type="categorytab/advanced" translate="name description" module="categorytab">
+          <name>Category Slider Tabs</name>
+        <description>List of Broduct By Ids</description>
+        <is_email_compatible>1</is_email_compatible>
+        <parameters>
+            <title translate="label">
+                <required>1</required>
+                <visible>1</visible>
+               
+                <label>title</label>
+                <type>text</type>
+            </title>
+			<identify translate="label">
+                <required>1</required>
+                <visible>1</visible>
+               
+                <label>Identify</label>
+                <type>text</type>
+				<description>Text must be like title but no have white space or special sign</description>
+            </identify>
+            <cat_ids translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>Category ids</label>
+                <type>text</type>
+            </cat_ids>
+			<!--
+            <product_ids translate="label">
+                <required>1</required>
+                <visible>1</visible>
+               
+                <label>Product ids</label>
+                <type>text</type>
+            </product_ids>
+            -->
+            <template>
+                <required>1</required>
+                <visible>1</visible>
+                
+                <label>Template</label>
+                <type>select</type> 
+                <values>
+                    <default translate="label">
+                        <value>rokanthemes/categorytab/categorytab.phtml</value>
+                        <label>categorytab</label>
+                    </default>
+                </values>
+                
+            </template>
+			
+            <products_count translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <value>15</value>
+                <label>Number of Products to Display</label>
+                <type>text</type>
+            </products_count>
+			<product_on_row translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <value>4</value>
+                <label>Products on Row</label>
+                <type>text</type>
+            </product_on_row>
+				<width_thumbnail translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <value>135</value>
+                <label>Width Thumbnail</label>
+                <type>text</type>
+            </width_thumbnail>
+			<height_thumbnail translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <value>135</value>
+                <label>Height Thumbnail</label>
+                <type>text</type>
+            </height_thumbnail>
+        </parameters>
+    </categorytab_advanced>
+</widgets>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <catalog_product_view>
+		<reference name="head">
+            <action method="addCss" ifconfig="zoom/zoom_config/enabled"><stylesheet>rokanthemes/css/rk.zoom.css</stylesheet></action>
+			<action method="addJs" ifconfig="zoom/zoom_config/enabled_thumbnail"><script>rokanthemes/rk.slider.js</script></action> 
+			<action method="addJs" ifconfig="zoom/zoom_config/enabled"><script>rokanthemes/zoom/rk.zoom.js</script></action>
+			<action method="addJs" ifconfig="zoom/zoom_config/enabled"><script>rokanthemes/zoom/rk.lightbox.js</script></action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="zoom.lightbox">
+                <action method="setTemplate" ifconfig="zoom/zoom_config/enabled"><template>rokanthemes/zoom/script.phtml</template></action>
+            </block>
+        </reference>
+        <reference name="product.info.media">
+           <action method="setTemplate" ifconfig="zoom/zoom_config/enabled"><template>rokanthemes/zoom/media.phtml</template></action>
+        </reference>
+    </catalog_product_view>
+	<review_product_list translate="label">
+		<reference name="head">
+            <action method="addCss" ifconfig="zoom/zoom_config/enabled"><stylesheet>rokanthemes/css/rk.zoom.css</stylesheet></action>
+			<action method="addCss" ifconfig="zoom/zoom_config/enabled_thumbnail"><stylesheet>rokanthemes/css/rk.thumbslider.css</stylesheet></action>  
+			<action method="addJs" ifconfig="zoom/zoom_config/enabled_thumbnail"><script>rokanthemes/rk.slider.js</script></action> 
+			<action method="addJs" ifconfig="zoom/zoom_config/enabled"><script>rokanthemes/zoom/rk.zoom.js</script></action>
+			<action method="addJs" ifconfig="zoom/zoom_config/enabled"><script>rokanthemes/zoom/rk.lightbox.js</script></action>
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" name="zoom.lightbox">
+                <action method="setTemplate" ifconfig="zoom/zoom_config/enabled"><template>rokanthemes/zoom/script.phtml</template></action>
+            </block>
+        </reference>
+        <reference name="product.info.media">
+           <action method="setTemplate" ifconfig="zoom/zoom_config/enabled"><template>rokanthemes/zoom/media.phtml</template></action>
+        </reference>
+	</review_product_list>
+</layout> 

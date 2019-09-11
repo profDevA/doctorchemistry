@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Webshopapps_Matrixrate>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Shipping />
+           		</depends>
+		</Webshopapps_Matrixrate>
+	</modules>
+</config>

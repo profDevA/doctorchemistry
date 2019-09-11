@@ -1,0 +1,62 @@
+<script type="text/javascript">
+    $jq(document).ready(function(){
+         var enable_module = $jq('#enable_module').val();
+         if(enable_module==0) return false;
+    })
+
+</script>
+<?php $_cartQty = $this->getSummaryCount() ?>
+<div id ="mini_cart_block">
+    <div class="block-cart mini_cart_ajax">
+            <div class="block-cart">
+                <?php 
+                $_cartQty = $this->getSummaryCount();
+                if($_cartQty>1){
+                    $_cartQtyHtml = $this->__('<span class="highligh">'.$_cartQty.'</span> items');
+                }elseif($_cartQty == 1){
+                    $_cartQtyHtml = $this->__('<span class="highligh">01</span> item');
+                }else{
+                    $_cartQtyHtml = $this->__('<span class="highligh">0</span> item');
+                }
+                ?>
+                <div class="top-cart-title">
+				<a href="<?php echo $this->getUrl('checkout/cart')?>">
+					<?php  if($_cartQty>1){?>
+                    <span class="fa fa-shopping-cart"><?php echo '<span class="item-qty">'.$_cartQty.'</span>'; ?></span>
+					<?php } else{?>
+						<span class="fa fa-shopping-cart"><?php echo '<span class="item-qty">0</span>'; ?></span>
+					<?php }?>
+                    <span class="top-cart-right">
+                        <span class="title"><?php echo $this->__('Shopping Cart') ?></span>
+                        <span class="cart-quality">
+                        <?php echo $_cartQtyHtml; ?>
+                        </span>
+                        <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+                        
+                    </span>
+                </a>
+                </div>
+                <div class="top-cart-content">
+                    <?php $_items = $this->getRecentItems() ?>
+                    <?php if (count($_items)): ?>
+                        <ol id="cart-sidebar" class="mini-products-list">
+                            <?php foreach ($_items as $_item): ?>
+                                <?php echo $this->getItemHtml($_item) ?>
+                            <?php endforeach; ?>
+                        </ol>
+                        <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
+                    <?php else: ?>
+                        <p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+                    <?php endif ?>
+                    <!-- <div class="top-subtotal"><?php echo $this->__('Subtotal') ?>: <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?></div>  -->
+                    <?php if ($_cartQty && $this->isPossibleOnepageCheckout()): ?>
+                        <div class="actions">
+                            <?php echo $this->getChildHtml('extra_actions') ?>
+                            <button type="button" title="<?php echo $this->__('Checkout') ?>" class="button" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')"><span><span><?php echo $this->__('Checkout') ?></span></span></button>
+                        </div>
+                    <?php endif ?>
+                </div>
+            </div>
+
+    </div>
+</div>

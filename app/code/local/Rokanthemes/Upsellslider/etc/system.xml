@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<rokanthemes translate="label">
+			<label>Rokanthemes</label>
+			<sort_order>205</sort_order>
+		</rokanthemes>
+	</tabs>
+	<sections>
+		<upsellslider translate="label" module="upsellslider">
+			<label>Upsellslider Product</label>
+			<tab>rokanthemes</tab>
+			<sort_order>138</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>Upsellslider Product</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</enabled>
+						<title translate="label">
+                            <label>Title: </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+<!-- 						<slide translate="label comment">
+							<label>Show slide: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</slide> -->
+						<vertical translate="label comment">
+							<label>Mode Vetical slide: </label>
+							<!-- <depends><slide>1</slide></depends> -->
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</vertical>
+						<auto translate="label comment">
+							<label>Auto slide: </label>
+							<!-- <depends><slide>1</slide></depends> -->
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</auto>
+						<controls translate="label comment">
+							<label>Show Next/Back control: </label>
+							<!-- <depends><slide>1</slide></depends> -->
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</controls>
+						<pager translate="label comment">
+							<label>Show Pager control: </label>
+							<!-- <depends><slide>1</slide></depends> -->
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</pager>
+						<speed translate="label comment">
+							<label>Speed: </label>
+							<!-- <depends><slide>1</slide></depends> -->
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-greater-than-zero</validate>
+							<sort_order>30></sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</speed>
+						<pause translate="label comment">
+							<label>Pause:</label>
+							<!-- <depends><slide>1</slide></depends> -->
+							<frontend_type>text</frontend_type>
+							<validate>required-entry validate-greater-than-zero</validate>
+							<sort_order>35</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</pause>						
+                        <!-- <maxSlides translate="label comment">
+                            <label>Item Visible: </label>
+                            <depends><slide>1</slide></depends>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxSlides> -->
+						<!--<rows translate="label comment">
+                            <label>Rows of Item Slider: </label>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Use for Horizontal Slide</comment>
+                        </rows> -->
+                        <!-- <slideWidth translate="label comment">
+                            <label>Width of Item Slider: </label>
+                            <depends><slide>1</slide></depends>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideWidth> -->
+
+<!-- 						<playDelay translate="label comment">
+                            <label>Play Delay Product: </label>
+                            <depends><slide>0</slide></depends>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </playDelay> -->	
+                        <heading_product translate="label">
+                            <label>Setting for Product</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading_product>
+						<price translate="label comment">
+							<label>Show Price: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>65</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</price>
+						<cart translate="label comment">
+							<label>Show Add To Cart: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</cart>
+<!-- 						<wishlist translate="label comment">
+							<label>Show Add To Wishlist: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>75</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</wishlist>
+						<compare translate="label comment">
+							<label>Show Add To Compare: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</compare>	 -->				
+						<review translate="label comment">
+							<label>Show Review Rating: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>85</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</review>						
+<!-- 						<description translate="label comment">
+							<label>Show Short Description: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</description>
+						<maxlength translate="label">
+                            <label>Short Description Max Length: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>Empty for display all short description.</comment>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxlength> -->
+						<qty translate="label comment">
+                            <label>Qty of Product: </label>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </qty>
+                        <widthImage translate="label comment">
+                            <label>Width of Image: </label>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>105</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </widthImage>						
+                        <heightImage translate="label comment">
+                            <label>Height of Image: </label>
+                            <frontend_type>text</frontend_type>
+                            <validate>required-entry validate-greater-than-zero</validate>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heightImage>				                
+					</fields>
+				</general>						
+			</groups>
+		</upsellslider>
+	</sections>
+</config>
+
+

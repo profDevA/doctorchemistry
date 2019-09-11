@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <block type="related/page_html_head" name="rokanthemes_related_head" as="rokanthemes_related_head"/>
+        </reference>
+    </default>
+    <catalog_product_view translate="label">		
+		<!-- <reference name="content">
+			<block type="catalog/product_list_related" name="rokanthemes.related" as="related_slider" template="rokanthemes/related/related.phtml"/>
+		</reference>
+		<reference name="right">
+			<remove name="catalog.product.related" />
+        </reference> -->
+		<reference name="left">
+			<block type="catalog/product_list_related" name="rokanthemes.related" as="related_slider" template="rokanthemes/related/related.phtml"/>
+        </reference>
+    </catalog_product_view>
+</layout> 

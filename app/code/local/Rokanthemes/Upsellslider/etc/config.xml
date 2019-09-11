@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rokanthemes_Upsellslider>
+            <version>0.1.0</version>
+        </Rokanthemes_Upsellslider>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <upsellslider>
+                    <file>upsellslider.xml</file>
+                </upsellslider>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <upsellslider>
+                <class>Rokanthemes_Upsellslider_Block</class>
+            </upsellslider>
+            <catalog>
+                <rewrite>
+                    <product_list_upsell>Rokanthemes_Upsellslider_Block_Catalog_Product_List_Upsell</product_list_upsell>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <models>
+            <upsellslider>
+                <class>Rokanthemes_Upsellslider_Model</class>
+            </upsellslider>
+        </models>
+        <helpers>
+            <upsellslider>
+                <class>Rokanthemes_Upsellslider_Helper</class>
+            </upsellslider>
+        </helpers>
+    </global>
+    <default>
+        <upsellslider>
+			<general>
+			    <enabled>1</enabled>
+			    <title>Upsell Products</title>
+			    <vertical>0</vertical>
+			    <auto>0</auto>
+			    <controls>1</controls>
+			    <pager>0</pager>
+			    <speed>600</speed>
+			    <pause>3000</pause>
+			  <!--   <maxSlides>5</maxSlides> -->
+			    <rows>1</rows>
+			   <!--  <slideWidth>210</slideWidth> -->
+			    <price>1</price>
+			    <cart>0</cart>
+			    <review>1</review>
+			    <qty>15</qty>
+			    <widthImage>300</widthImage>
+			    <heightImage>450</heightImage>
+			</general>
+        </upsellslider>
+    </default>
+</config>

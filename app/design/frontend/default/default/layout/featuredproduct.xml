@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+        <reference name="head">
+			<action method="addCss" ifconfig="featuredproduct/featuredproduct_config/enabled"><stylesheet>rokanthemes/css/ma.bxslider.css</stylesheet></action>
+			<action method="addJs" ifconfig="featuredproduct/featuredproduct_config/enabled"><script>rokanthemes/ma.jq.slide.js</script></action>
+			<action method="addJs" ifconfig="featuredproduct/featuredproduct_config/enabled"><script>rokanthemes/ma.bxslider.min.js</script></action>     
+		</reference>
+        <reference name="content">
+            <block type="featuredproduct/featuredproduct" after="banner_static_center" name="featuredproduct" template="rokanthemes/featuredproduct/featuredproduct.phtml" />
+        </reference>
+    </cms_index_index>
+</layout> 

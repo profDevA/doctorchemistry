@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+* @package     CueBlocks_SitemapEnhancedPlus
+* @company     CueBlocks
+* @author      Francesco Magazzu' <francesco.magazzu at cueblocks.com>
+-->
+<config>
+    <tabs>
+        <cueBlocks translate="label">
+            <label>CueBlocks</label>
+            <sort_order>100</sort_order>
+        </cueBlocks>
+    </tabs>
+    <sections>
+		<robotstxt translate="label" module="robots">
+            <label>Robots.txt</label>
+            <tab>cueBlocks</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>80</sort_order>
+            <show_in_default>0</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+				<general translate="label">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>0</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <path_map translate="label">
+                            <label>PathMap</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Default value: empty. 'Relative Path' for the sub-root: use this setting only for Multi-Domain site that uses a different Root for every Domain/Store.</comment>
+                            <tooltip>In case of multi-domain Magento setup, give the location where extension has to create the robots file. Populate with the relative path between your main Magento Root and the sub-root folder ( ex. '../SubRoot/', './SubRoot/' ).</tooltip>
+                            <sort_order>10</sort_order>
+                            <show_in_default>0</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </path_map>
+                     </fields>
+                 </general>
+             </groups>
+		</robotstxt>
+	</sections>
+</config>

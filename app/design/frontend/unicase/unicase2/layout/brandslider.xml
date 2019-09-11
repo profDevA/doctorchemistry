@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+	<cms_index_index translate="label">
+		<!--<reference name="brand_slider">
+             <block type="brandslider/brandslider" name="brandslider" template="rokanthemes/brandslider/brandslider.phtml" /> -->
+            <!--<block type="brandslider/brandslider" name="brand.slider" before="-">
+                <action method="setTemplate" ifconfig="brandslider/brandslider_config/enabled"><template>rokanthemes/brandslider/brandslider.phtml</template></action>
+            </block>
+        </reference>-->
+	</cms_index_index>
+</layout> 

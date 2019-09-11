@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <blog>
+                        <title>Blog</title>
+                        <sort_order>70</sort_order>
+                        <children>
+                            <posts>
+                                <title>Manage Posts</title>
+                                <sort_order>0</sort_order>
+                            </posts>
+                            <comment>
+                                <title>Manage Comments</title>
+                                <sort_order>1</sort_order>
+                            </comment>
+                            <cat>
+                                <title>Manage Categories</title>
+                                <sort_order>2</sort_order>
+                            </cat>
+                        </children>
+                    </blog>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <blog>
+                                        <title>aheadWorks Blog Section</title>
+                                    </blog>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

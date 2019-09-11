@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+             <action method="addJs"><script>rokanthemes/jquery.min.js</script></action>         
+             <action method="addJs"><script>rokanthemes/noconflict.js</script></action>    
+             <action method="addCss" ifconfig="searchbycaterory/settings/enabled"><stylesheet>rokanthemes/css/searchbycategory.css</stylesheet></action>
+         </reference>
+        <reference name="top.search">
+            <action method="setTemplate" ifconfig="searchbycaterory/settings/enabled">
+                <template>rokanthemes/searchbycaterory/form.phtml</template>
+            </action>
+            <block type="searchbycaterory/form_contents" name="top.search.content" as="topSearchContent" template="rokanthemes/searchbycaterory/form/contents.phtml"/>
+        </reference>
+    </default>
+</layout> 

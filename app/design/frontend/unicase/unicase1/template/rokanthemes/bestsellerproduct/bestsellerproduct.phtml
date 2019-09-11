@@ -1,0 +1,203 @@
+<?php
+	$width_thumbnail = $this->getConfig('width_thumbnail');
+	$height_thumbnail = $this->getConfig('height_thumbnail');
+	$heading = $this->getConfig('heading');
+	$rows = $this->getConfig('row_show');
+	$review = $this->getConfig('review');
+	$des = $this->getConfig('description');
+	$des_max_leng = $this->getConfig('maxlength');
+	$show_cart = $this->getConfig('addtocart');
+	$show_wislist = $this->getConfig('addtowishlist');
+	$show_compare = $this->getConfig('addtocompare');
+	// Slider
+	$autoslider = $this->getConfig('auto');
+	$speedslider = $this->getConfig('speed');
+	$pauseslider = $this->getConfig('interval');
+	$max_slides = $this->getConfig('items_show');
+	$item_slides = $this->getConfig('item_width');
+	$nav_slider = $this->getConfig('nav_ctrl');
+	$next_back_slider = $this->getConfig('next_back');
+?>
+<?php if($this->getConfig('enabled')){?>
+
+	<?php //$this->getProducts() ?>
+	<?php //$_productCollection=$this->getProductCollection() ?>
+	<?php
+		$visibility = array(
+			Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+			Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+		);	
+		
+		$storeId = Mage::app()->getStore()->getId();
+		$_productCollection = Mage::getResourceModel('reports/product_collection')
+				->addAttributeToSelect('*')
+				->addOrderedQty()
+				->addAttributeToFilter('visibility', $visibility)
+				->setOrder('ordered_qty', 'desc');
+				//print_r($_productCollection);
+	?>
+	
+	<div class="rokan-bestsellerproduct">
+		<?php				
+			if ( !$width_thumbnail ){
+				$w_tnl = 270;
+			} else {
+				$w_tnl = $width_thumbnail;
+			}
+			if( !$height_thumbnail ){
+				$h_tnl = 338;
+			 }
+			else {
+				$h_tnl = $height_thumbnail;
+			}
+		?>
+		<?php if($heading){?>
+			<div class="rokan-product-heading rokan-bestsellerproduct-heading"><h2><?php echo $heading;?></h2></div>
+		<?php }?>
+		<?php if(!$_productCollection->count()): ?> 
+			<div class="rokan-bestseller">	
+				<p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+			</div>
+		<?php else: ?>
+		<div class="row">
+			<ul class="owl">
+				<?php $_collectionSize = $_productCollection->count() ?>
+				<?php $i=0; foreach ($_productCollection as $_product): ?>
+					<?php if($i % $rows == 0){ ?>
+						<li class='slide item bestsellerproduct-item'>
+						<?php }?>
+
+						<?php
+							//$_product = $_product->load($_product->getId());
+							$newFromDate = $_product->getNewsFromDate();
+							$newToDate = $_product->getNewsToDate();                 
+							$now = date("Y-m-d H:m:S");
+							// Get the Special Price
+							$specialprice = $_product->getSpecialPrice(); 
+							// Get the Special Price FROM date
+							$specialPriceFromDate = $_product->getSpecialFromDate();
+							// Get the Special Price TO date
+							$specialPriceToDate = $_product->getSpecialToDate();
+							// Get Current date
+							if ($specialprice&&($specialPriceFromDate <= $now && $specialPriceToDate >= $now)&& Mage::getStoreConfig('themeoptions/themeoptions_config/sale_label')){
+							 echo '<div class="label-pro-sale">sale</div>';
+							}else{
+							 if($newFromDate <= $now && $newToDate >= $now && Mage::getStoreConfig('themeoptions/themeoptions_config/new_label') ) {
+								   echo '<div class="label-pro-new">new&nbsp;!</div>';
+							 }
+							}
+						?>
+
+						<div class="product-item">
+							<div class="pull-left">
+								<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($w_tnl, $h_tnl); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
+							</div>
+
+							<div class="box-content">
+								<h2 class="product-name">
+									<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a>
+								</h2>
+								<div class="product-ratting">
+									<?php if($review): ?>
+										<?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+									<?php endif; ?>
+								 </div> <!--end .product-ratting-->
+							 <div class="price-box">
+								<?php
+								$sym = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); 
+								$price = $_product->getPrice();
+								$specialprice = $_product->getFinalPrice();
+								if($price != $specialprice){
+								if($price != ''){
+								echo '<p class="old-price"><span class="price-label">';
+								echo $this->__('Regular Price'). ': </span>';
+								echo '<span class="price">'.$sym.''.number_format($price,2).'</span></p>';
+								}
+								if($specialprice != '')
+								{
+								echo '<p class="special-price">
+								<span class="price-label">Special Price</span>
+								<span class="price">'.$sym.''.number_format($specialprice,2).'</span>
+								</p> ';
+								} 
+								}else {
+								echo '<div class="price-boxs">
+								<span class="regular-price">
+								<span class="price">'.$sym.''.number_format($price,2).'</span>                                    
+								</span>    
+								</div>';    
+								}
+								?>
+							</div>
+								<div class="actions clearfix">
+									<div class="action-inner">
+										<?php if ($show_cart) { ?>
+											<?php if($_product->isSaleable()): ?>
+												<button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')">
+												<span><?php echo $this->__('Add to Cart') ?></span></button>
+											<?php else: ?>
+												<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+											<?php endif; ?>
+										<?php }?>
+										<?php if( $show_wislist || $show_compare){?>
+											<ul class="add-to-links">
+												<?php if( $show_wislist): ?>
+													<?php if ($this->helper('wishlist')->isAllow()) : ?>
+														<li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a></li>
+													<?php endif; ?>
+												<?php endif; ?>
+												<?php if( $show_compare): ?>
+													<?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+														<li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
+													<?php endif; ?>
+												<?php endif; ?>
+											</ul>
+										<?php }?>
+									</div>
+								</div>
+							
+							<?php if($des){?>
+								<div class="short-description">
+									<?php if(!$des_max_leng){?>
+										<?php echo nl2br($this->htmlEscape($_product->getShortDescription())) ?>
+									<?php } else {?>
+										<?php echo nl2br($this->cut_string_bestsellerproduct($this->htmlEscape($_product->getShortDescription()),$this->getConfig('maxlength'))) ?>			            
+									<?php }?>			                    
+								</div>
+							<?php }?>
+					<?php $i++;?>
+					</div><!--end .box-content-->
+					</div><!--end .product-item-->
+					<?php if($i %$rows == 0){?>                    
+					</li>
+					<?php }?>
+				<?php endforeach; ?>
+					<?php if($i %$rows != 0) { ?>
+					</li>
+					<?php }?>
+			</ul>
+		</div>
+		<?php endif; ?> 
+	</div> 
+<?php } ?>
+	<script type="text/javascript">
+		$jq(document).ready(function(){
+			$jq(".rokan-bestsellerproduct .owl").owlCarousel({
+				autoPlay : false,
+				items : 3,
+				itemsDesktop : [1199,3],
+				itemsDesktopSmall : [980,2],
+				itemsTablet: [768,2],
+				itemsMobile : [479,1],
+				slideSpeed : 500,
+				paginationSpeed : 500,
+				rewindSpeed : 500,
+				navigation : true,
+				stopOnHover : true,
+				pagination :false,
+				scrollPerPage:true,
+			});
+		});
+	</script>
+
+

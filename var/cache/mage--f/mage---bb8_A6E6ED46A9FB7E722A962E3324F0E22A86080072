@@ -1,0 +1,70 @@
+<div class="footer-static-block">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+<h3>Buy research chemicals&nbsp;usa</h3>
+<p>Doctor chemistry is the online shop where all&nbsp;<br />your&nbsp;needed to buy Research Chemicals.<br />Our Research Chemicals are of the highest<br />and most pure quality on the market<br />We never make any concession in terms of quality.</p>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+<h3>Factory Hours</h3>
+<ul class="open-time">
+<li><span class="f-left">Monday-Friday:</span><span class="f-right">07.00 - 19.00</span></li>
+<li><span class="f-left">Saturday:</span><span class="f-right">07.00 - 15.00</span></li>
+<li><span class="f-left">Sunday:</span><span class="f-right">OFF</span></li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">    <style>
+        .timeline-Header
+        {
+            display:none !important;
+        }
+    </style>
+    <h3>Latest Tweet</h3>
+
+    <div id="twitter-feed"><a class="twitter-timeline" data-dnt="true" data-link-color="#85c94f" href="https://twitter.com/Drchemistrycom?ref_src=twsrc%5Etfw">Tweets by Drchemistrycom</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div></div>
+<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+<h3>Information</h3>
+<ul class="info-list">
+<li>Guangdong Biological Chemistry Co., Ltd</li>
+<li>Yunshan 6B, Wenchang, Huizhou, Guangdong, 571300, China.</li>
+<li><a href="mailto:support@doctorchemistry.com">support@doctorchemistry.com&nbsp;</a></li>
+<li>Skype: &nbsp;live:f54281c1860da1ac</li>
+</ul>
+</div>
+</div>
+</div></div><!--end .footer-static-block-->
+
+<div class="footer-container">
+    <div class="footer-top">
+		<div class="container">
+			<div class="row">
+<h4 class=" col xs-12 col-sm-6 col-md-4 col-lg-4">Customer Service</h4>
+<ul class="footer-ul">
+<li class="item"><a href="http://localhost:7000/terms-and-conditions ">Terms and Conditions</a></li>
+<li class="item"><a href="http://localhost:7000/privacy-policy">Privacy Policy</a></li>
+<li class="item"><a href="http://localhost:7000/return-and-refund">Return and Refund</a></li>
+<li class="item"><a href="http://localhost:7000/shipping">Shipping</a></li>
+<li class="item"><a href="http://localhost:7000/payment">Payment</a></li>
+<li class="item"><a href="http://localhost:7000/disclaimer">Disclaimer</a></li>
+<li class="item"><a href="https://www.doctorchemistry.com/free-samples" target="_self">Free&nbsp;Samples</a></li>
+<li class="item"><a href="https://www.doctorchemistry.com/custom-synthesis" target="_self">Custom Synthesis</a></li>
+</ul>
+</div>			
+		</div><!--end .container-->
+    </div><!--end .footer-top-->
+    <div class="footer-bottom">
+    	<div class="container">
+    		<div class="row">
+	    		<div class="footer-bottom-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
+		    	
+					<address>Copyright &copy; 2018 <a href="https://www.doctorchemistry.com">DoctorChemistry.com</a>. All rights Reserved.</address>
+					
+	    		</div>
+	    		<div class="footer-bottom-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						    			<div class="payment-icon"></div>
+	    		</div>
+    		</div><!--end .row-->
+			<div id="back-top" class="hidden-xs"><i class="fa fa-arrow-up"></i></div>
+    	</div><!--end .container-->
+    </div><!--end .footer-bottom-->
+</div>

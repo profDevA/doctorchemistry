@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Databunch_Ems>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Databunch_Ems>
+    </modules>
+</config>

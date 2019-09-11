@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name ='head'>
+			 <action method="addJs" >
+                <script>rokanthemes/jquery-ui.js</script>
+            </action>
+            <action method="addCss">
+                <script>rokanthemes/layerednavigation/jquery-ui.css</script>
+            </action>
+        </reference>
+
+    </default>
+    <catalog_category_view>
+        <reference name = "head">
+           
+        </reference>    
+    </catalog_category_view>
+     <catalogsearch_result_index>
+        <reference name = "head">
+            <block type="layerednavigation/layerednavigation" name="layerednavigation" template="rokanthemes/layerednavigation/layerednavigation.phtml" />
+        </reference>    
+    </catalogsearch_result_index>
+    <catalog_category_default>
+        <reference name = "head">
+            <block type="layerednavigation/layerednavigation" name="layerednavigation" template="rokanthemes/layerednavigation/layerednavigation.phtml" />
+        </reference>    
+    </catalog_category_default>
+    <layerednavigation_index_index>
+        <reference name="content">
+            <block type="layerednavigation/layerednavigation" name="layerednavigation" template="rokanthemes/layerednavigation/layerednavigation.phtml" />
+        </reference>
+    </layerednavigation_index_index>
+</layout> 

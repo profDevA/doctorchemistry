@@ -1,0 +1,39 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<bestsellerproduct>
+										<title>Bestseller Products</title>
+									</bestsellerproduct>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="bestsellerproduct">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<bestsellerproduct translate="title" module="bestsellerproduct">
+								<title>Bestseller Products</title>
+								<sort_order>0</sort_order>
+								<children>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/bestsellerproduct</action>
+									</configuration>
+								</children>
+							</bestsellerproduct>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<onsale>
+										<title>OnSale Products Slider</title>
+									</onsale>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="onsale">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<onsale translate="title" module="onsale">
+								<title>On Sale Slider</title>
+								<sort_order>15</sort_order>
+								<action>adminhtml/system_config/edit/section/onsale</action>
+							</onsale>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

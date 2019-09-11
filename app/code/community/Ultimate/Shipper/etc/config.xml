@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ultimate_Shipper extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Shipping & Fulfillment
+ * @package        Ultimate_Shipper
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Ultimate_Shipper>
+            <version>1.0.0</version>
+        </Ultimate_Shipper>
+    </modules>
+    <global>
+        <resources>
+            <ultimate_shipper_setup>
+                <setup>
+                    <module>Ultimate_Shipper</module>
+                    <class>Ultimate_Shipper_Model_Resource_Setup</class>
+                </setup>
+            </ultimate_shipper_setup>
+        </resources>
+        <blocks>
+            <ultimate_shipper>
+                <class>Ultimate_Shipper_Block</class>
+            </ultimate_shipper>
+        </blocks>
+        <helpers>
+            <ultimate_shipper>
+                <class>Ultimate_Shipper_Helper</class>
+            </ultimate_shipper>
+        </helpers>        
+        <models>            
+            <ultimate_shipper>
+                <class>Ultimate_Shipper_Model</class>
+                <resourceModel>ultimate_shipper_resource</resourceModel>
+            </ultimate_shipper>
+
+            <ultimate_shipper_resource>
+                <class>Ultimate_Shipper_Model_Resource</class>
+                <entities>
+                    <method>
+                        <table>ultimate_shipper_method</table>
+                    </method>
+                </entities>
+            </ultimate_shipper_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <ultimate_shipper>
+                    <file>ultimate_shipper.xml</file>
+                </ultimate_shipper>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Ultimate_Shipper>
+                    <files>
+                        <default>Ultimate_Shipper.csv</default>
+                    </files>
+                </Ultimate_Shipper>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ultimate_Shipper before="Mage_Adminhtml">Ultimate_Shipper_Adminhtml</Ultimate_Shipper>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <!-- Default configuration -->
+    <default>
+        <carriers>
+            <ultimate_shipper>
+                <active>1</active>
+                <model>ultimate_shipper/carrier</model>
+                <title>Ultimate Shipping Carrier</title>
+                <allowedmethods>1,2,3</allowedmethods>
+                <freemethods_active>1</freemethods_active>
+                <freemethods>4</freemethods>
+                <freemethods_order_total>200</freemethods_order_total>
+                <freemethods_restrict_others>0</freemethods_restrict_others>
+                <sallowspecific>0</sallowspecific>
+                <sort_order>10</sort_order>
+                <showmethod>1</showmethod>
+            </ultimate_shipper>
+        </carriers>
+    </default>
+</config>

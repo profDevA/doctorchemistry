@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Ocodewire_OnePageCheckout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ocodewire_OnePageCheckout>
+    </modules>
+</config>

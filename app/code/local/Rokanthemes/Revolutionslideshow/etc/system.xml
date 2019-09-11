@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<config>
+	<sections>
+		<revolutionslideshow translate="label" module="revolutionslideshow">
+			<label>Slideshow</label>
+			<tab>rokanthemes</tab>
+			<sort_order>400</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<config translate="label">
+					<label>Slideshow Config</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+                        <enabled>
+							<label>Enabled: </label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+							<comment>Enable/Disable slideshow</comment>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</enabled>
+                        <show>
+							<label>Show on: </label>
+							<frontend_type>select</frontend_type>
+                            <source_model>revolutionslideshow/config_show</source_model>
+							<comment>Select pages to show slideshow</comment>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</show>
+					</fields>
+				</config>
+                <revolutionslider>
+                    <label>Revolution slider Config</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+	                    <global translate="label">
+		                    <label>Global settings</label>
+		                    <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+		                    <sort_order>10</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+	                    </global>
+                        <delay>
+                            <label>Delay: </label>
+                            <frontend_type>text</frontend_type>
+                            <comment>The time one slide stays on the screen in Milliseconds (Default: 9000)</comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </delay>
+                        <startheight>
+                            <label>Height: </label>
+                            <frontend_type>text</frontend_type>
+                            <comment>This Height of the Grid where the Captions are displayed in Pixel.
+	                            This Height is the Max height of Slider in Fullwidth Layout and in Responsive Layout.
+	                            In Fullscreen Layout the Gird will be centered Vertically in case the Slider is higher then this value.</comment>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </startheight>
+                        <startwidth>
+                            <label>Width: </label>
+                            <frontend_type>text</frontend_type>
+                            <comment>This Width is the Max Width of Slider in Responsive Layout.
+	                            In Fullscreen and in FullWidth Layout the Gird will be centered Horizontally in case the
+	                            Slider is wider then this value.</comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </startwidth>
+	                    <loops translate="label">
+		                    <label>Loops settings</label>
+		                    <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+		                    <sort_order>200</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+	                    </loops>
+	                    <stopAtSlide>
+		                    <label>Stop at selected Slide Number: </label>
+		                    <frontend_type>text</frontend_type>
+		                    <comment>-1 or 1 to 999. Stop at selected Slide Number. If set to -1 it will loop without stopping. Only available if stopAfterLoops is not equal -1 !</comment>
+		                    <sort_order>210</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_store>1</show_in_store>
+		                    <show_in_website>1</show_in_website>
+	                    </stopAtSlide>
+	                    <stopAfterLoops>
+		                    <label>Stop at selected Slide Number after slide looped "x" time: </label>
+		                    <frontend_type>text</frontend_type>
+		                    <comment>-1 or 0 to 999. Stop at selected Slide Number (stopAtSlide) after slide looped "x" time, where x this Number. If set to -1 it will loop without stopping. Only available if stopAtSlide not equal -1 !</comment>
+		                    <sort_order>220</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_store>1</show_in_store>
+		                    <show_in_website>1</show_in_website>
+	                    </stopAfterLoops>
+	                    <layout translate="label">
+		                    <label>Layout styles</label>
+		                    <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+		                    <sort_order>400</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+	                    </layout>
+	                    <fullWidth>
+		                    <label>Enable Fullwidth mode: </label>
+		                    <frontend_type>select</frontend_type>
+		                    <source_model>revolutionslideshow/config_revolution_onoff</source_model>
+		                    <sort_order>410</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_store>1</show_in_store>
+		                    <show_in_website>1</show_in_website>
+	                    </fullWidth>
+
+	                    <other translate="label">
+		                    <label>Other settings</label>
+		                    <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+		                    <sort_order>500</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+	                    </other>
+                        <shuffle>
+                            <label>Shuffle slides in random order: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>revolutionslideshow/config_revolution_onoff</source_model>
+                            <sort_order>510</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </shuffle>
+                        <timeline>
+                            <label>Show timeline: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>520</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </timeline>
+                        <timeline_position>
+                            <label>Timeline position: </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>revolutionslideshow/config_revolution_timeline</source_model>
+                            <sort_order>530</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                        </timeline_position>
+                    </fields>
+                </revolutionslider>
+			</groups>
+		</revolutionslideshow>
+	</sections>
+</config>

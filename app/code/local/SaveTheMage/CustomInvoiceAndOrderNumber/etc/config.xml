@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <SaveTheMage_CustomInvoiceAndOrderNumber>
+            <version>1.3.1</version>
+        </SaveTheMage_CustomInvoiceAndOrderNumber>
+    </modules> 
+
+    <global>
+        <blocks>
+            <CustomInvoiceAndOrderNumberBlock1>
+            	<class>SaveTheMage_CustomInvoiceAndOrderNumber_Block</class>
+           </CustomInvoiceAndOrderNumberBlock1>  
+        </blocks>
+        <helpers>
+            <CustomInvoiceAndOrderNumberHelper1>
+                <class>SaveTheMage_CustomInvoiceAndOrderNumber_Helper</class>
+            </CustomInvoiceAndOrderNumberHelper1>
+        </helpers>  
+        <models>
+                <!-- ... -->
+                <savethemageCustomInvoiceAndOrderNumber>
+                    <class>SaveTheMage_CustomInvoiceAndOrderNumber_Model</class>
+                </savethemageCustomInvoiceAndOrderNumber>   
+                <!-- ... -->
+            </models>	
+	</global>    
+
+	<admin>
+		<routers>
+		   <CustomInvoiceAndOrderNumber>
+                <use>admin</use>
+                <args>
+                    <module>SaveTheMage_CustomInvoiceAndOrderNumber_AdminControllersHere</module>
+                    <frontName>CustomInvoiceAndOrderNumber</frontName>                   
+                    <modules>
+		    <CustomInvoiceAndOrderNumber after="SaveTheMage_CustomInvoiceAndOrderNumber_AdminControllersHere">Mage_Adminhtml</CustomInvoiceAndOrderNumber>
+		    </modules>
+                </args>
+		   </CustomInvoiceAndOrderNumber>		     
+	     </routers>    	
+	</admin>
+	
+    <adminhtml>
+        <menu>
+             <SaveTheMageMenu translate="title" module="CustomInvoiceAndOrderNumberHelper1">
+                <title>Custom Order#</title>
+                <sort_order>201</sort_order>
+                <children>
+                    <CustomInvoiceAndOrderNumberChildItem1 translate="title" module="CustomInvoiceAndOrderNumberHelper1">
+                        <title>Custom Invoice And Order Number</title>
+                        <action>CustomInvoiceAndOrderNumber/Ops</action>
+                        <sort_order>3</sort_order>                        
+                    </CustomInvoiceAndOrderNumberChildItem1>
+	       </children>
+             </SaveTheMageMenu>
+        </menu>
+	</adminhtml>    
+    
+</config>

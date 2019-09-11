@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rokanthemes_Layerednavigation>
+            <version>1.8.0</version>
+        </Rokanthemes_Layerednavigation>
+    </modules>
+    <frontend>
+  <!--      <routers>
+            <layerednavigation>
+                <use>standard</use>
+                <args>
+                    <module>Rokanthemes_Layerednavigation</module>
+                    <frontName>layerednavigation</frontName>
+                </args>
+            </layerednavigation>
+      
+            <catalog>
+                <args>
+                    <modules>
+                        <Rokanthemes_Layerednavigation before="Mage_Catalog">Rokanthemes_Layerednavigation</Rokanthemes_Layerednavigation>
+                    </modules>
+                </args>
+            </catalog>
+        </routers>-->
+        <routers>
+            <catalog>
+                <args>
+                    <modules>
+                        <Rokanthemes_Layerednavigation before="Mage_Catalog">Rokanthemes_Layerednavigation</Rokanthemes_Layerednavigation>
+                    </modules>
+                </args>
+            </catalog>
+            <catalogsearch>
+                <args>
+                    <modules>
+                        <Rokanthemes_Layerednavigation before="Mage_CatalogSearch">Rokanthemes_Layerednavigation</Rokanthemes_Layerednavigation>
+                    </modules>
+                </args>
+            </catalogsearch>
+            <tag>
+                <args>
+                    <modules>
+                        <Rokanthemes_Layerednavigation before="Mage_Tag">Rokanthemes_Layerednavigation</Rokanthemes_Layerednavigation>
+                    </modules>
+                </args>
+            </tag>
+        </routers>
+        <layout>
+            <updates>
+                <layerednavigation>
+                    <file>layerednavigation.xml</file>
+                </layerednavigation>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+		<menu>
+			<rokanthemes translate="title" module="layerednavigation">
+				<title>Rokanthemes</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<layerednavigation translate="title" module="layerednavigation">
+						<title>Layered Navigation Ajax</title>
+						<sort_order>35</sort_order>
+						<action>adminhtml/system_config/edit/section/layerednavigation</action>
+					</layerednavigation>
+				</children>
+			</rokanthemes>
+		</menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <layerednavigation>
+                                            <title>Layered Navigation Ajax</title>
+                                        </layerednavigation>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>   
+    <global>
+        <models>
+            <layerednavigation>
+                <class>Rokanthemes_Layerednavigation_Model</class>
+            </layerednavigation>
+            <catalog>
+                <rewrite>
+                    <layer>Rokanthemes_Layerednavigation_Model_Catalog_Layer</layer>
+                </rewrite>
+            </catalog>
+			 <catalog>
+                <rewrite>
+                    <layer_filter_price>Rokanthemes_Layerednavigation_Model_Catalog_Layer_Filter_Price</layer_filter_price>
+                </rewrite>
+            </catalog>
+            <catalogsearch>
+                <rewrite>
+                    <layer>Rokanthemes_Layerednavigation_Model_Catalogsearch_Layer</layer>
+                </rewrite>
+            </catalogsearch>
+        </models>
+        <blocks>
+            <layerednavigation>
+                <class>Rokanthemes_Layerednavigation_Block</class>
+            </layerednavigation>
+        </blocks>
+        <blocks>
+            <catalog>
+                <rewrite >
+                    <layer_filter_price>Rokanthemes_Layerednavigation_Block_Catalog_Layer_Filter_Price</layer_filter_price>
+                    <layer_filter_attribute>Rokanthemes_Layerednavigation_Block_Catalog_Layer_Filter_Attribute</layer_filter_attribute>
+                    <layer_filter_decimal>Rokanthemes_Layerednavigation_Block_Catalog_Layer_Filter_Decimal</layer_filter_decimal>
+                    <layer_filter_category>Rokanthemes_Layerednavigation_Block_Catalog_Layer_Filter_Category</layer_filter_category>
+             </rewrite>
+            </catalog>
+              <catalogsearch>
+                <rewrite >
+                    <layer_filter_attribute>Rokanthemes_Layerednavigation_Block_Catalogsearch_Layer_Filter_Attribute</layer_filter_attribute>
+                    <layer_filter_decimal>Rokanthemes_Layerednavigation_Block_Catalogsearch_Layer_Filter_Decimal</layer_filter_decimal>
+                </rewrite>
+            </catalogsearch>
+            <tag>
+                <rewrite>
+                    <popular>Rokanthemes_Layerednavigation_Block_Tag_Popular</popular>
+                </rewrite>
+            </tag>
+        </blocks>
+        <helpers>
+            <layerednavigation>
+                <class>Rokanthemes_Layerednavigation_Helper</class>
+            </layerednavigation>
+        </helpers>
+    </global>
+    <default>
+        <layerednavigation>
+            <layerfiler_config>
+                <enabled>1</enabled>
+                <toolbar_status>1</toolbar_status>
+                <slider_status>1</slider_status>
+                <tag_status>1</tag_status>
+                <loading_image>default/loader.gif</loading_image>
+                <trans_image>default/bg4.png</trans_image>
+                <bg_opacity>0.7</bg_opacity>
+            </layerfiler_config>
+        </layerednavigation>
+    </default>
+</config>

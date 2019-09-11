@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+			<action method="addCss" ifconfig="verticalmenu/general/enabled"><stylesheet>rokanthemes/css/verticalmenu.css</stylesheet></action>
+        </reference>
+        <reference name="left">
+            <!-- <block type="verticalmenu/verticalmenu" name="catalog.leftverticalmenu">
+                <action method="setTemplate" ifconfig="verticalmenu/general/leftmenu"><template>rokanthemes/verticalmenu/verticalmenu.phtml</template></action>
+            </block> -->
+             <block type="verticalmenu/verticalmenu" name="catalog.leftverticalmenu" before="-" template="rokanthemes/verticalmenu/verticalmenu.phtml"/>
+        </reference>
+       
+    </default>
+</layout> 

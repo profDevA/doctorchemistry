@@ -1,0 +1,135 @@
+<?php
+/*
+ * @author onclick
+ * @version 1.1.0
+ * 
+ */
+?>
+<?php
+    $baseUrl = Mage::helper('layerednavigation/data')->getBaseUrlFilter();
+    $params = trim(Mage::helper('layerednavigation/data')->prepareParams($this->getRequest()->getParams()));
+    $currencies = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
+    $toolBarStatus = Mage::getStoreConfig('layerednavigation/layerfiler_config/toolbar_status');
+    $sliderStatus = Mage::getStoreConfig('layerednavigation/layerfiler_config/slider_status');
+?>
+<?php
+if ($sliderStatus == 1) {
+    ?>
+    <!-- <p>
+        <input type="text" disabled ="disabled" id="amount" style="" />
+    </p> -->
+    
+    <div id ="search">
+        <input type ="text" name ="first_price" style="width:40px"/>
+        <input type ="text" name ="last_price" style="width:40px"/>
+		<div id="rokanthemes-slider-range"></div>
+        <button class="button" type ="button" name ="search_price" id ="search_price"><span><span>Search</span></span></button>
+    </div>
+	
+<?php } else { ?>
+    <ol>
+            <?php foreach ($this->getItems() as $_item): ?>
+                <li>
+                    <?php if ($_item->getCount() > 0): ?>
+                        <?php
+                        $url = $_item->getUrl();
+                        $onclick = "ajaxFilter('" . $url . "')";
+                        echo '<a class="ajaxLayer"  onclick = "' . $onclick . '" >' . $_item->getLabel() . '</a>';
+                        ?> 
+                    <?php else: echo $_item->getLabel() ?>
+                    <?php endif; ?>
+                        (<?php echo $_item->getCount() ?>)
+                </li>
+            <?php endforeach ?>
+        </ol>
+
+
+<?php } ?>
+<?php 
+		$taxMin = $this->_taxMin;
+		$taxMax = $this->_taxMax; 
+		if(!$taxMin) { $taxMin = 0; }
+		if(!$taxMax) { $taxMax = 0; } 
+        $baseCurrencyCode = Mage::app()->getStore()->getBaseCurrencyCode();
+        $currentCurrencyCode = Mage::app()->getStore()->getCurrentCurrencyCode();
+        $rate = round(Mage::helper('directory')->currencyConvert(1.0000, $baseCurrencyCode, $currentCurrencyCode),2);
+        if($this->_currMaxPrice > 0){$Curmax = $this->_currMaxPrice;} else{$Curmax = $this->getMaxRangePrice; }
+        if($this->_currMinPrice > 0){$Curmin = $this->_currMinPrice;} else{$Curmin = $this->getMinRangePrice;}
+        $minRange = $this->getMinRangePrice();
+        $maxRange = $this->getMaxRangePrice();
+        $minRange = $minRange * $rate;
+        $maxRange = $maxRange * $rate;
+		$maxRange = $maxRange + $taxMax;
+		$minRange = $minRange + $taxMin;
+		$Curmax = $Curmax + $taxMax;
+		$Curmin = $Curmin + $taxMin;
+        if(!isset($_GET['rate'])) {
+            $Curmax = $Curmax * $rate;
+            $Curmin = $Curmin * $rate;
+        }
+?>
+<script type ="text/javascript">
+//<![CDATA[  
+    $jq(function() {
+        
+        var currencies = "<?php echo $currencies; ?>";
+        var toolbar_status = "<?php echo $toolBarStatus; ?>";
+        var rate = "<?php echo $rate; ?>";
+        var min = "<?php echo $minRange; ?>"
+            min = Number(min);
+        var max = "<?php echo $maxRange; ?>"
+            max = Number(max);
+        var currentMinPrice = "<?php echo $Curmin; ?>"
+            currentMinPrice = Number(currentMinPrice);
+        var currentMaxPrice = "<?php echo $Curmax; ?>"
+        //alert('min: '+min+'--max: '+ max+ 'currentMin: '+currentMinPrice);
+        currentMaxPrice = Number(currentMaxPrice);
+        var params = "<?php echo trim($params); ?>";
+		var tax_min = "<?php echo $taxMin; ?>";
+		var tax_max = "<?php echo $taxMax; ?>";
+        params = $jq.trim(params);
+        //slider
+        $jq( "#rokanthemes-slider-range" ).slider({
+            range: true,
+            min: min,
+            max: max,
+            values: [ currentMinPrice, currentMaxPrice ],
+            slide: function( event, ui ) {
+                $jq( "#amount" ).val( currencies + ui.values[ 0 ] + " - "+ currencies + ui.values[ 1 ] );
+                $jq('input[name="first_price"]').val(ui.values[0]);
+                $jq('input[name="last_price"]').val(ui.values[1]);
+            },
+            stop: function( event, ui ) {
+                var first =   ui.values[0];
+                var  last =  ui.values[1];
+                     var baseUrl = '<?php echo $baseUrl; ?>'+'?rate='+rate+'&first='+first+'&last='+last+params+'&tax_min='+tax_min+'&tax_max='+tax_max;
+                     ajaxFilter(baseUrl);
+                
+            }
+        });
+
+        $jq( "#amount" ).val( currencies + $jq( "#rokanthemes-slider-range" ).slider( "values", 0 ) +
+            " - "+currencies + $jq( "#rokanthemes-slider-range" ).slider( "values", 1 ) );
+        $jq('input[name="first_price"]').val($jq( "#rokanthemes-slider-range" ).slider( "values", 0 ));
+        $jq('input[name="last_price"]').val($jq( "#rokanthemes-slider-range" ).slider( "values", 1 ));   
+         
+         
+        //search price from input box
+        $jq('#search_price').each(function(){
+            $jq(this).live('click',function(){
+                var first_price = $jq('input[name="first_price"]').val();
+                var last_price = $jq('input[name="last_price"]').val();
+                var rate = "<?php echo $rate; ?>";
+                var urlFilter = '<?php echo $baseUrl; ?>'+'?rate='+rate+'&first='+first_price+'&'+'last='+last_price+params;
+                ajaxFilter(urlFilter);
+                return false;
+            })
+        });
+        
+        
+        $jq('#rokanthemes-slider-range a:first').addClass('first_item');
+        $jq('#rokanthemes-slider-range a:last').addClass('last_item');
+         
+    });
+ //]]>
+</script>

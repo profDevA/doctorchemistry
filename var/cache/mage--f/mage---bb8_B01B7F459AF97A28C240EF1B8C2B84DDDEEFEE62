@@ -1,0 +1,403 @@
+
+<div class="nav-bar">
+<!-- menu start -->
+<ul id="nav">
+<li  class="  level0"> <a href="http://localhost:7000/index.php/admin/dashboard/index/key/$dashboard/index$/"   class=""><span>{{{Dashboard}}{{Dashboard}}{{Dashboard}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Sales}}{{Sales}}{{Sales}}{{Mage_Sales}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_order/index/key/$sales_order/index$/"   class=""><span>{{{Orders}}{{Orders}}{{Orders}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_invoice/index/key/$sales_invoice/index$/"   class=""><span>{{{Invoices}}{{Invoices}}{{Invoices}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_shipment/index/key/$sales_shipment/index$/"   class=""><span>{{{Shipments}}{{Shipments}}{{Shipments}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_creditmemo/index/key/$sales_creditmemo/index$/"   class=""><span>{{{Credit Memos}}{{Credit Memos}}{{Credit Memos}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_transactions/index/key/$sales_transactions/index$/"   class=""><span>{{{Transactions}}{{Transactions}}{{Transactions}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_recurring_profile/index/key/$sales_recurring_profile/index$/"   class=""><span>{{{Recurring Profiles (beta)}}{{Recurring Profiles (beta)}}{{Recurring Profiles (beta)}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_billing_agreement/index/key/$sales_billing_agreement/index$/"   class=""><span>{{{Billing Agreements}}{{Billing Agreements}}{{Billing Agreements}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/checkout_agreement/index/key/$checkout_agreement/index$/"   class=""><span>{{{Terms and conditions}}{{Terms and conditions}}{{Terms and conditions}}{{Mage_Checkout}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent last level1"> <a href="#"  onclick="return false" class=""><span>{{{Tax}}{{Tax}}{{Tax}}{{Mage_Tax}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/tax_rule/index/key/$tax_rule/index$/"   class=""><span>{{{Manage Tax Rules}}{{Manage Tax Rules}}{{Manage Tax Rules}}{{Mage_Tax}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/tax_rate/index/key/$tax_rate/index$/"   class=""><span>{{{Manage Tax Zones &amp; Rates}}{{Manage Tax Zones &amp; Rates}}{{Manage Tax Zones &amp; Rates}}{{Mage_Tax}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/tax_rate/importExport/key/$tax_rate/importExport$/"   class=""><span>{{{Import / Export Tax Rates}}{{Import / Export Tax Rates}}{{Import / Export Tax Rates}}{{Mage_Tax}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/tax_class_customer/index/key/$tax_class_customer/index$/"   class=""><span>{{{Customer Tax Classes}}{{Customer Tax Classes}}{{Customer Tax Classes}}{{Mage_Tax}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/tax_class_product/index/key/$tax_class_product/index$/"   class=""><span>{{{Product Tax Classes}}{{Product Tax Classes}}{{Product Tax Classes}}{{Mage_Tax}}}</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Catalog}}{{Catalog}}{{Catalog}}{{Mage_Catalog}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/catalog_product/index/key/$catalog_product/index$/"   class=""><span>{{{Manage Products}}{{Manage Products}}{{Manage Products}}{{Mage_Catalog}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/catalog_category/index/key/$catalog_category/index$/"   class=""><span>{{{Manage Categories}}{{Manage Categories}}{{Manage Categories}}{{Mage_Catalog}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Attributes}}{{Attributes}}{{Attributes}}{{Mage_Catalog}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/catalog_product_attribute/index/key/$catalog_product_attribute/index$/"   class=""><span>{{{Manage Attributes}}{{Manage Attributes}}{{Manage Attributes}}{{Mage_Catalog}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/catalog_product_set/index/key/$catalog_product_set/index$/"   class=""><span>{{{Manage Attribute Sets}}{{Manage Attribute Sets}}{{Manage Attribute Sets}}{{Mage_Catalog}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/urlrewrite/index/key/$urlrewrite/index$/"   class=""><span>{{{URL Rewrite Management}}{{URL Rewrite Management}}{{URL Rewrite Management}}{{Mage_Catalog}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/catalog_search/index/key/$catalog_search/index$/"   class=""><span>{{{Search Terms}}{{Search Terms}}{{Search Terms}}{{Mage_CatalogSearch}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Reviews and Ratings}}{{Reviews and Ratings}}{{Reviews and Ratings}}{{Mage_Review}}}</span></a>
+<ul >
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level2"> <a href="#"  onclick="return false" class=""><span>{{{Customer Reviews}}{{Customer Reviews}}{{Customer Reviews}}{{Mage_Review}}}</span></a>
+<ul >
+<li  class="  level3"> <a href="http://localhost:7000/index.php/admin/catalog_product_review/pending/key/$catalog_product_review/pending$/"   class=""><span>{{{Pending Reviews}}{{Pending Reviews}}{{Pending Reviews}}{{Mage_Review}}}</span></a>
+</li>
+<li  class="  last level3"> <a href="http://localhost:7000/index.php/admin/catalog_product_review/index/key/$catalog_product_review/index$/"   class=""><span>{{{All Reviews}}{{All Reviews}}{{All Reviews}}{{Mage_Review}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/rating/index/key/$rating/index$/"   class=""><span>{{{Manage Ratings}}{{Manage Ratings}}{{Manage Ratings}}{{Mage_Review}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Tags}}{{Tags}}{{Tags}}{{Mage_Tag}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/tag/index/key/$tag/index$/"   class=""><span>{{{All Tags}}{{All Tags}}{{All Tags}}{{Mage_Tag}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/tag/pending/key/$tag/pending$/"   class=""><span>{{{Pending Tags}}{{Pending Tags}}{{Pending Tags}}{{Mage_Tag}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/sitemap/index/key/$sitemap/index$/"   class=""><span>{{{Google Sitemap}}{{Google Sitemap}}{{Google Sitemap}}{{Mage_Sitemap}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Customers}}{{Customers}}{{Customers}}{{Mage_Customer}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/customer/index/key/$customer/index$/"   class=""><span>{{{Manage Customers}}{{Manage Customers}}{{Manage Customers}}{{Mage_Customer}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/customer_group/index/key/$customer_group/index$/"   class=""><span>{{{Customer Groups}}{{Customer Groups}}{{Customer Groups}}{{Mage_Customer}}}</span></a>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/customer_online/index/key/$customer_online/index$/"   class=""><span>{{{Online Customers}}{{Online Customers}}{{Online Customers}}{{Mage_Customer}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Promotions}}{{Promotions}}{{Promotions}}{{Mage_CatalogRule}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/promo_catalog/index/key/$promo_catalog/index$/"   class=""><span>{{{Catalog Price Rules}}{{Catalog Price Rules}}{{Catalog Price Rules}}{{Mage_CatalogRule}}}</span></a>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/promo_quote/index/key/$promo_quote/index$/"   class=""><span>{{{Shopping Cart Price Rules}}{{Shopping Cart Price Rules}}{{Shopping Cart Price Rules}}{{Mage_SalesRule}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Newsletter}}{{Newsletter}}{{Newsletter}}{{Mage_Newsletter}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/newsletter_template/index/key/$newsletter_template/index$/"   class=""><span>{{{Newsletter Templates}}{{Newsletter Templates}}{{Newsletter Templates}}{{Mage_Newsletter}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/newsletter_queue/index/key/$newsletter_queue/index$/"   class=""><span>{{{Newsletter Queue}}{{Newsletter Queue}}{{Newsletter Queue}}{{Mage_Newsletter}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/newsletter_subscriber/index/key/$newsletter_subscriber/index$/"   class=""><span>{{{Newsletter Subscribers}}{{Newsletter Subscribers}}{{Newsletter Subscribers}}{{Mage_Newsletter}}}</span></a>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/newsletter_problem/index/key/$newsletter_problem/index$/"   class=""><span>{{{Newsletter Problem Reports}}{{Newsletter Problem Reports}}{{Newsletter Problem Reports}}{{Mage_Newsletter}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class=" active  parent level0"> <a href="#"  onclick="return false" class="active"><span>{{{CMS}}{{CMS}}{{CMS}}{{Mage_Cms}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/cms_page/index/key/$cms_page/index$/"   class=""><span>{{{Pages}}{{Pages}}{{Pages}}{{Mage_Cms}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/cms_block/index/key/$cms_block/index$/"   class=""><span>{{{Static Blocks}}{{Static Blocks}}{{Static Blocks}}{{Mage_Cms}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/widget_instance/index/key/$widget_instance/index$/"   class=""><span>{{{Widgets}}{{Widgets}}{{Widgets}}{{Mage_Widget}}}</span></a>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/poll/index/key/$poll/index$/"   class=""><span>{{{Polls}}{{Polls}}{{Polls}}{{Mage_Poll}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{CueBlocks}}{{CueBlocks}}{{CueBlocks}}{{CueBlocks_Robots}}}</span></a>
+<ul >
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent last level1"> <a href="#"  onclick="return false" class=""><span>{{{Robots}}{{Robots}}{{Robots}}{{CueBlocks_Robots}}}</span></a>
+<ul >
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/robots/adminhtml_robots/index/key/$adminhtml_robots/index$/"   class=""><span>{{{Edit Robot.txt}}{{Edit Robot.txt}}{{Edit Robot.txt}}{{CueBlocks_Robots}}}</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Ultimate Shipper}}{{Ultimate Shipper}}{{Ultimate Shipper}}{{Ultimate_Shipper}}}</span></a>
+<ul >
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/shipper_method/index/key/$shipper_method/index$/"   class=""><span>{{{Method}}{{Method}}{{Method}}{{Ultimate_Shipper}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Rokanthemes}}{{Rokanthemes}}{{Rokanthemes}}{{Rokanthemes_Upsellslider}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/featuredproduct/key/$system_config/edit$/"   class=""><span>{{{Featured Products}}{{Featured Products}}{{Featured Products}}{{Rokanthemes_Featuredproduct}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/onsale/key/$system_config/edit$/"   class=""><span>{{{OnSale Products Slider}}{{OnSale Products Slider}}{{OnSale Products Slider}}{{Rokanthemes_Onsale}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/mostviewedproduct/key/$system_config/edit$/"   class=""><span>{{{Mostviewed Products}}{{Mostviewed Products}}{{Mostviewed Products}}{{Rokanthemes_Mostviewedproduct}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/newproduct/key/$system_config/edit$/"   class=""><span>{{{New Products Slider}}{{New Products Slider}}{{New Products Slider}}{{Rokanthemes_Newproduct}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/searchbycaterory/key/$system_config/edit$/"   class=""><span>{{{Search By Caterory}}{{Search By Caterory}}{{Search By Caterory}}{{Rokanthemes_Searchbycaterory}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/bestsellerproduct/key/$system_config/edit$/"   class=""><span>{{{Bestseller Products}}{{Bestseller Products}}{{Bestseller Products}}{{Rokanthemes_Bestsellerproduct}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Zoom}}{{Zoom}}{{Zoom}}{{Rokanthemes_Zoom}}}</span></a>
+<ul >
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/zoom/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/verticalmenu/key/$system_config/edit$/"   class=""><span>{{{Verticalmenu}}{{Verticalmenu}}{{Verticalmenu}}{{Rokanthemes_Verticalmenu}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/explodemenu/key/$system_config/edit$/"   class=""><span>{{{Explodemenu}}{{Explodemenu}}{{Explodemenu}}{{Rokanthemes_Explodemenu}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/related/key/$system_config/edit$/"   class=""><span>{{{Related Slider}}{{Related Slider}}{{Related Slider}}{{Rokanthemes_Related}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Blog}}{{Blog}}{{Blog}}{{Rokanthemes_Blog}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/blog_admin/manage_blog/new/key/$manage_blog/new$/"   class=""><span>{{{Add Post}}{{Add Post}}{{Add Post}}{{Rokanthemes_Blog}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/blog_admin/manage_blog/index/key/$manage_blog/index$/"   class=""><span>{{{Posts}}{{Posts}}{{Posts}}{{Rokanthemes_Blog}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/blog_admin/manage_comment/index/key/$manage_comment/index$/"   class=""><span>{{{Comments}}{{Comments}}{{Comments}}{{Rokanthemes_Blog}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/blog_admin/manage_cat/index/key/$manage_cat/index$/"   class=""><span>{{{Categories}}{{Categories}}{{Categories}}{{Rokanthemes_Blog}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/blog/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Rokanthemes_Blog}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Latesttweet}}{{Latesttweet}}{{Latesttweet}}{{Rokanthemes_Lastesttweet}}}</span></a>
+<ul >
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/lastesttweet/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Brandslider}}{{Brandslider}}{{Brandslider}}{{Rokanthemes_Brandslider}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/brandslider/adminhtml_brandslider/index/key/$adminhtml_brandslider/index$/"   class=""><span>{{{Manage Items}}{{Manage Items}}{{Manage Items}}{{Rokanthemes_Brandslider}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/brandslider/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Category Tabs Slider}}{{Category Tabs Slider}}{{Category Tabs Slider}}{{Rokanthemes_Categorytab}}}</span></a>
+<ul >
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/categorytab/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/layerednavigation/key/$system_config/edit$/"   class=""><span>{{{Layered Navigation Ajax}}{{Layered Navigation Ajax}}{{Layered Navigation Ajax}}{{Rokanthemes_Layerednavigation}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{UpsellSlider}}{{UpsellSlider}}{{UpsellSlider}}{{Rokanthemes_Upsellslider}}}</span></a>
+<ul >
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/upsellslider/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/ajaxcart/key/$system_config/edit$/"   class=""><span>{{{Ajaxcart Super}}{{Ajaxcart Super}}{{Ajaxcart Super}}{{Rokanthemes_Ajaxcart}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent last level1"> <a href="#"  onclick="return false" class=""><span>{{{Slideshow}}{{Slideshow}}{{Slideshow}}{{Rokanthemes_Revolutionslideshow}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/revolutionslideshow/adminhtml_rokanthemerevolution/index/key/$adminhtml_rokanthemerevolution/index$/"   class=""><span>{{{Revolution slider Slides}}{{Revolution slider Slides}}{{Revolution slider Slides}}{{Rokanthemes_Revolutionslideshow}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_config/edit/section/revolutionslideshow/key/$system_config/edit$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Reports}}{{Reports}}{{Reports}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Sales}}{{Sales}}{{Sales}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/sales/key/$report_sales/sales$/"   class=""><span>{{{Orders}}{{Orders}}{{Orders}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/tax/key/$report_sales/tax$/"   class=""><span>{{{Tax}}{{Tax}}{{Tax}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/invoiced/key/$report_sales/invoiced$/"   class=""><span>{{{Invoiced}}{{Invoiced}}{{Invoiced}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/shipping/key/$report_sales/shipping$/"   class=""><span>{{{Shipping}}{{Shipping}}{{Shipping}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/refunded/key/$report_sales/refunded$/"   class=""><span>{{{Refunds}}{{Refunds}}{{Refunds}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/coupons/key/$report_sales/coupons$/"   class=""><span>{{{Coupons}}{{Coupons}}{{Coupons}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/paypal_reports/index/key/$paypal_reports/index$/"   class=""><span>{{{PayPal Settlement Reports}}{{PayPal Settlement Reports}}{{PayPal Settlement Reports}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Shopping Cart}}{{Shopping Cart}}{{Shopping Cart}}{{Mage_Reports}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_shopcart/product/key/$report_shopcart/product$/"   class=""><span>{{{Products in carts}}{{Products in carts}}{{Products in carts}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/report_shopcart/abandoned/key/$report_shopcart/abandoned$/"   class=""><span>{{{Abandoned carts}}{{Abandoned carts}}{{Abandoned carts}}{{Mage_Reports}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Products}}{{Products}}{{Products}}{{Mage_Reports}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_sales/bestsellers/key/$report_sales/bestsellers$/"   class=""><span>{{{Bestsellers}}{{Bestsellers}}{{Bestsellers}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_product/sold/key/$report_product/sold$/"   class=""><span>{{{Products Ordered}}{{Products Ordered}}{{Products Ordered}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_product/viewed/key/$report_product/viewed$/"   class=""><span>{{{Most Viewed}}{{Most Viewed}}{{Most Viewed}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_product/lowstock/key/$report_product/lowstock$/"   class=""><span>{{{Low stock}}{{Low stock}}{{Low stock}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/report_product/downloads/key/$report_product/downloads$/"   class=""><span>{{{Downloads}}{{Downloads}}{{Downloads}}{{Mage_Reports}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Customers}}{{Customers}}{{Customers}}{{Mage_Reports}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_customer/accounts/key/$report_customer/accounts$/"   class=""><span>{{{New Accounts}}{{New Accounts}}{{New Accounts}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_customer/totals/key/$report_customer/totals$/"   class=""><span>{{{Customers by orders total}}{{Customers by orders total}}{{Customers by orders total}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/report_customer/orders/key/$report_customer/orders$/"   class=""><span>{{{Customers by number of orders}}{{Customers by number of orders}}{{Customers by number of orders}}{{Mage_Reports}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Tags}}{{Tags}}{{Tags}}{{Mage_Tag}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_tag/customer/key/$report_tag/customer$/"   class=""><span>{{{Customers}}{{Customers}}{{Customers}}{{Mage_Tag}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_tag/product/key/$report_tag/product$/"   class=""><span>{{{Products}}{{Products}}{{Products}}{{Mage_Tag}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/report_tag/popular/key/$report_tag/popular$/"   class=""><span>{{{Popular}}{{Popular}}{{Popular}}{{Mage_Tag}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Reviews}}{{Reviews}}{{Reviews}}{{Mage_Reports}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/report_review/customer/key/$report_review/customer$/"   class=""><span>{{{Customers Reviews}}{{Customers Reviews}}{{Customers Reviews}}{{Mage_Review}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/report_review/product/key/$report_review/product$/"   class=""><span>{{{Products Reviews}}{{Products Reviews}}{{Products Reviews}}{{Mage_Review}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/report/search/key/$report/search$/"   class=""><span>{{{Search Terms}}{{Search Terms}}{{Search Terms}}{{Mage_Reports}}}</span></a>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/report_statistics/index/key/$report_statistics/index$/"   class=""><span>{{{Refresh Statistics}}{{Refresh Statistics}}{{Refresh Statistics}}{{Mage_Reports}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{System}}{{System}}{{System}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_account/index/key/$system_account/index$/"   class=""><span>{{{My Account}}{{My Account}}{{My Account}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/notification/index/key/$notification/index$/"   class=""><span>{{{Notifications}}{{Notifications}}{{Notifications}}{{Mage_AdminNotification}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Tools}}{{Tools}}{{Tools}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/system_backup/index/key/$system_backup/index$/"   class=""><span>{{{Backups}}{{Backups}}{{Backups}}{{Mage_Backup}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/smtp_log/index/key/$smtp_log/index$/"   class=""><span>{{{SMTPPro - Email Log}}{{SMTPPro - Email Log}}{{SMTPPro - Email Log}}{{Aschroder_SMTPPro}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/compiler_process/index/key/$compiler_process/index$/"   class=""><span>{{{Compilation}}{{Compilation}}{{Compilation}}{{Mage_Compiler}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Web Services}}{{Web Services}}{{Web Services}}{{Mage_Api}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/api_user/index/key/$api_user/index$/"   class=""><span>{{{SOAP/XML-RPC - Users}}{{SOAP/XML-RPC - Users}}{{SOAP/XML-RPC - Users}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/api_role/index/key/$api_role/index$/"   class=""><span>{{{SOAP/XML-RPC - Roles}}{{SOAP/XML-RPC - Roles}}{{SOAP/XML-RPC - Roles}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/api2_role/index/key/$api2_role/index$/"   class=""><span>{{{REST - Roles}}{{REST - Roles}}{{REST - Roles}}{{Mage_Api2}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/api2_attribute/index/key/$api2_attribute/index$/"   class=""><span>{{{REST - Attributes}}{{REST - Attributes}}{{REST - Attributes}}{{Mage_Api2}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/oauth_consumer/index/key/$oauth_consumer/index$/"   class=""><span>{{{REST - OAuth Consumers}}{{REST - OAuth Consumers}}{{REST - OAuth Consumers}}{{Mage_Oauth}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/oauth_authorizedTokens/index/key/$oauth_authorizedTokens/index$/"   class=""><span>{{{REST - OAuth Authorized Tokens}}{{REST - OAuth Authorized Tokens}}{{REST - OAuth Authorized Tokens}}{{Mage_Oauth}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/oauth_admin_token/index/key/$oauth_admin_token/index$/"   class=""><span>{{{REST - My Apps}}{{REST - My Apps}}{{REST - My Apps}}{{Mage_Oauth}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_design/index/key/$system_design/index$/"   class=""><span>{{{Design}}{{Design}}{{Design}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Import/Export}}{{Import/Export}}{{Import/Export}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/import/index/key/$import/index$/"   class=""><span>{{{Import}}{{Import}}{{Import}}{{Mage_ImportExport}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/export/index/key/$export/index$/"   class=""><span>{{{Export}}{{Export}}{{Export}}{{Mage_ImportExport}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/system_convert_gui/index/key/$system_convert_gui/index$/"   class=""><span>{{{Dataflow - Profiles}}{{Dataflow - Profiles}}{{Dataflow - Profiles}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_convert_profile/index/key/$system_convert_profile/index$/"   class=""><span>{{{Dataflow - Advanced Profiles}}{{Dataflow - Advanced Profiles}}{{Dataflow - Advanced Profiles}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="http://localhost:7000/index.php/admin/system_currency/index/key/$system_currency/index$/"   class=""><span>{{{Manage Currency}}{{Manage Currency}}{{Manage Currency}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/system_currency/index/key/$system_currency/index$/"   class=""><span>{{{Rates}}{{Rates}}{{Rates}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/system_currencysymbol/index/key/$system_currencysymbol/index$/"   class=""><span>{{{Symbols}}{{Symbols}}{{Symbols}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_email_template/index/key/$system_email_template/index$/"   class=""><span>{{{Transactional Emails}}{{Transactional Emails}}{{Transactional Emails}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_variable/index/key/$system_variable/index$/"   class=""><span>{{{Custom Variables}}{{Custom Variables}}{{Custom Variables}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Permissions}}{{Permissions}}{{Permissions}}{{Mage_Adminhtml}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/permissions_user/index/key/$permissions_user/index$/"   class=""><span>{{{Users}}{{Users}}{{Users}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/permissions_role/index/key/$permissions_role/index$/"   class=""><span>{{{Roles}}{{Roles}}{{Roles}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/permissions_variable/index/key/$permissions_variable/index$/"   class=""><span>{{{Variables}}{{Variables}}{{Variables}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/permissions_block/index/key/$permissions_block/index$/"   class=""><span>{{{Blocks}}{{Blocks}}{{Blocks}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level1"> <a href="#"  onclick="return false" class=""><span>{{{Magento Connect}}{{Magento Connect}}{{Magento Connect}}{{Mage_Connect}}}</span></a>
+<ul >
+<li  class="  level2"> <a href="http://localhost:7000/index.php/admin/extension_local/index/key/$extension_local/index$/"   class=""><span>{{{Magento Connect Manager}}{{Magento Connect Manager}}{{Magento Connect Manager}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  last level2"> <a href="http://localhost:7000/index.php/admin/extension_custom/index/key/$extension_custom/index$/"   class=""><span>{{{Package Extensions}}{{Package Extensions}}{{Package Extensions}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/cache/index/key/$cache/index$/"   class=""><span>{{{Cache Management}}{{Cache Management}}{{Cache Management}}{{Mage_Adminhtml}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/process/list/key/$process/list$/"   class=""><span>{{{Index Management}}{{Index Management}}{{Index Management}}{{Mage_Index}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/system_store/index/key/$system_store/index$/"   class=""><span>{{{Manage Stores}}{{Manage Stores}}{{Manage Stores}}{{Mage_Core}}}</span></a>
+</li>
+<li  class="  level1"> <a href="http://localhost:7000/index.php/admin/sales_order_status/index/key/$sales_order_status/index$/"   class=""><span>{{{Order Statuses}}{{Order Statuses}}{{Order Statuses}}{{Mage_Sales}}}</span></a>
+</li>
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/admin/system_config/index/key/$system_config/index$/"   class=""><span>{{{Configuration}}{{Configuration}}{{Configuration}}{{Mage_Adminhtml}}}</span></a>
+</li>
+</ul>
+</li>
+<li onmouseover="Element.addClassName(this,'over')" onmouseout="Element.removeClassName(this,'over')" class="  parent level0"> <a href="#"  onclick="return false" class=""><span>{{{Custom Order#}}{{Custom Order#}}{{Custom Order#}}{{SaveTheMage_CustomInvoiceAndOrderNumber}}}</span></a>
+<ul >
+<li  class="  last level1"> <a href="http://localhost:7000/index.php/CustomInvoiceAndOrderNumber/Ops/index/key/$Ops/index$/"   class=""><span>{{{Custom Invoice And Order Number}}{{Custom Invoice And Order Number}}{{Custom Invoice And Order Number}}{{SaveTheMage_CustomInvoiceAndOrderNumber}}}</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<!-- menu end -->
+
+    <a id="page-help-link" href="http://merch.docs.magento.com/ce/user_guide/cms/pages.html">{{{Get help for this page}}{{Get help for this page}}{{Get help for this page}}{{Mage_Adminhtml}}}</a>
+    <script type="text/javascript">$('page-help-link').target = 'magento_page_help'</script>
+
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+        <!-- <reference name="content">
+            <block type="onsale/onsale" name="rk.onsale" template="rokanthemes/onsale/onsale.phtml" />
+        </reference> -->
+        <reference name="left">
+            <block type="onsale/onsale" name="rk-onsale" after="tags_popular" template="rokanthemes/onsale/onsale_sidebar.phtml" />
+        </reference>
+    </cms_index_index>
+</layout> 

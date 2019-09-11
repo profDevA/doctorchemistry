@@ -1,0 +1,3 @@
+5.0 Ammended numeric zip-from/to search to use ints and BETWEEN logic
+    Changed free shipping logic to allow items to be included in calculations even if marked as free shipping
+    Changed setconditionname to stop conflict with tablerates

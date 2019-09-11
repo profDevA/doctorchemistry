@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+  
+    <onepagecheckout_ajax_set_methods_separate>
+        <block output="toHtml" type="core/template" name="set_methods_result" as="set_methods_result" template="onepagecheckout/set_methods_separate.phtml" >
+            <block type="onepagecheckout/summary" as="summary" name="onepagecheckout.summary" template="onepagecheckout/summary.phtml">
+                  
+                </block>
+            <block type="checkout/onepage_payment_methods" name="choose-payment-method" template="onepagecheckout/payment_method.phtml" as="choose-payment-method">
+                <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+            </block>
+        </block>
+    </onepagecheckout_ajax_set_methods_separate>
+
+    <onepagecheckout_ajax_updated_payment>
+        <block output="toHtml" type="core/template" name="paymentrefresh_result" template="onepagecheckout/set_methods_separate.phtml" >
+            <block type="onepagecheckout/summary" as="summary" name="onepagecheckout.summary" template="onepagecheckout/summary.phtml">
+                  
+                </block>
+            <block type="checkout/onepage_payment_methods" name="choose-payment-method" template="onepagecheckout/payment_method.phtml" as="choose-payment-method">
+                <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+            </block>
+        </block>
+    </onepagecheckout_ajax_updated_payment>
+
+    <onepagecheckout_ajax_billing_details>
+        <block output="toHtml" type="onepagecheckout/billing" name="billing" as="billing" template="onepagecheckout/billing.phtml">
+            <block type="checkout/onepage_payment_methods" name="choose-payment-method" template="onepagecheckout/payment_method.phtml" as="choose-payment-method">
+                <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+            </block>
+            <block type="checkout/onepage_shipping_method_available" name="choose-shipping-method" template="onepagecheckout/shipping_method.phtml" as="choose-shipping-method" />
+            <block type="onepagecheckout/summary" as="summary" name="onepagecheckout.summary" template="onepagecheckout/summary.phtml">
+               
+            </block>
+            <block type="checkout/cart_totals" name="checkout.cart.totals" as="totals" template="checkout/cart/totals.phtml"/>
+        </block>
+    </onepagecheckout_ajax_billing_details>
+
+    <onepagecheckout_index_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <action method="setHeaderTitle" translate="title"><title>Checkout</title></action>
+        </reference>
+        <reference name="head">
+            <action method="setTitle" translate="title"><title>One Page Checkout</title></action>
+            <action method="addItem"><type>skin_js</type><name>onepagecheckout/js/window.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>onepagecheckout/js/onepagecheckout.js</name></action>
+            <action method="addCss"><stylesheet>onepagecheckout/onepagecheckout.css</stylesheet></action>
+        </reference>
+        <reference name="content">
+            <block type="onepagecheckout/checkout" name="onepagecheckout.checkout" template="onepagecheckout/checkout.phtml">
+                <block type="checkout/agreements" name="checkout.onepage.agreements" as="agreements" template="onepagecheckout/agreements.phtml"/>
+                <block type="onepagecheckout/fields" as="billing_address" name="onepagecheckout.billing.address" template="onepagecheckout/billing_fields.phtml" />
+                <block type="onepagecheckout/fields" as="shipping_address" name="onepagecheckout.shipping.address" template="onepagecheckout/shipping_fields.phtml" />
+                <block type="onepagecheckout/summary" as="summary" name="onepagecheckout.summary" template="onepagecheckout/summary.phtml" />
+                <block type="checkout/onepage_payment_methods" name="choose-payment-method" template="onepagecheckout/payment_method.phtml">
+                    <action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+                </block>
+                <block type="checkout/onepage_shipping_method_available" name="choose-shipping-method" template="onepagecheckout/shipping_method.phtml"/>
+            </block>
+        </reference>
+        <reference name="before_body_end">
+            <block type="core/template" template="onepagecheckout/login_popup.phtml" name="login-popup" />
+          
+        </reference>
+    </onepagecheckout_index_index>
+    <checkout_onepage_success translate="label">
+            <reference name="content">
+                <block type="onepagecheckout/register" name="onepagecheckout.register" template="onepagecheckout/register.phtml">
+                    <block type="onepagecheckout/register" name="customer_form_register" template="onepagecheckout/register_form.phtml"/>
+                </block>
+            </reference>
+    </checkout_onepage_success>
+</layout>

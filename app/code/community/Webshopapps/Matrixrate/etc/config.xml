@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webshopapps Shipping Module
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * Shipping MatrixRates
+ *
+ * @category   Webshopapps
+ * @package    Webshopapps_Matrixrate
+ * @copyright  Copyright (c) 2010 Zowta Ltd (http://www.webshopapps.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Karen Baker <sales@webshopapps.com>
+*/
+
+-->
+<config>
+   <modules>
+        <Webshopapps_Matrixrate>
+          <version>2.0.2</version>
+    </Webshopapps_Matrixrate>
+    </modules>
+ <global>
+   <blocks>
+   	 <matrixrate_adminhtml>
+        <class>Webshopapps_Matrixrate_Block_Adminhtml</class>
+      </matrixrate_adminhtml>
+        </blocks>
+        <helpers>
+            <matrixrate>
+                <class>Webshopapps_Matrixrate_Helper</class>
+            </matrixrate>
+        </helpers> 
+    <models>
+      <matrixrate>
+        <class>Webshopapps_Matrixrate_Model</class>
+      </matrixrate>
+      <matrixrate_adminhtml>
+        <class>Webshopapps_Matrixrate_Model_Adminhtml</class>
+      </matrixrate_adminhtml>
+	  <matrixrate_shipping>
+			<class>Webshopapps_Matrixrate_Model</class>
+			<resourceModel>matrixrate_mysql4</resourceModel>
+		</matrixrate_shipping>
+		<matrixrate_mysql4>
+			<class>Webshopapps_Matrixrate_Model_Mysql4</class>
+			<entities>
+	  			<matrixrate>
+					<table>shipping_matrixrate</table>
+				</matrixrate>
+			</entities>
+      </matrixrate_mysql4>
+    </models>
+    <resources>
+      <matrixrate_setup>
+        <setup>
+          <module>Webshopapps_Matrixrate</module>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+            <matrixrate_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </matrixrate_write>
+            <matrixrate_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </matrixrate_read>
+      </matrixrate_setup>
+    </resources>
+    <sales>
+	<shipping>
+	    <carriers>
+			<matrixrate>
+				<class>Webshopapps_Matrixrate_Model_Carrier_Matrixrate</class>
+			</matrixrate>
+	    </carriers>
+	</shipping>
+    </sales>
+    <helpers>
+         <matrixrate>
+             <class>Webshopapps_Matrixrate_Helper</class>
+         </matrixrate>
+     </helpers> 
+  </global>
+   <frontend>
+   		
+        <translate>
+            <modules>
+                <Webshopapps_Matrixrate>
+                    <files>
+                        <default>Webshopapps_Matrixrate.csv</default>
+                    </files>
+                </Webshopapps_Matrixrate>
+            </modules>
+        </translate>
+    </frontend>
+       <admin>
+         <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Webshopapps_Matrixrate before="Mage_Adminhtml">Webshopapps_Matrixrate</Webshopapps_Matrixrate>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+      <adminhtml>
+        <translate>
+        
+            <modules>
+                <Webshopapps_Matrixrate>
+                    <files>
+                        <default>Webshopapps_Matrixrate.csv</default>
+                    </files>
+                </Webshopapps_Matrixrate>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <carriers>
+            <matrixrate>
+            	<condition_name>package_weight</condition_name>
+                <active>0</active>
+                <include_virtual_price>1</include_virtual_price>
+                <sallowspecific>0</sallowspecific>
+                <allow_free_shipping_promotions>1</allow_free_shipping_promotions>
+                <show_only_free>0</show_only_free>
+                <free_method_text>Free Shipping</free_method_text>
+                <cutoff_cost>50</cutoff_cost>
+                <model>matrixrate_shipping/carrier_matrixrate</model>
+                <name>MatrixRate</name>
+                <title>Select Shipping Method</title>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg>      
+              	<include_free_ship_items>0</include_free_ship_items>
+            </matrixrate>
+        </carriers>
+    </default>
+</config>

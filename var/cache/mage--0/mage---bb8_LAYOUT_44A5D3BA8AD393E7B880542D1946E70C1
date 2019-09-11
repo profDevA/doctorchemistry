@@ -1,0 +1,881 @@
+<block name="formkey" type="core/template" template="core/formkey.phtml"/>
+<label>All Pages</label>
+<block type="page/html" name="root" output="toHtml" template="page/2columns-left.phtml">
+   <block type="page/html_head" name="head" as="head">
+      <action method="addJs">
+         <script>prototype/prototype.js</script>
+      </action>
+      <action method="addJs">
+         <script>lib/ccard.js</script>
+      </action>
+      <action method="addJs">
+         <script>prototype/validation.js</script>
+      </action>
+      <action method="addJs">
+         <script>scriptaculous/builder.js</script>
+      </action>
+      <action method="addJs">
+         <script>scriptaculous/effects.js</script>
+      </action>
+      <action method="addJs">
+         <script>scriptaculous/dragdrop.js</script>
+      </action>
+      <action method="addJs">
+         <script>scriptaculous/controls.js</script>
+      </action>
+      <action method="addJs">
+         <script>scriptaculous/slider.js</script>
+      </action>
+      <action method="addJs">
+         <script>varien/js.js</script>
+      </action>
+      <action method="addJs">
+         <script>varien/form.js</script>
+      </action>
+      <action method="addJs">
+         <script>varien/menu.js</script>
+      </action>
+      <action method="addJs">
+         <script>mage/translate.js</script>
+      </action>
+      <action method="addJs">
+         <script>mage/cookies.js</script>
+      </action>
+      <action method="addJs">
+         <script>rokanthemes/jquery-1.11.0.min.js</script>
+      </action>
+      <action method="addJs">
+         <script>rokanthemes/jquery.noconflict.js</script>
+      </action>
+      <action method="addJs">
+         <script>rokanthemes/owl.carousel.js</script>
+      </action>
+      <action method="addJs">
+         <script>rokanthemes/bootstrap/bootstrap.min.js</script>
+      </action>
+      <action method="addJs">
+         <script>rokanthemes/mobile.js</script>
+      </action>
+      <action method="addJs">
+         <script>rokanthemes/backtotop.js</script>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/owl.carousel.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/bootstrap.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/bootstrap-theme.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/font-awesome.min.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/styles.css</stylesheet>
+      </action>
+      <action method="addItem">
+         <type>skin_css</type>
+         <name>css/styles-ie.css</name>
+         <params/>
+         <if>lt IE 8</if>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/widgets.css</stylesheet>
+      </action>
+      <action method="addCss">
+         <stylesheet>css/print.css</stylesheet>
+         <params>media=&quot;print&quot;</params>
+      </action>
+      <action method="addItem">
+         <type>js</type>
+         <name>lib/ds-sleight.js</name>
+         <params/>
+         <if>lt IE 7</if>
+      </action>
+      <action method="addItem">
+         <type>skin_js</type>
+         <name>js/ie6.js</name>
+         <params/>
+         <if>lt IE 7</if>
+      </action>
+   </block>
+   <block type="core/text_list" name="after_body_start" as="after_body_start" translate="label">
+      <label>Page Top</label>
+   </block>
+   <block type="page/html_notices" name="global_notices" as="global_notices" template="page/html/notices.phtml"/>
+   <block type="page/html_header" name="header" as="header">
+      <block type="core/text_list" name="top.menu" as="topMenu" translate="label">
+         <label>Navigation Bar</label>
+         <block type="page/html_topmenu" name="catalog.topnav" template="page/html/topmenu.phtml"/>
+      </block>
+      <block type="page/switch" name="store_language" as="store_language" template="page/switch/languages.phtml"/>
+      <block type="page/template_links" name="top.links" as="topLinks"/>
+      <block type="page/html_wrapper" name="top.bar" as="topBar" translate="label">
+         <label>Breadcrumbs</label>
+         <action method="setElementClass">
+            <value>top-bar</value>
+         </action>
+      </block>
+      <block type="page/html_wrapper" name="top.container" as="topContainer" translate="label">
+         <label>Page Header</label>
+         <action method="setElementClass">
+            <value>top-container</value>
+         </action>
+      </block>
+      <block type="page/html_welcome" name="welcome" as="welcome"/>
+      <block type="directory/currency" template="directory/currency.phtml" name="store_currency_selector" as="store_currency_selector"/>
+      <block type="cms/block" name="call-us">
+         <action method="setBlockId">
+            <block_id>call-us</block_id>
+         </action>
+      </block>
+   </block>
+   <block type="page/html_breadcrumbs" name="breadcrumbs" as="breadcrumbs"/>
+   <block type="core/text_list" name="left" as="left" translate="label">
+      <label>Left Column</label>
+   </block>
+   <block type="core/messages" name="global_messages" as="global_messages"/>
+   <block type="core/messages" name="messages" as="messages"/>
+   <block type="core/text_list" name="content" as="content" translate="label">
+      <label>Main Content Area</label>
+   </block>
+   <block type="core/text_list" name="right" as="right" translate="label">
+      <label>Right Column</label>
+   </block>
+   <block type="core/text_list" name="brand" as="brand" translate="label"/>
+   <block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
+      <block type="page/html_wrapper" name="bottom.container" as="bottomContainer" translate="label">
+         <label>Page Footer</label>
+         <action method="setElementClass">
+            <value>bottom-container</value>
+         </action>
+      </block>
+      <block type="page/template_links" name="footer_links" as="footer_links" template="page/template/links.phtml"/>
+      <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
+   </block>
+   <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
+      <label>Page Bottom</label>
+   </block>
+</block>
+<block type="core/profiler" output="toHtml" name="core_profiler"/>
+<reference name="head">
+   <block type="core/template" name="optional_zip_countries" as="optional_zip_countries" template="directory/js/optional_zip_countries.phtml"/>
+</reference>
+<reference name="top.links">
+   <action method="addLink" translate="label title" module="customer">
+      <label>My Account</label>
+      <url helper="customer/getAccountUrl"/>
+      <title>My Account</title>
+      <prepare/>
+      <urlParams/>
+      <position>10</position>
+   </action>
+</reference>
+<reference name="footer">
+   <block type="cms/block" name="cms_footer_links" before="footer_links">
+      <action method="setBlockId">
+         <block_id>footer_links</block_id>
+      </action>
+   </block>
+</reference>
+<reference name="brand">
+   <block type="brandslider/brandslider" name="brand-slider" template="rokanthemes/brandslider/brandslider.phtml"/>
+</reference>
+<reference name="left">
+   <block type="catalog/product_compare_sidebar" before="banner.left" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml"/>
+</reference>
+<reference name="footer_links">
+   <action method="addLink" translate="label title" module="catalog" ifconfig="catalog/seo/site_map">
+      <label>Site Map</label>
+      <url helper="catalog/map/getCategoryUrl"/>
+      <title>Site Map</title>
+   </action>
+</reference>
+<block type="catalog/product_price_template" name="catalog_product_price_template"/>
+<reference name="catalog_product_price_template">
+   <action method="addPriceBlockType">
+      <type>msrp</type>
+      <block>catalog/product_price</block>
+      <template>catalog/product/price_msrp.phtml</template>
+   </action>
+   <action method="addPriceBlockType">
+      <type>msrp_item</type>
+      <block>catalog/product_price</block>
+      <template>catalog/product/price_msrp_item.phtml</template>
+   </action>
+   <action method="addPriceBlockType">
+      <type>msrp_noform</type>
+      <block>catalog/product_price</block>
+      <template>catalog/product/price_msrp_noform.phtml</template>
+   </action>
+</reference>
+<reference name="header">
+   <block type="core/template" name="top.search" as="topSearch" template="catalogsearch/form.mini.phtml"/>
+</reference>
+<reference name="footer_links">
+   <action method="addLink" translate="label title" module="catalogsearch" ifconfig="catalog/seo/search_terms">
+      <label>Search Terms</label>
+      <url helper="catalogsearch/getSearchTermUrl"/>
+      <title>Search Terms</title>
+   </action>
+   <action method="addLink" translate="label title" module="catalogsearch">
+      <label>Advanced Search</label>
+      <url helper="catalogsearch/getAdvancedSearchUrl"/>
+      <title>Advanced Search</title>
+   </action>
+</reference>
+<reference name="footer_links">
+   <block type="sales/guest_links" name="return_link"/>
+   <action method="addLinkBlock">
+      <blockName>return_link</blockName>
+   </action>
+</reference>
+<reference name="top.links">
+   <block type="checkout/links" name="checkout_cart_link">
+      <action method="addCartLink"/>
+      <action method="addCheckoutLink"/>
+   </block>
+</reference>
+<reference name="left">
+            
+        </reference>
+<reference name="head">
+   <block type="core/template" name="optional_zip_countries" as="optional_zip_countries" template="directory/js/optional_zip_countries.phtml"/>
+</reference>
+<reference name="topCart.extra_actions">
+   <block type="paypal/express_shortcut" name="paypal.partner.top_cart.shortcut" template="paypal/express/shortcut.phtml"/>
+</reference>
+<reference name="cart_sidebar.extra_actions">
+   <block type="paypal/express_shortcut" name="paypal.partner.cart_sidebar.shortcut" template="paypal/express/shortcut.phtml"/>
+</reference>
+<reference name="right">
+   <block type="poll/activePoll" name="right.poll">
+      <action method="setPollTemplate">
+         <template>poll/active.phtml</template>
+         <type>poll</type>
+      </action>
+      <action method="setPollTemplate">
+         <template>poll/result.phtml</template>
+         <type>results</type>
+      </action>
+   </block>
+</reference>
+<reference name="left">
+   <block type="tag/popular" name="tags_popular" after="mostviewedproduct" template="tag/popular.phtml"/>
+</reference>
+<reference name="right">
+   <block type="reports/product_viewed" before="right.permanent.callout" name="right.reports.product.viewed" template="reports/product_viewed.phtml"/>
+   <block type="reports/product_compared" before="right.permanent.callout" name="right.reports.product.compared" template="reports/product_compared.phtml"/>
+</reference>
+<reference name="head" before="-">
+   <block type="googleanalytics/ga" name="google_analytics" as="google_analytics" template="googleanalytics/ga.phtml"/>
+</reference>
+<reference name="top.links">
+   <block type="wishlist/links" name="wishlist_link"/>
+   <action method="addLinkBlock">
+      <blockName>wishlist_link</blockName>
+   </action>
+</reference>
+<reference name="left">
+   <block type="wishlist/customer_sidebar" name="wishlist_sidebar" as="wishlist" after="cart_sidebar" template="wishlist/sidebar.phtml"/>
+</reference>
+<reference name="topCart.extra_actions">
+   <block type="paypaluk/express_shortcut" name="paypaluk.partner.top_cart.shortcut" template="paypal/express/shortcut.phtml"/>
+</reference>
+<reference name="cart_sidebar.extra_actions">
+   <block type="paypaluk/express_shortcut" name="paypaluk.partner.cart_sidebar.shortcut" template="paypal/express/shortcut.phtml"/>
+</reference>
+<reference name="footer_links">
+   <action method="addLink" translate="label title" module="contacts" ifconfig="contacts/contacts/enabled">
+      <label>Contact Us</label>
+      <url>contacts</url>
+      <title>Contact Us</title>
+      <prepare>true</prepare>
+   </action>
+</reference>
+<reference name="footer_links">
+   <action method="addLink" translate="label title" module="rss" ifconfig="rss/config/active">
+      <label>RSS</label>
+      <url>rss</url>
+      <title>RSS</title>
+      <prepare>true</prepare>
+      <urlParams/>
+      <position/>
+      <li/>
+      <a>class=&quot;link-rss&quot;</a>
+   </action>
+</reference>
+<block type="rss/list" name="head_rss" ifconfig="rss/config/active"/>
+<reference name="cart_sidebar">
+   <action method="addItemRender">
+      <type>bundle</type>
+      <block>bundle/checkout_cart_item_renderer</block>
+      <template>checkout/cart/sidebar/default.phtml</template>
+   </action>
+</reference>
+<reference name="wishlist_sidebar">
+   <action method="addPriceBlockType">
+      <type>bundle</type>
+      <block>bundle/catalog_product_price</block>
+      <template>bundle/catalog/product/price.phtml</template>
+   </action>
+</reference>
+<reference name="catalog_product_price_template">
+   <action method="addPriceBlockType">
+      <type>bundle</type>
+      <block>bundle/catalog_product_price</block>
+      <template>bundle/catalog/product/price.phtml</template>
+   </action>
+</reference>
+<reference name="footer">
+            
+        </reference>
+<reference name="head">
+   <action method="addJs">
+      <script>rokanthemes/ajax_cart.js</script>
+   </action>
+   <action method="addCss">
+      <stylesheet>rokanthemes/css/ajax_cart.css</stylesheet>
+   </action>
+</reference>
+<reference name="header">
+   <block type="checkout/cart_sidebar" as="top_cart_mini" name="cart_sidebar_mini" template="rokanthemes/ajaxcart/checkout/cart/topcart.phtml" before="-">
+      <action method="addItemRender">
+         <type>simple</type>
+         <block>checkout/cart_item_renderer</block>
+         <template>checkout/cart/sidebar/default.phtml</template>
+      </action>
+      <action method="addItemRender">
+         <type>grouped</type>
+         <block>checkout/cart_item_renderer_grouped</block>
+         <template>checkout/cart/sidebar/default.phtml</template>
+      </action>
+      <action method="addItemRender">
+         <type>configurable</type>
+         <block>checkout/cart_item_renderer_configurable</block>
+         <template>checkout/cart/sidebar/default.phtml</template>
+      </action>
+      <block type="core/text_list" name="cart_sidebar.extra_actions" as="extra_actions" translate="label" module="checkout">
+         <label>Shopping Cart Sidebar Extra Actions</label>
+      </block>
+   </block>
+   <block type="wishlist/customer_sidebar" name="top_wishlist_sidebar" as="top_wishlist" template="rokanthemes/ajaxcart/wishlist/sidebar.phtml"/>
+   <block type="catalog/product_compare_sidebar" name="top.compare.sidebar" as="top_compare_sidebar" template="rokanthemes/ajaxcart/compare/sidebar.phtml"/>
+</reference>
+<reference name="before_body_end">
+   <block type="ajaxcart/ajaxcartconfig" name="ajaxcartconfig" template="rokanthemes/ajaxcart/ajaxcartconfig.phtml"/>
+</reference>
+<reference name="head">
+   <action method="addItem">
+      <type>skin_css</type>
+      <name>rokanthemes/css/blog_slide.css</name>
+   </action>
+   <action method="addCss" ifconfig="blog/blog/enabled">
+      <stylesheet>rokanthemes/css/blog.css</stylesheet>
+   </action>
+</reference>
+<reference name="head">
+   <action method="addCss">
+      <stylesheet>rokanthemes/css/categorytab.css</stylesheet>
+   </action>
+</reference>
+<reference name="head">
+   <action method="addJs" ifconfig="explodemenu/general/enabled">
+      <script>rokanthemes/explodemenu/explodemenu.js</script>
+   </action>
+</reference>
+<reference name="catalog.topnav">
+   <action method="setTemplate" ifconfig="explodemenu/general/enabled">
+      <template>rokanthemes/explodemenu/explodemenu.phtml</template>
+   </action>
+</reference>
+<reference name="head">
+   <action method="addCss" ifconfig="lastesttweet/lastesttweet_config/enabled">
+      <stylesheet>rokanthemes/css/rk.lastesttweet.css</stylesheet>
+   </action>
+   <action method="addJs" ifconfig="lastesttweet/lastesttweet_config/enabled">
+      <script>rokanthemes/rk.lastesttweet.js</script>
+   </action>
+</reference>
+<reference name="head">
+   <action method="addJs">
+      <script>rokanthemes/jquery-ui.js</script>
+   </action>
+   <action method="addCss">
+      <script>rokanthemes/layerednavigation/jquery-ui.css</script>
+   </action>
+</reference>
+<reference name="root">
+   <block type="related/page_html_head" name="rokanthemes_related_head" as="rokanthemes_related_head"/>
+</reference>
+<reference name="head">
+   <action method="addCss">
+      <stylesheet>rs-plugin/css/settings.css</stylesheet>
+   </action>
+   <action method="addItem">
+      <type>skin_css</type>
+      <name>rs-plugin/css/settings-ie8.css</name>
+      <params/>
+      <if>lt IE 9</if>
+   </action>
+   <action method="addJs">
+      <script>rokanthemes/jquery-1.11.0.min.js</script>
+   </action>
+   <action method="addJs">
+      <script>rokanthemes/jquery-migrate-1.2.1.min.js</script>
+   </action>
+   <action method="addJs">
+      <script>rokanthemes/jquery.noconflict.js</script>
+   </action>
+   <action method="addJs">
+      <script>rokanthemes/jquery.cycle2.min.js</script>
+   </action>
+   <action method="addItem">
+      <type>skin_js</type>
+      <script>rs-plugin/js/jquery.themepunch.plugins.min.js</script>
+   </action>
+   <action method="addItem">
+      <type>skin_js</type>
+      <script>rs-plugin/js/jquery.themepunch.revolution.min.js</script>
+   </action>
+   <action method="addItem">
+      <type>skin_js</type>
+      <script>rs-plugin/js/script.js</script>
+   </action>
+</reference>
+<reference name="head">
+   <action method="addCss" ifconfig="searchbycaterory/settings/enabled">
+      <stylesheet>rokanthemes/css/searchbycategory.css</stylesheet>
+   </action>
+</reference>
+<reference name="top.search">
+   <action method="setTemplate" ifconfig="searchbycaterory/settings/enabled">
+      <template>rokanthemes/searchbycaterory/form.phtml</template>
+   </action>
+   <block type="searchbycaterory/form_contents" name="top.search.content" as="topSearchContent" template="rokanthemes/searchbycaterory/form/contents.phtml"/>
+</reference>
+<reference name="head">
+   <action method="addCss" ifconfig="verticalmenu/general/enabled">
+      <stylesheet>rokanthemes/css/verticalmenu.css</stylesheet>
+   </action>
+</reference>
+<reference name="left">
+   <block type="verticalmenu/verticalmenu" name="catalog.leftverticalmenu" before="-" template="rokanthemes/verticalmenu/verticalmenu.phtml"/>
+</reference>
+<label>Catalog Product View (Any)</label>
+<reference name="root">
+   <action method="setTemplate">
+      <template>page/2columns-left.phtml</template>
+   </action>
+</reference>
+<reference name="head">
+   <action method="addJs">
+      <script>varien/product.js</script>
+   </action>
+   <action method="addJs">
+      <script>varien/configurable.js</script>
+   </action>
+   <action method="addItem">
+      <type>js_css</type>
+      <name>calendar/calendar-win2k-1.css</name>
+      <params/>
+   </action>
+   <action method="addItem">
+      <type>js</type>
+      <name>calendar/calendar.js</name>
+   </action>
+   <action method="addItem">
+      <type>js</type>
+      <name>calendar/calendar-setup.js</name>
+   </action>
+</reference>
+<reference name="content">
+   <block type="catalog/product_view" name="product.info" template="catalog/product/view.phtml">
+      <block type="catalog/product_view_media" name="product.info.media" as="media" template="catalog/product/view/media.phtml"/>
+      <block type="core/text_list" name="alert.urls" as="alert_urls" translate="label">
+         <label>Alert Urls</label>
+      </block>
+      <action method="setTierPriceTemplate">
+         <template>catalog/product/view/tierprices.phtml</template>
+      </action>
+      <block type="catalog/product_view_tabs" name="product.info.tabs" as="info_tabs" template="catalog/product/view/tabs.phtml">
+         <action method="addTab" translate="title" module="catalog">
+            <alias>description</alias>
+            <title>Product Description</title>
+            <block>catalog/product_view_description</block>
+            <template>catalog/product/view/description.phtml</template>
+         </action>
+         <action method="addTab" translate="title" module="catalog">
+            <alias>additional</alias>
+            <title>Additional Information</title>
+            <block>catalog/product_view_attributes</block>
+            <template>catalog/product/view/attributes.phtml</template>
+         </action>
+         <block type="review/form" name="product.review.form" as="review_form"/>
+         <action method="addTab" translate="title" module="review">
+            <alias>product_additional_data</alias>
+            <title>Reviews</title>
+            <block>review/product_view_list</block>
+            <template>review/product/view/list_tab.phtml</template>
+         </action>
+      </block>
+      <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
+         <action method="setColumnCount">
+            <columns>4</columns>
+         </action>
+         <action method="setItemLimit">
+            <type>upsell</type>
+            <limit>4</limit>
+         </action>
+      </block>
+      <block type="catalog/product_view_additional" name="product.info.additional" as="product_additional_data"/>
+      <block type="catalog/product_view_description" name="product.description" as="description" template="catalog/product/view/description.phtml">
+         <action method="addToParentGroup">
+            <group>detailed_info</group>
+         </action>
+      </block>
+      <block type="catalog/product_view_attributes" name="product.attributes" as="additional" template="catalog/product/view/attributes.phtml">
+         <action method="addToParentGroup">
+            <group>detailed_info</group>
+         </action>
+      </block>
+      <block type="catalog/product_view" name="product.info.addto" as="addto" template="catalog/product/view/addto.phtml"/>
+      <block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/>
+      <block type="core/text_list" name="product.info.extrahint" as="extrahint" translate="label">
+         <label>Product View Extra Hint</label>
+      </block>
+      <block type="catalog/product_view" name="product.info.options.wrapper" as="product_options_wrapper" template="catalog/product/view/options/wrapper.phtml" translate="label">
+         <label>Info Column Options Wrapper</label>
+         <block type="core/template" name="options_js" template="catalog/product/view/options/js.phtml"/>
+         <block type="catalog/product_view_options" name="product.info.options" as="product_options" template="catalog/product/view/options.phtml">
+            <action method="addOptionRenderer">
+               <type>text</type>
+               <block>catalog/product_view_options_type_text</block>
+               <template>catalog/product/view/options/type/text.phtml</template>
+            </action>
+            <action method="addOptionRenderer">
+               <type>file</type>
+               <block>catalog/product_view_options_type_file</block>
+               <template>catalog/product/view/options/type/file.phtml</template>
+            </action>
+            <action method="addOptionRenderer">
+               <type>select</type>
+               <block>catalog/product_view_options_type_select</block>
+               <template>catalog/product/view/options/type/select.phtml</template>
+            </action>
+            <action method="addOptionRenderer">
+               <type>date</type>
+               <block>catalog/product_view_options_type_date</block>
+               <template>catalog/product/view/options/type/date.phtml</template>
+            </action>
+         </block>
+         <block type="core/html_calendar" name="html_calendar" as="html_calendar" template="page/js/calendar.phtml"/>
+      </block>
+      <block type="catalog/product_view" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="catalog/product/view/options/wrapper/bottom.phtml" translate="label">
+         <label>Bottom Block Options Wrapper</label>
+         <action method="insert">
+            <block>product.tierprices</block>
+         </action>
+         <block type="catalog/product_view" name="product.clone_prices" as="prices" template="catalog/product/view/price_clone.phtml"/>
+         <action method="append">
+            <block>product.info.addtocart</block>
+         </action>
+         <action method="append">
+            <block>product.info.addto</block>
+         </action>
+      </block>
+      <block type="core/template_facade" name="product.info.container1" as="container1">
+         <action method="setDataByKey">
+            <key>alias_in_layout</key>
+            <value>container1</value>
+         </action>
+         <action method="setDataByKeyFromRegistry">
+            <key>options_container</key>
+            <key_in_registry>product</key_in_registry>
+         </action>
+         <action method="append">
+            <block>product.info.options.wrapper</block>
+         </action>
+         <action method="append">
+            <block>product.info.options.wrapper.bottom</block>
+         </action>
+      </block>
+      <block type="core/template_facade" name="product.info.container2" as="container2">
+         <action method="setDataByKey">
+            <key>alias_in_layout</key>
+            <value>container2</value>
+         </action>
+         <action method="setDataByKeyFromRegistry">
+            <key>options_container</key>
+            <key_in_registry>product</key_in_registry>
+         </action>
+         <action method="append">
+            <block>product.info.options.wrapper</block>
+         </action>
+         <action method="append">
+            <block>product.info.options.wrapper.bottom</block>
+         </action>
+      </block>
+      <action method="unsetCallChild">
+         <child>container1</child>
+         <call>ifEquals</call>
+         <if>0</if>
+         <key>alias_in_layout</key>
+         <key>options_container</key>
+      </action>
+      <action method="unsetCallChild">
+         <child>container2</child>
+         <call>ifEquals</call>
+         <if>0</if>
+         <key>alias_in_layout</key>
+         <key>options_container</key>
+      </action>
+   </block>
+</reference>
+<reference name="left">
+   <block type="catalog/product_list_related" name="magentothem.relatedslider" before="-" template="magentothem/relatedslider/relatedslider.phtml"/>
+   <block type="cms/block" name="banner_right" after="-">
+      <action method="setBlockId">
+         <block_id>banner_right</block_id>
+      </action>
+   </block>
+   <remove name="sale.reorder.sidebar"/>
+</reference>
+<remove name="right.poll"/>
+<remove name="cart_sidebar"/>
+<reference name="head">
+   <action method="addItem" ifconfig="sales/msrp/enabled">
+      <type>skin_js</type>
+      <name>js/msrp.js</name>
+   </action>
+</reference>
+<reference name="content">
+   <block type="core/template" template="catalog/msrp/popup.phtml" name="product.tooltip"/>
+</reference>
+<reference name="catalog_product_price_template">
+   <action method="addPriceBlockType">
+      <type>msrp</type>
+      <block>catalog/product_price</block>
+      <template>catalog/product/price_msrp_item.phtml</template>
+   </action>
+</reference>
+<reference name="product.clone_prices">
+   <action method="addPriceBlockType">
+      <type>msrp</type>
+      <block>catalog/product_price</block>
+      <template>catalog/product/price_msrp_item.phtml</template>
+   </action>
+</reference>
+<update handle="MAP_popup"/>
+<update handle="MAP_price_msrp_item"/>
+<reference name="product.info.tabs">
+   <action method="addTab" translate="title" module="payment">
+      <alias>product.info.additional.recurring.schedule</alias>
+      <title>Recurring Profile</title>
+      <block>payment/catalog_product_view_profile</block>
+      <template>payment/catalog/product/view/profile/schedule.phtml</template>
+   </action>
+</reference>
+<reference name="product.info.options.wrapper">
+   <block type="payment/catalog_product_view_profile" name="product.info.options.recurring" as="recurring_options" template="payment/catalog/product/view/profile/options.phtml"/>
+</reference>
+<reference name="product.info.extrahint">
+   <block type="cataloginventory/qtyincrements" name="product.info.extrahint.qtyincrements" template="cataloginventory/qtyincrements.phtml"/>
+</reference>
+<reference name="product.tooltip">
+   <block type="page/html_wrapper" name="product.info.addtocart.paypal.wrapper" translate="label">
+      <block type="paypal/express_shortcut" name="product.info.addtocart.paypal" template="paypal/express/shortcut.phtml">
+         <action method="setIsInCatalogProduct">
+            <value>1</value>
+         </action>
+         <action method="setShowOrPosition">
+            <value>after</value>
+         </action>
+      </block>
+   </block>
+</reference>
+<reference name="product.info.addtocart">
+   <block type="page/html_wrapper" name="product.info.addtocart.paypal.wrapper" translate="label">
+      <label>PayPal Express Checkout Shortcut Wrapper</label>
+      <block type="paypal/express_shortcut" name="product.info.addtocart.paypal" template="paypal/express/shortcut.phtml">
+         <action method="setIsInCatalogProduct">
+            <value>1</value>
+         </action>
+      </block>
+   </block>
+</reference>
+<update handle="SHORTCUT_popup"/>
+<reference name="right">
+   <block type="paypal/logo" name="paypal.partner.right.logo" template="paypal/partner/logo.phtml">
+                
+            </block>
+</reference>
+<reference name="top.container">
+   <block type="paypal/bml_banners" name="bml.center.logo" template="paypal/bml.phtml">
+      <action method="setSection">
+         <section>productpage</section>
+      </action>
+      <action method="setPosition">
+         <position>0</position>
+      </action>
+   </block>
+</reference>
+<reference name="product.info.addtocart">
+   <block type="paypal/bml_banners" name="bml.right.logo" after="product.info.addtocart.paypal" template="paypal/bml.phtml">
+      <action method="setSection">
+         <section>productpage</section>
+      </action>
+      <action method="setPosition">
+         <position>1</position>
+      </action>
+   </block>
+</reference>
+<label>Catalog Product View</label>
+<reference name="product.info.tabs">
+   <action method="addTab" translate="title" module="tag">
+      <alias>product.tags</alias>
+      <title>Product Tags</title>
+      <block>tag/product_list</block>
+      <template>tag/list.phtml</template>
+   </action>
+</reference>
+<reference name="product.tags">
+   <block type="page/html_wrapper" name="product.tag.list.list.before" as="list_before" translate="label">
+      <label>Tags List Before</label>
+      <action method="setMayBeInvisible">
+         <value>1</value>
+      </action>
+   </block>
+</reference>
+<reference name="product.tooltip">
+   <block type="page/html_wrapper" name="product.info.addtocart.paypaluk.wrapper" translate="label">
+      <block type="paypaluk/express_shortcut" name="product.info.addtocart.paypaluk" template="paypal/express/shortcut.phtml">
+         <action method="setIsInCatalogProduct">
+            <value>1</value>
+         </action>
+         <action method="setShowOrPosition">
+            <value>after</value>
+         </action>
+      </block>
+   </block>
+</reference>
+<reference name="product.info.addtocart">
+   <block type="page/html_wrapper" name="product.info.addtocart.paypaluk.wrapper" translate="label">
+      <label>PayPal Express Checkout (Payflow Edition) Shortcut Wrapper</label>
+      <action method="setHtmlTagName">
+         <tag>p</tag>
+      </action>
+      <action method="setElementClass">
+         <class>paypal-logo</class>
+      </action>
+      <block type="paypaluk/express_shortcut" name="product.info.addtocart.paypaluk" template="paypal/express/shortcut.phtml">
+         <action method="setIsInCatalogProduct">
+            <value>1</value>
+         </action>
+      </block>
+   </block>
+</reference>
+<update handle="SHORTCUT_uk_popup"/>
+<reference name="content">
+   <reference name="product.info">
+      <reference name="alert.urls">
+         <block type="productalert/product_view" name="productalert.price" as="productalert_price" template="productalert/product/view.phtml">
+            <action method="preparePriceAlertData"/>
+            <action method="setHtmlClass">
+               <value>alert-price link-price-alert</value>
+            </action>
+            <action method="setSignupLabel" translate="value">
+               <value>Sign up for price alert</value>
+            </action>
+         </block>
+         <block type="productalert/product_view" name="productalert.stock" as="productalert_stock" template="productalert/product/view.phtml">
+            <action method="prepareStockAlertData"/>
+            <action method="setHtmlClass">
+               <value>alert-stock link-stock-alert</value>
+            </action>
+            <action method="setSignupLabel" translate="value">
+               <value>Sign up to get notified when this product is back in stock</value>
+            </action>
+         </block>
+      </reference>
+   </reference>
+</reference>
+<reference name="catalog.product.related">
+   <action method="addPriceBlockType">
+      <type>bundle</type>
+      <block>bundle/catalog_product_price</block>
+      <template>bundle/catalog/product/price.phtml</template>
+   </action>
+</reference>
+<reference name="content">
+   <block type="core/template" name="external.pagecache.cookie" template="pagecache/cookie.phtml"/>
+</reference>
+<reference name="left">
+   <block type="catalog/product_list_related" name="rokanthemes.related" as="related_slider" template="rokanthemes/related/related.phtml"/>
+</reference>
+<reference name="root">
+   <block type="upsellslider/page_html_head" name="upsellslider" as="upsellslider"/>
+</reference>
+<reference name="head">
+            
+        </reference>
+<reference name="head">
+   <action method="addCss" ifconfig="zoom/zoom_config/enabled">
+      <stylesheet>rokanthemes/css/rk.zoom.css</stylesheet>
+   </action>
+   <action method="addJs" ifconfig="zoom/zoom_config/enabled_thumbnail">
+      <script>rokanthemes/rk.slider.js</script>
+   </action>
+   <action method="addJs" ifconfig="zoom/zoom_config/enabled">
+      <script>rokanthemes/zoom/rk.zoom.js</script>
+   </action>
+   <action method="addJs" ifconfig="zoom/zoom_config/enabled">
+      <script>rokanthemes/zoom/rk.lightbox.js</script>
+   </action>
+</reference>
+<reference name="before_body_end">
+   <block type="core/template" name="zoom.lightbox">
+      <action method="setTemplate" ifconfig="zoom/zoom_config/enabled">
+         <template>rokanthemes/zoom/script.phtml</template>
+      </action>
+   </block>
+</reference>
+<reference name="product.info.media">
+   <action method="setTemplate" ifconfig="zoom/zoom_config/enabled">
+      <template>rokanthemes/zoom/media.phtml</template>
+   </action>
+</reference>
+<label>Catalog Product View (Simple)</label>
+<reference name="product.info">
+   <block type="catalog/product_view_type_simple" name="product.info.simple" as="product_type_data" template="catalog/product/view/type/default.phtml">
+      <block type="core/text_list" name="product.info.simple.extra" as="product_type_data_extra" translate="label">
+         <label>Product Extra Info</label>
+      </block>
+   </block>
+</reference>
+<reference name="product.info.simple.extra">
+   <block type="cataloginventory/stockqty_default" template="cataloginventory/stockqty/default.phtml"/>
+</reference>
+<reference name="product.info.upsell">
+   <action method="addPriceBlockType">
+      <type>bundle</type>
+      <block>bundle/catalog_product_price</block>
+      <template>bundle/catalog/product/price.phtml</template>
+   </action>
+   <action method="setItemLimit">
+      <type>bundle</type>
+      <limit>4</limit>
+   </action>
+</reference>
+<reference name="top.links">
+   <action method="addLink" translate="label title" module="customer">
+      <label>Log In</label>
+      <url helper="customer/getLoginUrl"/>
+      <title>Log In</title>
+      <prepare/>
+      <urlParams/>
+      <position>100</position>
+   </action>
+</reference>
+<remove name="reorder"/>

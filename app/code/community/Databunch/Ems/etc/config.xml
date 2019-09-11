@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Databunch_Ems>
+            <version>0.1.0</version>
+        </Databunch_Ems>
+    </modules>
+    <global>
+        <models>
+            <ems>
+                <class>Databunch_Ems_Model</class>
+                <resourceModel>ems_resource</resourceModel>
+            </ems>
+            <ems_resource>
+                <class>Databunch_Ems_Model_Resource</class>
+                <entities>
+                    <ems_region>
+                        <table>directory_country_region_ems</table>
+                    </ems_region>
+                </entities>
+            </ems_resource>
+        </models>
+        <blocks>
+            <ems>
+                <class>Databunch_Ems_Block</class>
+            </ems>
+        </blocks>
+        <helpers>
+            <ems>
+                <class>Databunch_Ems_Helper</class>
+            </ems>
+        </helpers>
+        <resources>
+            <ems_setup>
+                <setup>
+                    <module>Databunch_Ems</module>
+                </setup>
+            </ems_setup>
+        </resources>
+    </global>
+    <default>
+        <carriers>
+            <ems_ru>
+                <active>0</active>
+                <allowspecific>0</allowspecific>
+                <model>ems/carrier_ems_ru</model>
+                <name>EMS Post of Russia</name>
+                <title>EMS Post of Russia</title>
+                <api_uri>http://emspost.ru/api/rest</api_uri>
+            </ems_ru>
+        </carriers>
+    </default>
+</config>

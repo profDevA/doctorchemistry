@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Media Rocks GbR
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA that is bundled with 
+ * this package in the file MEDIAROCKS-LICENSE-COMMUNITY.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://solutions.mediarocks.de/MEDIAROCKS-LICENSE-COMMUNITY.txt
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package is designed for Magento COMMUNITY edition. 
+ * Media Rocks does not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * Media Rocks does not provide extension support in case of
+ * incorrect edition usage.
+ * =================================================================
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extension
+ * to newer versions in the future. If you wish to customize the extension
+ * for your needs please send an email to support@mediarocks.de
+ *
+ */
+-->
+<config>
+	<tabs>
+		<mediarocks translate="label" module="mediarocks_socialmetatags">
+			<label>Media Rocks Extensions</label>
+			<sort_order>100</sort_order>
+		</mediarocks>
+	</tabs>
+	<sections>
+		<socialmetatags translate="label" module="mediarocks_socialmetatags">
+			<label>Social Meta Tags</label>
+			<tab>mediarocks</tab>
+			<sort_order>1000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general>
+					<label>General</label>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<product_img_fallback_order translate="label comment">
+							<label>Product Image Fallback</label>
+							<comment>In what order should the image fallback on product pages be? If you have custom image attributes, you can choose "custom" and define your own order in the field that appears below.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>Mediarocks_SocialMetaTags_Model_System_Config_Source_ImageFallback</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</product_img_fallback_order>
+						<product_img_fallback_order_custom translate="label comment">
+							<label>Product Image Custom Fallback</label>
+							<comment>Provide a comma seperated list of your image attribute names in the order the images should fallback to (i.e. "custom_image,small_image,thumbnail,base_image").</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<product_img_fallback_order>custom</product_img_fallback_order>
+							</depends>
+						</product_img_fallback_order_custom>
+					</fields>
+				</general>
+				<facebook translate="label comment">
+					<label>OpenGraph Settings (for Facebook/Pinterest/Google+ etc.)</label>
+					<comment>
+						<![CDATA[
+                        <strong>Facebook:</strong><br/>
+                        &raquo; For more information about Open Graph for Facebook go to: <a href="https://developers.facebook.com/products/open-graph" target="_blank">https://developers.facebook.com/products/open-graph</a><br/>
+                        &raquo; For a complete list of available product tags for Facebook go to: <a href="https://developers.facebook.com/docs/reference/opengraph/object-type/product/" target="_blank">https://developers.facebook.com/docs/reference/opengraph/object-type/product</a><br/>
+                        &raquo; To debug your pages go to: <a href="https://developers.facebook.com/tools/debug" target="_blank">https://developers.facebook.com/tools/debug</a><br/><br/>
+                        <strong>Pinterest:</strong><br/>
+                        &raquo; For more information about Open Graph for Pinterest Rich Pins go to: <a href="https://developers.pinterest.com/rich_pins_overview/" target="_blank">https://developers.pinterest.com/rich_pins_overview</a><br/>
+                        &raquo; To debug your pages go to: <a href="https://developers.pinterest.com/rich_pins/validator/" target="_blank">https://developers.pinterest.com/rich_pins/validator</a><br/><br/>
+                        <strong>Google+:</strong><br/>
+                        &raquo; For more information about Open Graph for Google+ posts go to: <a href="https://developers.google.com/+/web/snippet/article-rendering" target="_blank">https://developers.google.com/+/web/snippet/article-rendering</a><br/>
+                        &raquo; Unfortunately Google doesn't provide a tool to preview how your post will look like, but you can go to your google+ profile and paste the URL you want to validate and it will show you the rendered post before you hit the "Share" button.<br/><br/>
+						]]>
+					</comment>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Selecting No will disable tags for facebook in the current scope.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled>
+						<app_id translate="label comment">
+							<label>Application ID/key</label>
+							<comment>
+								<![CDATA[
+Create an app and get your API Key <a href="https://developers.facebook.com/apps" target="_blank">here</a>.
+								]]>
+							</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</app_id>
+						<admins translate="label comment">
+							<label>Admin ID(s)</label>
+							<comment>Comma seperated list of IDs of all Facebook admins.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</admins>
+						<use_product_type translate="label comment">
+							<label>Enable Product Type</label>
+							<comment>
+								<![CDATA[
+Use "og:type = product". This adds price and currency data automatically as described <a href="https://developers.facebook.com/docs/reference/opengraph/object-type/product/" target="_blank">here</a>. Support for more data will come in future versions but you can add more data for your products in the "Custom Meta Tags for Product and Category Pages" config section at the bottom of this page.
+								]]>
+							</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</use_product_type>
+						<last_fallback_image translate="label comment">
+							<label>Fallback Image (png, jpg or gif)</label>
+							<comment>Upload an image to display if no fallback image is found in the "Product Image Fallback" list defined in the "General" section.</comment>
+							<frontend_type>image</frontend_type>
+							<backend_model>adminhtml/system_config_backend_image</backend_model>
+							<upload_dir>media/mrsocialmetatags</upload_dir>
+							<base_url type="media" scope_info="1">mrsocialmetatags</base_url>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</last_fallback_image>
+					</fields>
+				</facebook>
+				<twitter translate="label comment">
+					<label>Twitter Card Settings</label>
+					<comment>
+						<![CDATA[
+&raquo; For more information about Twitter Cards go to: <a href="https://dev.twitter.com/docs/cards" target="_blank">https://dev.twitter.com/docs/cards</a><br/>&raquo; To debug your pages go to: <a href="https://dev.twitter.com/docs/cards/validation/validator" target="_blank">https://dev.twitter.com/docs/cards/validation/validator</a><br/><br/>
+						]]>
+					</comment>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled</label>
+							<comment>Selecting No will disable tags for twitter in the current scope.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enabled>
+						<card_site translate="label comment">
+							<label>Twitter Username</label>
+							<comment>@username for the website used in the card footer.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_site>
+						<card_site_id translate="label comment">
+							<label>Twitter User ID</label>
+							<comment>Same as "Twitter Username", but the website's Twitter user ID instead. Note that user ids never change, while @usernames can be changed by the user.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_site_id>
+						<card_creator translate="label comment">
+							<label>Author</label>
+							<comment>@username for the content creator / author.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_creator>
+						<card_creator_id translate="label comment">
+							<label>Author ID</label>
+							<comment>Same as "Author", but the Twitter user's ID.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_creator_id>
+						<card_type_cms translate="label">
+							<label>Twitter Card Type for CMS-Pages</label>
+							<frontend_type>select</frontend_type>
+							<source_model>Mediarocks_SocialMetaTags_Model_System_Config_Source_Twitter_Cards</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_type_cms>
+						<card_type_category translate="label">
+							<label>Twitter Card Type for Categories</label>
+							<frontend_type>select</frontend_type>
+							<source_model>Mediarocks_SocialMetaTags_Model_System_Config_Source_Twitter_Cards</source_model>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_type_category>
+						<card_type_product translate="label comment">
+							<label>Twitter Card Type for Products</label>
+							<frontend_type>select</frontend_type>
+							<source_model>Mediarocks_SocialMetaTags_Model_System_Config_Source_Twitter_ProductCards</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</card_type_product>
+						<card_video translate="label comment">
+							<label>Video Attribute Code</label>
+							<comment>Provide the attribute code for the products Video URL.</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>player_card</card_type_product>
+							</depends>
+						</card_video>
+						<card_data_1 translate="label comment">
+							<label>Data 1 Attribute</label>
+							<comment>
+								<![CDATA[
+Provide the attribute code for the data you want to display in the <a href="https://dev.twitter.com/docs/cards/types/product-card" target="_blank" title="More information about Player Cards">Product Card</a>.
+								]]>
+							</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+							</depends>
+						</card_data_1>
+						<card_data_1_formatprice translate="label comment">
+							<label>Format Price?</label>
+							<comment>When selecting Yes the price will be formatted with currency code.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+								<card_data_1 separator=",">price,cost,special_price,final_price</card_data_1>
+							</depends>
+						</card_data_1_formatprice>
+						<card_data_1_label translate="label comment">
+							<label>Data 1 Label</label>
+							<comment>Label for "Data 1 Attribute" (something like $, pound or inch).</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+							</depends>
+						</card_data_1_label>
+						<card_data_2 translate="label">
+							<label>Data 2 Attribute</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>17</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+							</depends>
+						</card_data_2>
+						<card_data_2_formatprice translate="label comment">
+							<label>Format Price?</label>
+							<comment>When selecting Yes the price will be formatted with currency code.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>18</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+								<card_data_2 separator=",">price,cost,special_price,final_price</card_data_2>
+							</depends>
+						</card_data_2_formatprice>
+						<card_data_2_label translate="label">
+							<label>Data 2 Label</label>
+							<comment>Label for "Data 2 Attribute"</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>19</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+							</depends>
+						</card_data_2_label>
+						<force_thumbnail_product translate="label comment">
+							<label>Use Thumbnail Image for Product Card</label>
+							<comment>When selecting Yes the module always tries to show the thumbnail as first fallback in Product Card. This overrides the "Product Image Fallback" option, but will use it if no twitter or thumbnail image was found.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+								<card_type_product>product_card</card_type_product>
+							</depends>
+						</force_thumbnail_product>
+						<force_thumbnail_summary translate="label comment">
+							<label>Use Thumbnail Image for Summary Card</label>
+							<comment>When selecting Yes the module always tries to show the thumbnail as first fallback in Summary Cards on category and product pages. This overrides the "Product Image Fallback" option, but will use it if no twitter or thumbnail image was found.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</force_thumbnail_summary>
+						<last_fallback_image translate="label comment">
+							<label>Fallback Image (png, jpg or gif)</label>
+							<comment>Upload an image to display if no fallback image is found in the "Product Image Fallback" list defined in the "General" section.</comment>
+							<frontend_type>image</frontend_type>
+							<backend_model>adminhtml/system_config_backend_image</backend_model>
+							<upload_dir>media/mrsocialmetatags</upload_dir>
+							<base_url type="media" scope_info="1">mrsocialmetatags</base_url>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<depends>
+								<enabled>1</enabled>
+							</depends>
+						</last_fallback_image>
+					</fields>
+				</twitter>
+				<additional translate="label comment">
+					<label>Custom Meta Tags for Product and Category Pages</label>
+					<comment>
+						<![CDATA[
+<h3>Here you can define additional meta tags and remove default meta tags if you don't want them:</h3>
+<p><strong>Define a list of additional meta properties as key value pairs where the key is the meta property/name and the value is the product's or category's attribute_key. If you dont't want the value to get parsed you can surround it with the pipe-symbol like shown in the examples below.</strong></p>
+<p style="margin-bottom:10px;"><strong>&bull; If you define a meta tag, that comes from this extension, it will override the default value.<br/>
+&bull; If you want to remove a meta tag completely, you can use the magic value |-| (a minus between pipe-symbols).</strong></p>
+<h4>Pattern:</h4>
+<pre>
+property1,attribute_key1
+property2,attribute_key2
+property3,attribute_key3
+...
+</pre>
+<br/>
+<h4>Write them line by line like this:</h4>
+<pre>
+product:isbn,isbn_number
+property:weight,weight
+property:weight:units,|g|
+product:availability,|-|  &laquo; this would remove the default product:availability completely
+</pre>
+<br/>
+<strong>will get converted to:</strong><br/><pre>&lt;meta property="product:isbn" content="XY"&gt; <br/>&lt;meta property="product:weight" content="123"&gt;<br/>&lt;meta property="product:weight:units" content="g"&gt;</pre><strong>or</strong> 
+<br/><pre>&lt;meta name="product:isbn" content="XY"&gt;<br/>&lt;meta name="product:weight" content="123"&gt;<br/>&lt;meta name="product:weight:units" content="g"&gt;</pre><br/><br/><br/>
+						]]>
+					</comment>
+					<sort_order>50</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<product_properties translate="label comment">
+							<label>Additional Product Properties</label>
+							<comment>For product pages only</comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</product_properties>
+						<product_names translate="label comment">
+							<label>Additional Product Names</label>
+							<comment>For product pages only</comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</product_names>
+						<category_properties translate="label comment">
+							<label>Additional Category Properties</label>
+							<comment>For category pages only</comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</category_properties>
+						<category_names translate="label comment">
+							<label>Additional Category Names</label>
+							<comment>For category pages only</comment>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</category_names>
+					</fields>
+				</additional>
+			</groups>
+		</socialmetatags>
+	</sections>
+</config>

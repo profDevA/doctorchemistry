@@ -1,0 +1,162 @@
+<?php
+$loadingImage = Mage::getBaseUrl('media') . 'theme/' . Mage::getStoreConfig('layerednavigation/layerfiler_config/loading_image');
+$transParent = Mage::getBaseUrl('media') . 'theme/' . Mage::getStoreConfig('layerednavigation/layerfiler_config/trans_image');
+$opacity = Mage::getStoreConfig('layerednavigation/layerfiler_config/bg_opacity');
+$toolBarStatus = Mage::getStoreConfig('layerednavigation/layerfiler_config/toolbar_status');
+?>
+<script type="text/javascript">
+//<![CDATA[  
+    function ajaxFilter(url) {
+        var data = "layer_action=1";
+        jQuery(function($jq) {
+            $jq.ajax({
+                url: url,
+                dataType: 'json',
+                type: 'post',
+                data: data,
+                beforeSend: function ( xhr ) {
+                    var loading = '<img src ="<?php echo $loadingImage; ?>"/>';
+                    var urlImage = '<?php echo $transParent; ?>';
+                    var opacity = "<?php echo $opacity; ?>";
+                    $jq('#loading').html(loading);
+                    $jq('#wrapper').attr('style','position: fixed;top: 0%; z-index:99999; left: 0%; opacity:'+opacity+'; width:100%;height: 100%; background:url('+urlImage+')');
+                },
+                success: function(data) {
+                    var flag = true;
+                    if(data.status==1) {
+                        //alert(dat)
+                        if (data.productlist) {
+                             var cate_product =   $$('.category-products').length;
+                             if(cate_product>0){
+                                $$('.category-products').each(function (el){
+                                    el.replace(data.productlist);
+                                });
+                             } 
+                            if(data.pcount==0) {
+                                $jq('p.note-msg').attr('class','note-msg category-products');
+                                flag = false;
+                            }
+                            //$jq('#loading').html('');
+                        }
+                        if(flag==true) {
+                            if (data.leftLayer) {
+                                if(url.search('tag/product/list')!=-1){
+                                    if ($jq('.block-tags')) {
+                                        $$('.block-tags').each(function (el){
+                                            el.replace(data.leftLayer);
+                                        });
+                                        $jq('.block-tags').append('<div class= "add_js_tagproduct"></div>');
+                                        //$jq('.add_js_tagproduct').append(data.tagtoolbarjs);
+                                        //var page_title = $jq(data.productlist).children(':first').html();
+                                        $jq('.col-main .page-title').hide();
+                                        $jq('.col-main .page-title:last').show();
+                                        $jq('.col-main .page-title:first').show();
+                                    }
+                                } else {
+                                    if ($jq('.block-layered-nav')) {
+                                        $$('.block-layered-nav').each(function (el){
+                                            el.replace(data.leftLayer);
+                                        });
+                                        $jq('.block-layered-nav').append('<div class= "add_js_remove_item"></div>');
+                                        $jq('.add_js_remove_item').append(data.removeItem);
+                                        if(  $jq('.col-main .page-title').length >1){
+                                         $jq('.col-main .page-title:last').hide();
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                        $jq('#loading').html('');
+                        
+                        $jq('#wrapper').removeAttr('style');
+                    }else {
+                        alert('Load data was failed');
+                    }
+
+                }
+            })
+            return false;
+        });
+        
+    }
+    function Toolbar() {
+        var toolbar_status = "<?php echo $toolBarStatus; ?>";
+        if(toolbar_status==1){    
+            //view mode product   
+            $jq('.view-mode a').each(function(){
+                var viewModeUrl = $jq(this).attr('href');
+                $jq( this ).attr('link',viewModeUrl);
+                $jq(this).bind('click',function(){
+                $jq(this).attr('onclick',ajaxFilter(viewModeUrl));
+                return false;
+                });
+            });
+            //sort by
+            $jq('.sort-by select').removeAttr('onchange');
+            $jq('.sort-by select').change(function(){
+                var sortByUrl = $jq(this).children(":selected").attr('value');
+                ajaxFilter(sortByUrl)
+            });
+             //demention sort by
+
+            $jq('.sort-by a').each(function(){
+                var dementionUrl = $jq(this).attr('href');
+                $jq( this ).attr('link',dementionUrl);
+                //$jq(this).attr('href','javascript:void(0)');
+                $jq(this).bind('click',function(){
+                    $jq(this).attr('onclick',ajaxFilter(dementionUrl));
+                    return false;
+                });
+            });
+
+            //show per page
+
+            $jq('.limiter select').removeAttr('onchange');
+            $jq('.limiter select').change(function(){
+                var perPageUrl = $jq(this).children(":selected").attr('value');
+                ajaxFilter(perPageUrl)
+            });  
+
+            //pagination page
+            $jq('.pages a').each(function(){
+                var href = $jq(this).attr('href');
+                $jq( this ).attr('link',href);
+                //$jq(this).attr('href','javascript:void(0)');
+                $jq(this).bind('click',function(){
+                    $jq(this).attr('onclick',ajaxFilter(href));
+                    return false;
+                });
+            });
+            
+            $jq('.tags-list a').each(function(){
+                var TagUrl = $jq(this).attr('href');
+                $jq( this ).attr('link',TagUrl);
+                //$jq(this).attr('href','javascript:void(0)');
+                $jq(this).bind('click',function(){
+                    $jq(this).attr('onclick',ajaxFilter(TagUrl));
+                    return false;
+                });
+            });
+        }
+
+    }
+    $jq(document).ready(function(){
+        Toolbar();
+        $jq(document).ajaxComplete(function(){
+            Toolbar();
+        })
+    });
+    
+//]]>
+</script>
+<div id ="wrapper">
+    <div id="loading" style ="position: fixed;top: 45%;left: 45%;"></div>
+</div>
+
+<style type ="text/css">
+    .ajaxLayer{
+        cursor: pointer;
+    }
+</style>

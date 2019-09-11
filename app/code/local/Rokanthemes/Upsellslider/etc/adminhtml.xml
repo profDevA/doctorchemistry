@@ -1,0 +1,63 @@
+<?xml version="1.0"?> 
+<config>
+	<menu>
+		<rokanthemes translate="title" module="upsellslider">
+			<title>Rokanthemes</title>
+			<sort_order>71</sort_order>               
+			<children>
+				<upsellslider translate="title" module="upsellslider">
+					<title>UpsellSlider</title>
+					<sort_order>35</sort_order>
+					<children>
+						<configuration>
+							<title>Configuration</title>
+							<sort_order>1</sort_order>
+							<action>adminhtml/system_config/edit/section/upsellslider</action>
+						</configuration>
+					</children>
+				</upsellslider>
+			</children>
+		</rokanthemes>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<upsellslider>
+										<title>Upsellslider</title>
+									</upsellslider>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="upsellslider">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<upsellslider translate="title" module="upsellslider">
+								<title>Upsellslider</title>
+								<sort_order>0</sort_order>
+								<children>
+									<items translate="title" module="upsellslider">
+										<title>Manage Items</title>
+										<sort_order>0</sort_order>
+										<action>upsellslider/adminhtml_upsellslider</action>
+									</items>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/upsellslider</action>
+									</configuration>
+								</children>
+							</upsellslider>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

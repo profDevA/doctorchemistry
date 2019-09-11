@@ -1,0 +1,97 @@
+<?php
+$athleteHelper = $this->helper('custom');
+$config = $athleteHelper->getCfg('revolutionslider', 'revolutionslideshow');
+/* @var $helper Mage_Cms_Helper_Data */
+$helper = Mage::helper('cms');
+$processor = $helper->getBlockTemplateProcessor();
+$css_prefix = 'rs-';
+if ($config['fullWidth'] == 'on') {
+	$css_prefix = 'fullwidth';
+}
+?>
+<!-- SLIDESHOW -->
+<div class="slideshow-container <?php echo $css_prefix; ?>banner-container icons-<?php echo $athleteHelper->getCfg('slideshow/icons', 'athlete_appearance'); ?>">
+    <div class="revolution-slideshow <?php echo $css_prefix; ?>banner">
+        <ul>
+	        <?php
+	        $slides = $this->getSlides();
+	        foreach($slides as $s) {
+		        $attr = '';
+		        if ( !empty( $s['transition'] ) ) {
+					$attr .= ' data-transition="'.$s['transition'].'"';
+			    }
+		        if ( !empty( $s['masterspeed'] ) ) {
+					$attr .= ' data-masterspeed="'.$s['masterspeed'].'"';
+			    }
+		        if ( !empty( $s['slotamount'] ) ) {
+					$attr .= ' data-slotamount="'.$s['slotamount'].'"';
+			    }
+		        if ( !empty( $s['link'] ) ) {
+					$attr .= ' data-link="'.$s['link'].'"';
+			    }
+		        if ( !empty( $s['thumb'] ) ) {
+					$attr .= ' data-thumb="'.$s['thumb'].'"';
+			    }
+		        if ( !empty( $s['slide_bg'] ) ) {
+					$attr .= ' style="background-color: '.$s['slide_bg'].'"';
+			    }
+		?>
+			<li <?php echo $attr; ?> >
+                <?php if ( !empty( $s['image'] ) ) { ?>
+                <img src="<?php echo Mage::getBaseUrl('media') . $s['image'] ?>" alt="" />
+                <?php } else { ?>
+	            <img width="1" height="1" src="<?php echo $this->getSkinUrl('images/spacer.gif') ?>" alt=""  />
+                <?php } ?>
+				<?php if ( !empty( $s['text'] ) ) { ?>
+                <?php echo $processor->filter($s['text']) ?>
+                <?php } ?>
+			</li>
+		<?php
+		} // foreach($slides as $s) { ?>
+        </ul>
+	    <?php if ( $config['timeline'] ) { ?>
+        <div class="tp-bannertimer tp-<?php echo $config['timeline_position']; ?>"></div>
+	    <?php } ?>
+    </div>
+</div>
+<script type="text/javascript">
+    var CONFIG_REVOLUTION = {
+        delay:<?php echo (is_numeric($config['delay']) ? $config['delay'] : 9000); ?>,
+        startwidth:<?php echo (is_numeric($config['startwidth']) ? $config['startwidth'] : 960); ?>,
+        startheight:<?php echo (is_numeric($config['startheight']) ? $config['startheight'] : 464); ?>,
+
+	    keyboardNavigation: "off",
+
+	    onHoverStop:"<?php echo $config['onHoverStop']; ?>",
+	    thumbWidth:<?php echo (is_numeric($config['thumbWidth']) ? $config['thumbWidth'] : 100); ?>,
+	    thumbHeight:<?php echo (is_numeric($config['thumbHeight']) ? $config['thumbHeight'] : 50); ?>,
+	    thumbAmount:<?php echo (is_numeric($config['thumbAmount']) ? $config['thumbAmount'] : 5); ?>,
+	    hideThumbs:<?php echo (is_numeric($config['hideThumbs']) ? $config['hideThumbs'] : 200); ?>,
+        navigationType:"<?php echo $config['navigationType']; ?>",
+        navigationArrows:"<?php echo $config['navigationArrows']; ?>",
+        navigationStyle:"<?php echo $config['navigationStyle']; ?>",
+        touchenabled:"<?php echo $config['touchenabled']; ?>",
+
+	    soloArrowLeftHalign:"left",
+	    soloArrowLeftValign:"center",
+	    soloArrowLeftHOffset:0,
+	    soloArrowLeftVOffset:0,
+
+	    soloArrowRightHalign:"right",
+	    soloArrowRightValign:"center",
+	    soloArrowRightHOffset:0,
+	    soloArrowRightVOffset:0,
+
+	    stopAtSlide:<?php echo (is_numeric($config['stopAtSlide']) ? $config['stopAtSlide'] : -1); ?>,
+	    stopAfterLoops:<?php echo (is_numeric($config['stopAfterLoops']) ? $config['stopAfterLoops'] : -1); ?>,
+
+	    hideCaptionAtLimit:<?php echo (is_numeric($config['hideCaptionAtLimit']) ? $config['hideCaptionAtLimit'] : 0); ?>,
+	    hideAllCaptionAtLilmit:<?php echo (is_numeric($config['hideAllCaptionAtLilmit']) ? $config['hideAllCaptionAtLilmit'] : 0); ?>,
+	    hideSliderAtLimit:<?php echo (is_numeric($config['hideSliderAtLimit']) ? $config['hideSliderAtLimit'] : 0); ?>,
+
+        fullWidth:"<?php echo $config['fullWidth']; ?>",
+
+	    shuffle:"<?php echo $config['shuffle']; ?>"
+    };
+</script>
+<!-- SLIDESHOW EOF -->

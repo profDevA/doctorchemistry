@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <catalog_product_view>
+        <reference name="root">
+            <block type="upsellslider/page_html_head" name="upsellslider" as="upsellslider"/>
+        </reference>
+        <reference name="head">
+            <!-- <action method="addJs" ifconfig="upsellslider/general/enabled"><script>rokanthemes/jquery.min.js</script></action>
+            <action method="addJs" ifconfig="upsellslider/general/enabled"><script>rokanthemes/plugin/jquery.bxslider.js</script></action> -->
+        </reference>
+    </catalog_product_view>
+</layout> 

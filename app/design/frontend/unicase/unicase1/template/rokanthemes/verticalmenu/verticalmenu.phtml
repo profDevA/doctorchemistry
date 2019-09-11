@@ -1,0 +1,14 @@
+<?php $_categories = Mage::helper('catalog/category')->getStoreCategories() ?>
+
+<div class="rokanthemes-menu-container visible-lg visible-md">
+	<?php if(Mage::getStoreConfig('verticalmenu/general/title')){?>
+			<div class="rokanthemes-menu-title"><h2><?php echo Mage::getStoreConfig('verticalmenu/general/title'); ?></h2></div>
+		<?php }?>
+    <div id="rokanthemes-verticalmenu" class="rokanthemes-verticalmenu">
+        
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('left_menu')->toHtml(); ?>
+        
+        <div class="clearBoth"></div>
+    </div>
+</div>
+

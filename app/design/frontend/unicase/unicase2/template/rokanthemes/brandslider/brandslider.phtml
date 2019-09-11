@@ -1,0 +1,79 @@
+<?php $this->getProducts() ?>
+<?php $_productCollection=$this->getProductCollection() ?>
+<div class="rk-brand-slider">
+	<div class="container">
+		<div class="rokan-product-heading rokan-brand-heading">
+			<h2><?php echo $this->__('Our Brands') ?></h2>
+		</div>
+		<div class="brand-slider">
+			<div class="container-inner">
+			<?php
+				$slide = $this->getDataBrandslider();
+				$path = Mage::getBaseUrl('media');	
+				$qty_Item = $this->getConfig('qty');
+				/* Get max item & qty item */
+				if ($qty_Item > count($slide)) {
+					$qty_Item = count($slide);
+				}
+			?>
+			<!--<div class="brand-title"><h2><?php echo $this->__('BRAND &amp; CLIENTS') ?></h2></div>-->
+				<div class="row">
+					<ul class="owl">
+						<?php
+							$i = 1;
+							foreach($slide as $s)
+							{
+								if($i <= $qty_Item) {
+									//Get images slide show
+									$st1 = $s['image'];
+									$p1 = strpos($st1,'brandslider');
+									$st2 = substr($st1,$p1+11);
+									$p2 = strpos($st2,'"');
+									$imag = substr($st2,0,$p2);
+						?>
+							<li class="item">						    														
+							<div class="product-item">																			    <?php if( $s['link'] ) { ?>
+									<a href="<?php echo $s['link']?>" title=""><img src="<?php echo $path.'rokanthemes/brandslider'.$imag;?>" alt="" /></a>												
+								<?php } else { ?>
+									<img src="<?php echo $path.'rokanthemes/brandslider'.$imag;?>" alt="" />
+								<?php } ?>																																	             
+								<?php if( $this->getConfig('description')): ?>
+									<div class="ma-des">
+										<div class="ma-des-title"><h2><?php echo $s['title'] ?></h2></div>
+										<div class="ma-des-content"><?php echo $s['description'] ?></div>
+									</div>
+								<?php endif; ?>
+								</div>
+							</li>
+						<?php
+							}//end if
+							$i++;
+							} // end foreach
+						?>
+					</ul>
+				</div>
+					<script type="text/javascript">
+			       //<![CDATA[
+					$jq(document).ready(function(){					  
+					  $jq(".rk-brand-slider .owl").owlCarousel({
+							autoPlay : false,
+							items : 6,
+							itemsDesktop : [1199,6],
+							itemsDesktopSmall : [980,4],
+							itemsTablet: [768,3],
+							itemsMobile : [479,2],
+							slideSpeed : 500,
+							paginationSpeed : 500,
+							rewindSpeed : 500,
+							navigation : true,
+							stopOnHover : true,
+							pagination : false,
+							scrollPerPage:true,
+						});
+					});
+				//]]>
+				</script>	
+			</div>
+		</div>				
+    </div>				
+</div> 

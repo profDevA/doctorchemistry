@@ -1,0 +1,1 @@
+[06-Feb-2019 19:13:21 UTC] PHP Fatal error:  Using $this when not in object context in /home/chemistr/public_html/skin/frontend/unicase/unicase1/css/subscribe.phtml on line 27

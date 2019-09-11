@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+    function initLightbox(){
+        new Lightbox({
+            fileLoadingImage: '<?php echo $this->getSkinUrl('rokanthemes/images/loading.gif') ?>',
+            fileBottomNavCloseImage: '<?php echo $this->getSkinUrl('rokanthemes/images/closelabel.gif') ?>',
+            overlayOpacity: 0.8,   // controls transparency of shadow overlay
+            animate: true,         // toggles resizing animations
+            resizeSpeed: 7,        // controls the speed of the image resizing animations (1=slowest and 10=fastest)
+            borderSize: 10,
+            // When grouping images this is used to write: Image # of #.
+            // Change it for non-english localization
+            labelImage: "Image",
+            labelOf: "of"
+        });
+    }
+
+
+    if (Prototype.Browser.IE) {
+        Event.observe(window, 'load', function(){ //KB927917 fix
+            initLightbox();
+        });
+    } else {
+        document.observe("dom:loaded", function(){
+            initLightbox();
+        });
+    }
+</script>

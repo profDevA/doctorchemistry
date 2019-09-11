@@ -1,0 +1,107 @@
+<?php if($this->getItems()->getSize()): ?>
+    <?php
+        $auto = Mage::getStoreConfig('relatedslider/relatedslider_config/auto');
+        $width_thumbnail = Mage::getStoreConfig('relatedslider/relatedslider_config/width_thumbnail');
+        $height_thumbnail = Mage::getStoreConfig('relatedslider/relatedslider_config/height_thumbnail');
+        $item_width = Mage::getStoreConfig('relatedslider/relatedslider_config/item_width');
+        $items_show = Mage::getStoreConfig('relatedslider/relatedslider_config/items_show');
+        $speed = Mage::getStoreConfig('relatedslider/relatedslider_config/speed');
+        $interval = Mage::getStoreConfig('relatedslider/relatedslider_config/interval');
+        $nav_ctrl = Mage::getStoreConfig('relatedslider/relatedslider_config/nav_ctrl');
+        $next_back = Mage::getStoreConfig('relatedslider/relatedslider_config/next_back');
+        $show_price = Mage::getStoreConfig('relatedslider/relatedslider_config/show_price');
+        $show_wishlist = Mage::getStoreConfig('relatedslider/relatedslider_config/show_wishlist');
+		$title = Mage::getStoreConfig('relatedslider/relatedslider_config/title');
+    ?>
+<div class="rk-relatedslider">
+    <div class="rokan-product-heading related-product-title">
+        <h2><?php echo $this->__('Related Products') ?></h2>
+    </div>
+    <div class="rlt">
+		<?php $rows = Mage::getStoreConfig('relatedslider/relatedslider_config/row_show');$i=0; ?>
+		<div class="row">
+			<ul class="owl" id="block-related">
+			<?php foreach($this->getItems() as $_item): ?>
+				<?php if($i % $rows == 0) echo '<li class="relatedslider-item">'; ?>
+					<div class="item_related">
+					<!--<?php if(!$_item->isComposite() && $_item->isSaleable()): ?>
+						<?php if (!$_item->getRequiredOptions()): ?>
+							<input type="checkbox" class="checkbox related-checkbox" id="related-checkbox<?php echo $_item->getId() ?>" name="related_products[]" value="<?php echo $_item->getId() ?>" />
+						<?php endif; ?>
+					<?php endif; ?>-->
+					<div class="product">
+						<a href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_item->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize( $width_thumbnail,$height_thumbnail ) ?>" alt="<?php echo $this->htmlEscape($_item->getName()) ?>" /></a>
+						<div class="product-details">
+							<h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->htmlEscape($_item->getName()) ?></a></h3>
+							<?php echo $this->getReviewsSummaryHtml($_item) ?>
+							<?php echo $this->getPriceHtml($_item, true, '-related') ?>
+							<?php if ($this->helper('wishlist')->isAllow() && $show_wishlist ) : ?>
+								<a href="<?php echo $this->getAddToWishlistUrl($_item) ?>" class="link-wishlist"><?php echo $this->__('Add to Wishlist') ?></a>
+							<?php endif; ?>
+							
+						</div>
+					</div>
+					</div>
+				<?php $i++;?>
+				<?php if($i % $rows == 0) echo "</li>"; ?>   
+				<?php endforeach ?>
+				<?php if($i % $rows != 0) echo "</li>"; ?>
+			</ul>
+		</div>
+        <script type="text/javascript">decorateList('block-related', 'none-recursive')</script>
+    </div>
+    <script type="text/javascript">
+    //<![CDATA[
+    $$('.related-checkbox').each(function(elem){
+        Event.observe(elem, 'click', addRelatedToProduct)
+    });
+
+    var relatedProductsCheckFlag = false;
+    function selectAllRelated(txt){
+        if (relatedProductsCheckFlag == false) {
+            $$('.related-checkbox').each(function(elem){
+                elem.checked = true;
+            });
+            relatedProductsCheckFlag = true;
+            txt.innerHTML="<?php echo $this->__('unselect all') ?>";
+        } else {
+            $$('.related-checkbox').each(function(elem){
+                elem.checked = false;
+            });
+            relatedProductsCheckFlag = false;
+            txt.innerHTML="<?php echo $this->__('select all') ?>";
+        }
+        addRelatedToProduct();
+    }
+
+    function addRelatedToProduct(){
+        var checkboxes = $$('.related-checkbox');
+        var values = [];
+        for(var i=0;i<checkboxes.length;i++){
+            if(checkboxes[i].checked) values.push(checkboxes[i].value);
+        }
+        if($('related-products-field')){
+            $('related-products-field').value = values.join(',');
+        }
+    }
+       $jq(document).ready(function(){
+			$jq(".rk-relatedslider .owl").owlCarousel({
+				autoPlay : false,
+				items : 1,
+				itemsDesktop : [1199,1],
+				itemsDesktopSmall : [980,3],
+				itemsTablet: [768,2],
+				itemsMobile : [479,1],
+				slideSpeed : 500,
+				paginationSpeed : 500,
+				rewindSpeed : 500,
+				navigation : true,
+				stopOnHover : true,
+				pagination :false,
+				scrollPerPage:true,
+			});
+		});
+    //]]>
+    </script>
+</div>
+<?php endif ?>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<explodemenu>
+										<title>Custom Menu</title>
+									</explodemenu>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="explodemenu">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<explodemenu translate="title" module="explodemenu">
+								<title>Custom Menu</title>
+								<sort_order>0</sort_order>
+								<action>adminhtml/system_config/edit/section/explodemenu</action>
+							</explodemenu>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+            </resources>
+	</acl>
+</config>

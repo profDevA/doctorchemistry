@@ -1,0 +1,44 @@
+.header .form-search #cat { width: 118px; float:left; margin-right: 2px;}
+.header .form-search label { width: 22px; float: left; }
+#search_mini_form .header .form-search button.button { float: right; margin-right: 8px; }
+.header .form-search {width:100%; margin: auto;height: 54px;background:#fff;border: 3px solid #dddddd;position: relative;z-index: 1000;margin: 10px 0 0;}
+.header .form-search .bootstrap-select{width: auto !important;float:right !important;}
+.header .form-search .box-search-select{padding-left: 10px}
+.header .form-search .dropdown-toggle{text-shadow:none;background: none;border: none;border-radius:0;box-shadow: none;padding: 0 25px 0 15px;line-height:25px;margin: 11px 0 0;border-left: 2px solid #d9d9d9}
+.header .form-search label { display: none; }
+.header .form-search input.input-text { font-size: 15px;width: 60%;float:left;margin: 0;border: none;background: none;padding: 15px 10px 15px}
+.header .form-search button.button { float:right; }
+.header .form-search button.button{}
+.header .form-search button.button span{
+border: 0;
+font-size: 0;
+padding: 0;
+font-weight: normal;
+text-transform: uppercase;
+width:60px;
+height: 48px;
+text-align:center;
+background: #666666;
+}
+.header .form-search .bootstrap-select.btn-group .btn .filter-option{color: #888888;font-size: 15px}
+.header .form-search .bootstrap-select.btn-group .btn .filter-option:hover{color: #7ccfc4}
+.header .bootstrap-select .btn:focus{outline: inherit !important;
+outline: inherit !important; 
+outline-offset: inherit !important;}
+.bootstrap-select {
+    display: block !important;
+}
+.form-search .dropdown-menu{height: 300px !important;top: 43px;border-radius: 0;box-shadow: none}
+.header .form-search span .fa-search{
+font-size: 18px;line-height:50px;color: #fff
+}
+.bootstrap-select.btn-group .btn .caret{color: #888888}
+.bootstrap-select.btn-group:hover .btn .caret{color: #7ccfc4}
+.header .form-search button.button span span { padding: 0; background: none; }
+.header .form-search span .fa-search:hover { }
+.header .form-search .search-autocomplete { z-index:999; left:40px !important; top:22px !important; }
+.header .form-search .search-autocomplete ul { border:1px solid #5c7989; background-color:#f9f5f0; }
+.header .form-search .search-autocomplete li { text-align:left; border-bottom:1px solid #f4eee7; padding:2px 8px 1px 8px; cursor:pointer; }
+.header .form-search .search-autocomplete li .amount { float:right; font-weight:normal; }
+.header .form-search .search-autocomplete li.odd { background-color:#fffefb; }
+.header .form-search .search-autocomplete li.selected { background-color:#f7e8dd; }

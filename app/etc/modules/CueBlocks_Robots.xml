@@ -1,0 +1,17 @@
+<!--
+/**
+ *
+ * Package :- Robots
+ * Edition :- community
+ * Developed By :- CueBlocks.com
+ * 
+ */
+-->
+<config>
+    <modules>
+        <CueBlocks_Robots>
+            <active>true</active>
+            <codePool>community</codePool>
+        </CueBlocks_Robots>
+    </modules>
+</config> 

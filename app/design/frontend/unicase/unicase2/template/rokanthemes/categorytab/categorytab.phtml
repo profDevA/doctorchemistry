@@ -1,0 +1,200 @@
+<?php
+$title = $this->getTitle();
+$identify = $this->getIdentify();
+$categoryIds = $this->getCatIds();
+$categoryIds = explode(',', $categoryIds);
+$_helper = $this->helper('catalog/output');
+$productsOnRow = $this->getProductsOnRow();
+if(!$productsOnRow) $productsOnRow = 3;
+if ( !$this->getWidthThumbnail() ){
+	$w_thumbnail = 135;
+} else {
+	$w_thumbnail = $this->getWidthThumbnail();
+}
+if( !$this->getHeightThumbnail() ){
+	$h_thumbnail = 135;
+ }
+else {
+	$h_thumbnail = $this->getHeightThumbnail();
+}
+?>
+
+<?php
+
+        $item_width = Mage::getStoreConfig('categorytab/categorytab_config/item_width');
+        $items_show = Mage::getStoreConfig('categorytab/categorytab_config/items_show');
+        $speed = Mage::getStoreConfig('categorytab/categorytab_config/speed');
+        $interval = Mage::getStoreConfig('categorytab/categorytab_config/interval');
+        $nav_ctrl = Mage::getStoreConfig('categorytab/categorytab_config/nav_ctrl');
+        $next_back = Mage::getStoreConfig('categorytab/categorytab_config/next_back');
+        $show_price = Mage::getStoreConfig('categorytab/categorytab_config/show_price');
+        $review = Mage::getStoreConfig('categorytab/categorytab_config/show_review');
+	$addtowishlist = Mage::getStoreConfig('categorytab/categorytab_config/addtowishlist');
+	$addtocompare = Mage::getStoreConfig('categorytab/categorytab_config/addtocompare');
+	$title = $this->getTitle();
+?>
+<div class="rk-tab">
+	<div class="category-title rokan-product-heading">
+		<?php 	echo '<h2>'.$title.'</h2>'; ?>
+		<div class="box-title-category">
+			<ul class="tabs tabs<?php echo '-'.$identify;?>  tab_categorys"> 
+			 <?php 
+				  $k = 0;
+				  foreach($categoryIds as $cate_id) {
+					  $cate_model = Mage::getModel('catalog/category');
+					  $cateName = $cate_model->load($cate_id)->getName();
+					  
+					  if($cateName) {
+			 ?>
+						  <li class="<?php if($k==0){ echo "active"; }?>" rel="tab<?php echo $cate_id.'-'.$identify;?>"><?php  echo $cateName; ?></li>
+				  <?php }  $k++; } ?>
+			  </ul>
+		</div>
+	</div>
+	<?php if($this->getConfig('des')){?>
+		<div class="rk-categorytab-sldier-des description"><span><?php echo $this->getConfig('des')?></span></div>
+   <?php }?>
+	
+	<div class="tab_container"> 
+		<?php foreach($categoryIds as $cate_id) {
+		?>
+		 <div id="tab<?php echo $cate_id.'-'.$identify;?>" class="tab_content_<?php echo $identify; ?>"> 
+			<?php $_productCollection = $this->getProductCate($cate_id); ?>
+			<?php $_collectionSize = $_productCollection->count() ?>
+			<?php $_columnCount = $productsOnRow; ?>
+			<div class="row">
+		<ul class="owl">	
+		<?php $i=0; foreach ($_productCollection as $_product): ?>
+		
+				<li class="item<?php if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?>">
+					<div class="product-item">
+						<?php
+						$newFromDate = $_product->getNewsFromDate();
+						$newToDate = $_product->getNewsToDate();                 
+						$now = date("Y-m-d H:m(worry)");
+						// Get the Special Price
+						$specialprice = $_product->getSpecialPrice(); 
+						// Get the Special Price FROM date
+						$specialPriceFromDate = $_product->getSpecialFromDate();
+						// Get the Special Price TO date
+						$specialPriceToDate = $_product->getSpecialToDate();
+						// Get Current date
+						if ($specialprice&&($specialPriceFromDate <= $now && $specialPriceToDate >= $now)){
+							echo "<span class='icon-sale icon-product'>Sale</span>";
+							}else{
+							if($newFromDate <= $now && $newToDate >= $now) {
+								echo "<span class='icon-new icon-product'>Hot</span>";
+								//echo $now.' -- '.$newsFrom.' -- '.$newsTo;
+							}
+						}
+						?>
+						<div class="product-image">
+							<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($w_thumbnail, $h_thumbnail); ?>" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" /></a>
+						</div><!--end .product-image-->	
+						<div class="product-name">
+							<h2><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h2>
+						</div>
+						<div class="price-box">
+							<?php
+							$sym = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol(); 
+							$price = $_product->getPrice();
+							$specialprice = $_product->getFinalPrice();
+							if($price != $specialprice){
+							if($price != ''){
+							echo '<p class="old-price"><span class="price-label">';
+							echo $this->__('Regular Price'). ': </span>';
+							echo '<span class="price">'.$sym.''.number_format($price,2).'</span></p>';
+							}
+							if($specialprice != '')
+							{
+							echo '<p class="special-price">
+							<span class="price-label">Special Price</span>
+							<span class="price">'.$sym.''.number_format($specialprice,2).'</span>
+							</p> ';
+							} 
+							}else {
+							echo '<div class="price-boxs">
+							<span class="regular-price">
+							<span class="price">'.$sym.''.number_format($price,2).'</span>                                    
+							</span>    
+							</div>';    
+							}
+							?>
+						</div>
+
+						<div class="product-ratting">
+							<?php if($review) { ?>
+								<?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+							<?php } ?>
+						</div>
+						<div class="actions">
+                            <?php if($_product->isSaleable()): ?>
+								<button type="button" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><i class="fa fa-shopping-cart"></i><?php echo $this->__('Add to Cart') ?></span></button>
+							<?php else: ?>
+								<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+							<?php endif; ?>
+							<ul class="add-to-links">
+								<?php if( $this->getConfig('addtowishlist')): ?>
+									<?php if ($this->helper('wishlist')->isAllow()) : ?>
+										<li><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>" title="<?php echo $this->__('Wishlist') ?>" class="link-wishlist"><i class="fa fa-heart"></i></a></li>
+									<?php endif; ?>
+								<?php endif; ?>
+								<?php if( $this->getConfig('addtocompare')): ?>
+									<?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+										<li><span class="separator">/</span> <a href="<?php echo $_compareUrl ?>" title="<?php echo $this->__('Compare') ?>" class="link-compare"><i class="fa fa-retweet"></i></a></li>
+									<?php endif; ?>
+								<?php endif; ?>
+							</ul>
+							
+						</div>
+				</div>
+				</li>
+			
+			
+			<?php endforeach ?>
+			</ul>	
+			</div>			
+				<script type="text/javascript">
+		$jq(document).ready(function(){
+			$jq(".rk-tab .owl").owlCarousel({
+				autoPlay : false,
+				items : 4,
+				itemsDesktop : [1199,4],
+				itemsDesktopSmall : [980,3],
+				itemsTablet: [768,2],
+				itemsMobile : [479,1],
+				slideSpeed : 500,
+				paginationSpeed : 500,
+				rewindSpeed : 500,
+				navigation : true,
+				stopOnHover : true,
+				pagination :false,
+				scrollPerPage:true,
+			});
+		});
+	</script>
+		 </div><!-- #tab1 -->
+		 <?php }?>
+
+		 
+	 </div> <!-- .tab_container --> 
+
+</div> <!-- #container -->
+
+<script type="text/javascript">
+
+$jq(document).ready(function() {
+	
+	$jq(".tab_content_<?php echo $identify; ?>").hide();
+	$jq(".tab_content_<?php echo $identify; ?>:first").show(); 
+
+	$jq("ul.tabs<?php echo '-'.$identify;?> li").click(function() {
+		$jq("ul.tabs<?php echo '-'.$identify;?> li").removeClass("active");
+		$jq(this).addClass("active");
+		$jq(".tab_content_<?php echo $identify; ?>").hide();
+		var activeTab = $jq(this).attr("rel"); 
+		$jq("#"+activeTab).fadeIn(); 
+	});
+});
+
+</script> 

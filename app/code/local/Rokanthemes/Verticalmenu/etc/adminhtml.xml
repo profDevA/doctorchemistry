@@ -1,0 +1,39 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<verticalmenu>
+										<title>Vmega Menu</title>
+									</verticalmenu>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="verticalmenu">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<verticalmenu translate="title" module="verticalmenu">
+								<title>Vmega Menu</title>
+								<sort_order>0</sort_order>
+								<children>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/verticalmenu</action>
+									</configuration>
+								</children>
+							</verticalmenu>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+            </resources>
+	</acl>
+</config>

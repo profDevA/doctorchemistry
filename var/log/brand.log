@@ -1,0 +1,2880 @@
+2019-07-16T15:05:05+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:06+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:06+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:06+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:06+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:07+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:07+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:07+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:07+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:08+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:08+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:08+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:08+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:09+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:09+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:09+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:09+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:10+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:10+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:10+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:10+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:11+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:11+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:11+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:11+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:12+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:12+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:12+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:12+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:13+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:13+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:13+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:13+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:14+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:14+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:14+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:14+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:15+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:15+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:15+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:15+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:16+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:16+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:16+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:16+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:17+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:17+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:17+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:17+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:18+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:18+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:05:39+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:06:38+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:09:26+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:12:14+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-16T15:12:28+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-17T04:13:14+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-17T04:13:38+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-17T04:13:50+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+
+2019-07-18T21:29:55+00:00 DEBUG (7): Array
+(
+    [0] => Array
+        (
+            [brandslider_id] => 6
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand1.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [1] => Array
+        (
+            [brandslider_id] => 7
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand2.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [2] => Array
+        (
+            [brandslider_id] => 8
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand3.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+    [3] => Array
+        (
+            [brandslider_id] => 9
+            [title] => 
+            [link] => 
+            [description] => 
+            [image] => <img src="http://www.doctorchemistry.com/media/rokanthemes/brandslider/brand4.png" width="150" height="100px" alt="" />
+            [status] => 1
+            [store_ids] => 0
+        )
+
+)
+

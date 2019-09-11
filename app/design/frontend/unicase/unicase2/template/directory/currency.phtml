@@ -1,0 +1,72 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Currency switcher
+ *
+ * @see Mage_Directory_Block_Currency
+ */
+?>
+<?php if($this->getCurrencyCount()>1): ?>
+<div class="rk-form-currency">
+<label><?php echo $this->__('Currency:')?></label>
+<div class="drop-currency">
+	
+    <div class="currency-trigger">
+        <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
+            <?php if($_code == $this->getCurrentCurrencyCode()): ?>
+            <span class="level-0 select-lang"><?php echo $_name ?><i class="fa fa-caret-down"></i></span>
+            <?php endif?>
+            <?php endforeach; ?>
+            <ul class="sub-currency">
+            <?php foreach ($this->getCurrencies() as $_code => $_name): ?>
+                    <li>
+                        <a href="<?php echo $this->getSwitchCurrencyUrl($_code) ?>" onclick="setLocation(this.value);">
+                        <?php echo $_name ?>
+                        </a>
+                    </li>
+                
+            <?php endforeach; ?>
+            </ul>
+    </div>
+</div>
+</div>
+<?php endif; ?>
+
+<script type="text/javascript">
+    $jq(document).ready(function(){
+        
+        
+        $jq('.currency-trigger').mouseenter(function() {
+            $jq(this).find(".sub-currency").stop(true, true).slideDown();
+        });
+        //hide submenus on exit
+        $jq('.currency-trigger').mouseleave(function() {
+            $jq(this).find(".sub-currency").stop(true, true).slideUp();
+        });
+    });
+</script>

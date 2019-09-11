@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <!--<action method="addCss" ifconfig="explodemenu/general/enabled">
+                <stylesheet>rokanthemes/css/explodemenu.css</stylesheet>
+            </action>-->
+            <action method="addJs" ifconfig="explodemenu/general/enabled">
+                <script>rokanthemes/explodemenu/explodemenu.js</script>
+            </action>
+        </reference>
+        <reference name="catalog.topnav">
+            <action method="setTemplate" ifconfig="explodemenu/general/enabled">
+                <template>rokanthemes/explodemenu/explodemenu.phtml</template>
+            </action>
+        </reference>
+    </default>
+</layout> 

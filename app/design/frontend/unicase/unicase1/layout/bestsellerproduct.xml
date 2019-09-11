@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cms_index_index>
+        <reference name="head">
+			<action method="addCss" ifconfig="bestsellerproduct/bestsellerproduct_config/enabled"><stylesheet>rokanthemes/css/rk.bestsellerproduct.css</stylesheet></action> 
+	    </reference>
+       <reference name="content">
+           <!-- <block type="bestsellerproduct/bestsellerproduct" name="bestsellerproduct" template="rokanthemes/bestsellerproduct/bestsellerproduct.phtml" before="collection-for-men" /> -->
+        </reference>
+    </cms_index_index>
+</layout> 

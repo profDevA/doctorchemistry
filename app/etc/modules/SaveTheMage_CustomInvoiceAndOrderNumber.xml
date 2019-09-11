@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SaveTheMage_CustomInvoiceAndOrderNumber>
+            <active>true</active>
+            <codePool>local</codePool>
+        </SaveTheMage_CustomInvoiceAndOrderNumber>
+    </modules>
+</config>

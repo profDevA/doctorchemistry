@@ -1,0 +1,26 @@
+2019-07-16T15:12:14+00:00 CRIT (2): Not valid template file:frontend\base\default\template\catalog/layer/attribute.phtml
+2019-07-16T15:12:28+00:00 CRIT (2): Not valid template file:frontend\base\default\template\magentothem/relatedslider/relatedslider.phtml
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-16T15:12:28+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 48
+2019-07-17T04:13:38+00:00 CRIT (2): Not valid template file:frontend\base\default\template\catalog/layer/attribute.phtml
+2019-07-17T04:13:50+00:00 CRIT (2): Not valid template file:frontend\base\default\template\magentothem/relatedslider/relatedslider.phtml
+2019-07-17T04:13:50+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-17T04:13:50+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-17T04:13:50+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 25
+2019-07-17T04:13:50+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 46
+2019-07-17T04:13:50+00:00 ERR (3): Warning: Division by zero  in G:\phpwork\doctorchemistry\doctorchemistry\app\design\frontend\unicase\unicase1\template\rokanthemes\related\related.phtml on line 48

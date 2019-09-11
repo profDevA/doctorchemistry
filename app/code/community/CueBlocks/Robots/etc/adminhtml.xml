@@ -1,0 +1,68 @@
+<?xml version="1.0"?> 
+<!--
+ * @package     CueBlocks_
+ * @company     CueBlocks - http://www.cueblocks.com/
+ * @author      Francesco Magazzu' <francesco.magazzu at cueblocks.com>
+ -->    
+<adminhtml>
+    <menu>
+        <cueblocks module="robots">
+            <title>CueBlocks</title>
+            <sort_order>71</sort_order> 
+            <children>
+                <robots module="robots">
+                    <title>Robots</title>
+                    <children>
+                        <itemrobots module="robots">
+                            <title>Edit Robot.txt</title>
+                            <sort_order>0</sort_order>
+                            <action>robots/adminhtml_robots</action>
+                        </itemrobots>
+                    </children>
+                </robots>
+            </children>
+        </cueblocks>
+    </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <cueblocks>
+                        <title>CueBlocks Extension</title>
+						<children>
+                            <robots>
+                                <title>Robots Txt</title>
+                                <children>
+                                    <itemrobots>
+                                        <title>Robots</title>
+                                    </itemrobots>
+                                </children>
+                            </robots>
+                        </children>
+                    </cueblocks>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <robotstxt translate="title" module="robots">
+                                        <title>Robots.txt</title>
+                                    </robotstxt>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>   
+    </acl>
+    <layout>
+        <updates>
+            <robots>
+                <file>robots.xml</file>
+            </robots>
+        </updates>
+    </layout>
+</adminhtml>

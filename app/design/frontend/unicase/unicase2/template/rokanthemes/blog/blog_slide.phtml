@@ -1,0 +1,73 @@
+<?php
+$enabled_slide = Mage::getStoreConfig('blog/slide/enabled');
+$width_slide = Mage::getStoreConfig('blog/slide/width');
+$numbercolumn_slide = Mage::getStoreConfig('blog/slide/numbercolumn');
+$numberrow = Mage::getStoreConfig('blog/slide/numberrow');
+$speed_slide = Mage::getStoreConfig('blog/slide/speed');
+$auto_slide = Mage::getStoreConfig('blog/slide/auto');
+$show_image = Mage::getStoreConfig('blog/slide/showimage');
+$image_width = Mage::getStoreConfig('blog/slide/widthimage');
+$image_height = Mage::getStoreConfig('blog/slide/heightimage');
+$show_title = Mage::getStoreConfig('blog/slide/showtitle');
+$show_author = Mage::getStoreConfig('blog/slide/showauthor');
+$show_time = Mage::getStoreConfig('blog/slide/showtime');
+$show_shortcontent = Mage::getStoreConfig('blog/slide/showshortcontent');
+$show_readmore = Mage::getStoreConfig('blog/slide/showreadmore');
+if($enabled_slide){
+?>
+<?php if ($posts = $this->getRecent()):  $i = 1;?>
+	<div class="blog-slider menu-recent">
+		<div class="rokan-product-heading"><h2><?php echo $this->__('Latest Post') ?></h2></div>
+		<div class="row">
+			<ul class="owl">
+			<?php if($numberrow > 1){ ?>
+				<?php foreach ($posts as $post): ?>
+					<?php if($i % $numberrow == 1) echo '<li>'; ?>
+						<a class="images-blog" href="<?php echo $post->getAddress(); ?>"><?php if($show_image) echo '<img  width="'.$image_width.'px" height="'.$image_height.'px"  src="'.Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA). $post->getThumbnailimage().'" alt="" />'; ?></a>
+						<?php if($show_title): ?> <a class="title" href="<?php echo $post->getAddress(); ?>" ><?php echo '<span class="title">'.$post->getTitle().'</span>' ?></a> <?php endif; ?>
+						<?php $s = $post->getCreatedTime(); $date = strtotime($s); ?>
+						<?php if($show_author) echo '<p class="author">by&nbsp;'.$post->getUser(); if($show_time) echo '&nbsp;-&nbsp;'.date("d M Y", $date).'</p>'; ?>
+						<p class="clear"></p>
+						<?php if($show_shortcontent) echo '<p class="text">'.strip_tags($this->getContentBlogSidebar($post->getShortContent(),150)).'</p>';?>
+						<?php if($show_readmore): ?> <button class="button btn-cart"><span><span><a href="<?php echo $post->getAddress(); ?>">Read more >></a></span></span></button> <?php endif; ?>
+					<?php if($i % $numberrow == 0)echo '</li>'; $i++; ?>
+				<?php endforeach; ?>
+				<?php if($i % $numberrow != 1)echo '</li>'; ?>
+			<?php } else{ ?>
+				<?php foreach ($posts as $post): ?>
+					<li>
+						<a class="images-blog" href="<?php echo $post->getAddress(); ?>"><?php if($show_image) echo '<img  width="'.$image_width.'px" height="'.$image_height.'px"  src="'.Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA). $post->getThumbnailimage().'" alt="" />'; ?></a>
+						<?php if($show_title): ?> <a class="title" href="<?php echo $post->getAddress(); ?>" ><?php echo '<span class="title">'.$post->getTitle().'</span>' ?></a> <?php endif; ?>
+						<?php $s = $post->getCreatedTime(); $date = strtotime($s); ?>
+						<?php if($show_author) echo '<p class="author">by&nbsp;'.$post->getUser(); if($show_time) echo '&nbsp;-&nbsp;'.date("d M Y", $date).'</p>'; ?>
+						<p class="clear"></p>
+						<?php if($show_shortcontent) echo '<p class="text">'.strip_tags($this->getContentBlogSidebar($post->getShortContent(),150)).'</p>';?>
+						<?php if($show_readmore): ?> <button class="button btn-cart"><span><span><a href="<?php echo $post->getAddress(); ?>">Read more</a></span></span></button> <?php endif; ?>
+					</li>
+				<?php endforeach; ?>
+			<?php } ?>
+			</ul>
+		</div>	
+					<script type="text/javascript">
+		$jq(document).ready(function(){
+			$jq(".blog-slider .owl").owlCarousel({
+				autoPlay : false,
+				items : 3,
+				itemsDesktop : [1199,3],
+				itemsDesktopSmall : [980,3],
+				itemsTablet: [768,2],
+				itemsMobile : [479,1],
+				slideSpeed : 500,
+				paginationSpeed : 500,
+				rewindSpeed : 500,
+				navigation : true,
+				stopOnHover : true,
+				pagination :false,
+				scrollPerPage:true,
+			});
+		});
+	</script>
+	</div>
+<?php endif;
+}
+?>

@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<rokanthemes translate="label" module="bestsellerproduct">
+			<label>Rokanthemes</label>
+			<sort_order>205</sort_order>
+		</rokanthemes>
+	</tabs>
+	<sections>
+		<bestsellerproduct translate="label" module="bestsellerproduct">
+			<label>Bestseller Product</label>
+			<tab>rokanthemes</tab>
+			<sort_order>134</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<bestsellerproduct_config translate="label">
+					<label>Bestseller Product Config</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enabled translate="label comment">
+							<label>Enabled: </label>
+							<comment>Select Yes for display the Bestseller Products on frontend.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>0</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</enabled>
+						<auto translate="label comment">
+							<label>Auto: </label>
+							<comment>Autorun for slide.</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</auto>
+						<next_back translate="label">
+							<label>Show Next/Back control: </label>
+							<comment>Slide show as next back </comment>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</next_back>
+						<nav_ctrl translate="label">
+							<label>Show navigation control: </label>
+							<comment>Slide show as navigation </comment>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</nav_ctrl>
+						<speed translate="label">
+							<label>Slide Speed: </label>
+							<frontend_type>text</frontend_type>
+							<sort_order>16></sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</speed>
+						<interval translate="label">
+							<label>Pause:</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>17</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_store>1</show_in_store>
+							<show_in_website>1</show_in_website>
+						</interval>
+						<qty translate="label">
+                            <label>Qty of Product: </label>
+							<comment>Show number of product bestseller </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </qty>
+                        <!-- <items_show translate="label">
+                            <label>Number Product Show: </label>
+							<comment>Show number of product bestseller </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </items_show> -->
+						<row_show translate="label">
+                            <label>Number Rows Show: </label>
+							<comment>Show number of product bestseller in per row </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </row_show>
+						<!-- <item_width translate="label">
+                            <label>Width of Item: </label>
+							<comment>Width of product bestseller </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </item_width> -->	
+                        <width_thumbnail translate="label">
+                            <label>Width Images: </label>
+							<comment>Width images of product bestseller </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width_thumbnail>						
+                        <height_thumbnail translate="label">
+                            <label>Height Images: </label>
+							<comment>Height images of product bestseller </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>23</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height_thumbnail>
+						<heading translate="label">
+                            <label>Heading: </label>
+							<comment>You can set headding</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>24</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </heading>
+						<addtocart translate="label comment">
+							<label>Add to Cart: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</addtocart>
+						<addtowishlist translate="label comment">
+							<label>Add to Wishlist: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>26</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</addtowishlist>
+						<addtocompare translate="label comment">
+							<label>Add to Compare: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>27</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</addtocompare>					
+						<review translate="label comment">
+							<label>Review Rating: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>28</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</review>						
+						<description translate="label comment">
+							<label>Short Description: </label>
+							<frontend_type>select</frontend_type>
+							<source_model>
+								adminhtml/system_config_source_yesno
+							</source_model>
+							<sort_order>29</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>							
+						</description>
+						<maxlength translate="label">
+                            <label>Short Description Max Length: </label>
+                            <frontend_type>text</frontend_type>
+							<comment>! Empty for show all short description.</comment>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxlength> 
+					</fields>
+				</bestsellerproduct_config>						
+			</groups>
+		</bestsellerproduct>
+	</sections>
+</config>
+
+

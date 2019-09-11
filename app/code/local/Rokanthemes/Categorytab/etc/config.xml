@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Rokanthemes_Categorytab>
+            <version>0.1.0</version>
+        </Rokanthemes_Categorytab>
+    </modules>
+    <frontend>
+        <routers>
+            <categorytab>
+                <use>standard</use>
+                <args>
+                    <module>Rokanthemes_Categorytab</module>
+                    <frontName>categorytab</frontName>
+                </args>
+            </categorytab>
+        </routers>
+        <layout>
+            <updates>
+                <categorytab>
+                    <file>categorytab.xml</file>
+                </categorytab>
+            </updates>
+        </layout>
+    </frontend>
+		 <adminhtml>
+			<menu>
+				<rokanthemes translate="title" module="categorytab">
+					<title>Rokanthemes</title>
+					<sort_order>71</sort_order>               
+					<children>
+						<categorytab translate="title" module="categorytab">
+							<title>Category Tabs Slider</title>
+							<sort_order>35</sort_order>
+							<children>
+								<configuration>
+									<title>Configuration</title>
+									<sort_order>1</sort_order>
+									<action>adminhtml/system_config/edit/section/categorytab</action>
+								</configuration>
+							</children>
+						</categorytab>
+					</children>
+				</rokanthemes>
+			</menu>
+			<acl>
+				<resources>
+					<all>
+						<title>Allow Everything</title>
+					</all>
+					<admin>
+						<children>
+							<system>
+								<children>
+									<config>
+										<children>
+											<categorytab>
+												<title>Category Tabs Slider</title>
+											</categorytab>
+										</children>
+									</config>
+								</children>
+							</system>
+						</children>
+					</admin>
+				</resources>
+			</acl>
+			<layout>
+				<updates>
+					<categorytab>
+						<file>categorytab.xml</file>
+					</categorytab>
+				</updates>
+			</layout>
+		</adminhtml>   
+      
+    <global>
+        <blocks>
+            <categorytab>
+                <class>Rokanthemes_Categorytab_Block_Categorytab_Widget</class>
+            </categorytab>
+        </blocks>
+        <helpers>
+            <categorytab>
+                <class>Rokanthemes_Categorytab_Helper</class>
+            </categorytab>
+        </helpers>
+    </global>
+	<default>
+		<categorytab>
+			<categorytab_config>
+				<enabled>1</enabled>
+				<title></title>
+				
+				<auto>0</auto>
+				<speed>3000</speed>
+				<interval>600</interval>
+				<show_price>1</show_price>
+				<addtocart>1</addtocart>
+				<addtowishlist>1</addtowishlist>
+				<addtocompare>1</addtocompare>
+				<review>0</review>
+				<description>0</description>
+				<maxlength></maxlength>
+				<qty>9</qty>
+				<!-- <items_show>4</items_show> -->
+				<!-- <item_width>262</item_width> -->
+				<next_back>1</next_back>
+				<nav_ctrl>0</nav_ctrl>
+			</categorytab_config>
+		</categorytab>
+	</default>
+</config>

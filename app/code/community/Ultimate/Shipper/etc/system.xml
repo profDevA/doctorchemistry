@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ultimate_Shipper extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Shipping & Fulfillment
+ * @package        Ultimate_Shipper
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <sections>
+        <carriers translate="label" module="shipping">
+            <groups>
+                <ultimate_shipper translate="label">
+                    <label>Ultimate Shipping</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!--
+                            The following fields are available
+                            to modify in the admin panel.
+                            The values are saved in the
+                            database.
+
+                            This shipping carrier abstract checks
+                            this value to determine whether
+                            the carrier should be shown.
+                        -->
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+
+                        <!--
+                            This value can be used to specify a
+                            custom title for our method.
+                        -->
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+
+                       <!--
+                            This value is used to select
+                            the allowed methods this carrier be
+                            using for shipping.
+                        -->
+                        <allowedmethods translate="label">
+                            <label>Allowed Methods</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>30</sort_order>
+                            <source_model>ultimate_shipper/resource_method_collection</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment><model>ultimate_shipper/adminhtml_allowedmethods_comment</model></comment>
+                        </allowedmethods>
+                        
+                        <!--
+                            Enable free shipping method
+                        -->
+                        <freemethods_active translate="label">
+                            <label>Enable Free Shipping</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>39</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </freemethods_active>
+
+                        <!--
+                            This value is used to select
+                            the free shipping methods this 
+                            carrier be using for shipping.
+                        -->
+                        <freemethods translate="label">
+                            <label>Free Method</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <source_model>ultimate_shipper/resource_method_collection</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </freemethods>
+
+                        <!--
+                            This value is used to if free 
+                            shipping methods is enabled.
+                        -->
+                        <freemethods_order_total translate="label">
+                            <label>Minimum Order Amount for Free Shipping</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </freemethods_order_total>
+
+                        <!--
+                            If this is enable and met the criteria of 
+                            free shipping then other methods are disabled.
+                        -->
+                        <freemethods_restrict_others translate="label">
+                            <label>Restrict Other Methods If Free Shipping Criteria is Met</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>42</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>When this option is enabled only the method selected in the free method will be displayed when free shipping criteria is met. On disabled all allowed methods along with selected free shipping method will be displayed. </comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </freemethods_restrict_others>
+
+                        <!--
+                            This value is used to specify whether
+                            the carrier is available only for
+                            specific countries or all countries
+                            available in the current Magento
+                            installation.
+                        -->
+                        <sallowspecific translate="label">
+                            <label>Ship to Applicable Countries</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>90</sort_order>
+                            <frontend_class>shipping-applicable-country</frontend_class>
+                            <source_model>adminhtml/system_config_source_shipping_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sallowspecific>
+
+                        <!--
+                            If 'specific countries' is chosen
+                            in the previous option, then this field
+                            allows the administrator to specify
+                            which specific countries this carrier
+                            should be available for.
+                        -->
+                        <specificcountry translate="label">
+                            <label>Ship to Specific Countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>91</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </specificcountry>
+
+                         <!--
+                            The sort order is used in Magento
+                            to determine what order the carrier
+                            will appear in relative to the
+                            other carriers available.
+                        -->
+                        <sort_order translate="label">
+                            <label>Sort Order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>92</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sort_order>
+                        
+                    </fields>
+                </ultimate_shipper>
+            </groups>
+        </carriers>
+    </sections>
+</config>

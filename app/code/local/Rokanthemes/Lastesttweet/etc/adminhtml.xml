@@ -1,0 +1,44 @@
+<?xml version="1.0"?> 
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<system>
+						<children>
+							<config>
+								<children>
+									<lastesttweet>
+										<title>Latesttweet</title>
+									</lastesttweet>
+								</children>
+							</config>
+						</children>
+					</system>	
+					<rokanthemes translate="title" module="lastesttweet">
+						<title>Rokanthemes</title>
+						<sort_order>71</sort_order>               
+						<children>
+							<lastesttweet translate="title" module="lastesttweet">
+								<title>Latesttweet</title>
+								<sort_order>0</sort_order>
+								<children>
+									<items translate="title" module="lastesttweet">
+										<title>Manage Items</title>
+										<sort_order>0</sort_order>
+										<action>lastesttweet/adminhtml_lastesttweet</action>
+									</items>
+									<configuration>
+										<title>Configuration</title>
+										<sort_order>1</sort_order>
+										<action>adminhtml/system_config/edit/section/lastesttweet</action>
+									</configuration>
+								</children>
+							</lastesttweet>
+						</children>
+					</rokanthemes>					
+				</children>
+			</admin>
+        </resources>
+	</acl>
+</config>

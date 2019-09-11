@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+    </default>
+    <cms_index_index>
+        <reference name="head">
+			<action method="addCss" ifconfig="mostviewedproduct/mostviewedproduct_config/enabled"><stylesheet>rokanthemes/css/ma.mostviewedslider.css</stylesheet></action>
+			<action method="addJs" ifconfig="featuredproduct/featuredproduct_config/enabled"><script>rokanthemes/ma.jq.slide.js</script></action>
+			<action method="addJs" ifconfig="featuredproduct/featuredproduct_config/enabled"><script>rokanthemes/ma.bxslider.min.js</script></action>  		
+		</reference>
+        <reference name="content">
+            <block type="mostviewedproduct/mostviewedproduct" name="mostviewedproduct" template="rokanthemes/mostviewedproduct/mostviewedproduct.phtml" />
+        </reference>
+    </cms_index_index>
+</layout> 
