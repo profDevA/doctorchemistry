@@ -33,6 +33,9 @@
 <html xmlns="https://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
 <head>
 <?php echo $this->getChildHtml('head') ?>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
 <?php echo $this->getChildHtml('after_body_start') ?>
@@ -42,6 +45,16 @@
         <?php echo $this->getChildHtml('header') ?>
         <div class="main-container col2-left-layout">
             <div class="main">
+                <?php if(Mage::getBlockSingleton('page/html_header')->getIsHomePage()): ?>
+                    <div class="bxslider">
+                        <div class="has-buy-now">
+                            <img class="" src="skin\homesliderimage\New-formula-doctor.png">
+                            <a class="btn btn-buy-now" href="<?php echo Mage::getBaseUrl();?>new-products.html"><span>Buy Now</span></a>
+                        </div>
+                        <div><img src="skin\homesliderimage\Welcomdoctor.png"></div>
+                    </div>
+                <?php endif ?>
+
                 <div class="container">
                 <div class="container-inner">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
@@ -63,5 +76,19 @@
     </div>
 </div>
 <?php echo $this->getAbsoluteFooter() ?>
+<script type="text/javascript">
+    $jq(document).ready(function () {
+        $('.bxslider').bxSlider({
+            auto: true,
+            stopAutoOnClick: true,
+            pager: true,
+            speed:1000,
+            nextText: '<img src="skin/homesliderimage/icons8-next-48.png" />',
+            prevText: '<img src="skin/homesliderimage/icons8-previous-48.png"/>'
+        });
+    });
+
+</script>
+
 </body>
 </html>
