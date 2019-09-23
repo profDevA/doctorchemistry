@@ -48,10 +48,11 @@ Default layout, loads most of the pages
                 <action method="addJs"><script>varien/menu.js</script></action>
                 <action method="addJs"><script>mage/translate.js</script></action>
                 <action method="addJs"><script>mage/cookies.js</script></action>
-				
+
 				<!-- Inclue js module -->
 				<action method="addJs"><script>rokanthemes/jquery-1.11.0.min.js</script></action>
 				<action method="addJs"><script>rokanthemes/jquery.noconflict.js</script></action>
+
 				<action method="addJs" ><script>rokanthemes/owl.carousel.js</script></action>
 				<action method="addJs" ><script>rokanthemes/bootstrap/bootstrap.min.js</script></action>
 				<action method="addJs"><script>rokanthemes/mobile.js</script></action>
@@ -62,7 +63,7 @@ Default layout, loads most of the pages
                 <action method="addCss"><stylesheet>css/bootstrap-theme.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/font-awesome.min.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/styles.css</stylesheet></action>
-				
+
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
                 <action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/print.css</stylesheet><params>media="print"</params></action>
@@ -93,9 +94,9 @@ Default layout, loads most of the pages
                     <action method="setElementClass"><value>top-container</value></action>
                 </block>
                 <block type="page/html_welcome" name="welcome" as="welcome"/>
-                
+
                 <block type="directory/currency" template="directory/currency.phtml" name="store_currency_selector" as="store_currency_selector" />
-                
+
                 <block type="cms/block" name="call-us">
                     <action method="setBlockId"><block_id>call-us</block_id></action>
                 </block>
@@ -116,7 +117,7 @@ Default layout, loads most of the pages
                 <label>Right Column</label>
             </block>
 
-            <block type="core/text_list" name="brand" as="brand" translate="label" /> 
+            <block type="core/text_list" name="brand" as="brand" translate="label" />
 
             <block type="page/html_footer" name="footer" as="footer" template="page/html/footer.phtml">
                 <block type="page/html_wrapper" name="bottom.container" as="bottomContainer" translate="label">
